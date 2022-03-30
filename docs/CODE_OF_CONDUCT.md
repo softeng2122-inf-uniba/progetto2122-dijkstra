@@ -1,29 +1,29 @@
-# Scrum team member code of conduct
+# codice di condotta del team scrum
 
-June 30, 2012
+30 giugno 2012
 
-This post defines a code of conduct that I try to adhere to on a Scrum team.
+Questo post definisce un codice di condotta a cui cerco di aderire in un team scrum.
 
-**Team participation**
+**Partecipazione al team**
 
-* Fixing my team's broken builds is my highest priority.
-* Participating in my team's code reviews is my second highest priority.
-* Improving my team's velocity is more important than improving my individual velocity.
-* I will not be late for team meetings.
-* I will ask for help when I need it.
-* I will provide help when asked.
-* I will be honest at all times.
-* If I don't believe something is possible I will say so without hesitation.
+* Sistemare le build non funzionanti è la mia maggiore priorità.
+* Partecipare alle revisioni del codice del mio team è la mia seconda maggiore priorità.
+* Migliorare la velocità del mio team è più importante che migliorare la mia velocità.
+* Non farò tardi alle riunioni del team.
+* Chiederò aiuto quando ne avrò bisogno.
+* Fornirò aiuto quando richiesto.
+* Sarò onesto in ogni momento.
+* Se credo che qualcosa sia impossibile lo dirò senza esitazioni.
 
-**Peer reviews**
+**Revisione paritaria**
 
-* I will be professional and tactful when providing review comments.
-* I will be open to receiving feedback when others review my work.
+* Sarò professionale e discreto quando fornirò recensioni.
+* Sarò disponibile a ricevere feedback quando altri revisioneranno il mio lavoro.
 
-**Writing code**
+**Scrittura del codice**
 
-* I will express myself through code.
-* I will add comments to code only if I have failed to express myself through code.
-* I will write code that adheres to my team's formatting and style conventions.
-* I will not submit production code without thorough in-memory unit tests.
-* I will not submit code that causes any tool to emit a warning.
+* Mi esprimerò attraverso il codice.
+* Aggiungerò commenti al codice solo se avrò fallito nell'esprimermi attraverso il codice .
+* Scriverò codice che aderisce alle convenzioni di formattazione e stile del mio team .
+* Non invierò il codice di produzione senza test approfonditi dell'unità di memoria .
+* Non invierò codice che causa l'emissione di un avviso da parte di qualsiasi strumento.
