@@ -1,8 +1,8 @@
-# codice di condotta del team scrum
+# codice di condotta del team Dijkstra
 
-30 giugno 2012
+30 marzo 2022
 
-Questo post definisce un codice di condotta a cui cerco di aderire in un team scrum.
+Questo post definisce un codice di condotta a cui cerco di aderire nel team Dijkstra.
 
 **Partecipazione al team**
 
