@@ -4,7 +4,7 @@
 - [1. Introduzione](#introduzione)
 - [2. Biografia](#biografia)
     - [2.1 Giovinezza](#giovinezza)
-    - [2.2 carriera](#carriera)
+    - [2.2 Carriera](#carriera)
     - [2.3 Pubblicazioni](#pubblicazioni)
 - [3. Contributi](#contributi)
     - [3.1 Il sistema operativo](#il-sistema-operativo)
