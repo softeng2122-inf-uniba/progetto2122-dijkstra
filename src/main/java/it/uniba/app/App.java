@@ -8,6 +8,9 @@ public final class App {
     private static String parolaSegreta= new String();
     //Giocatore giocatore= new Giocatore();
     
+    public String getGreeting(){
+        return "BENVENUTO IN WORDLE";
+    }
     /*public void setParola(String x){
         
     }*/
@@ -30,7 +33,8 @@ public final class App {
     
 
    
-    public static void main(final String[] args) {     
+    public static void main(final String[] args) {  
+       System.out.println(new App().getGreeting());
         /*if(args[0].equals("--help")|| args[0].equals("-h")){
             String messaggioHelp= getHelp();
             System.out.println(messaggioHelp);
