@@ -1,5 +1,7 @@
-package main.java.it.uniba.app;
+package it.uniba.app;
 
 public final class Analizzatore{
+    
+    
     
 }
