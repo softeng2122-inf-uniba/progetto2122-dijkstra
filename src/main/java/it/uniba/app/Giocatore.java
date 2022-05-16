@@ -1,5 +1,14 @@
+
 package main.java.it.uniba.app;
 
-public final class Giocatore {
-    
+import java.util.Scanner;
+
+public class Giocatore {
+    public String input() {
+       Scanner keyboard = new Scanner(System.in);
+		String userInput = keyboard.nextLine();
+		return userInput;
+    }
+    public Giocatore(){
+    }
 }
