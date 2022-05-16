@@ -6,4 +6,6 @@ public final class Giocatore {
         String userInput = keyboard.nextLine();
         return userInput;
     }
+    public Giocatore(){
+    }
 }
