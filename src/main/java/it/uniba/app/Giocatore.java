@@ -1,4 +1,9 @@
-package main.java.it.uniba.app;
+package it.uniba.app;
+
+import java.util.Scanner;
+
+/** questa classe ha il compito di gestire le istanze della classe giocatore e permettere l'input all'utente **/
+/*<<entity>>**/
 
 public class Giocatore {
     public String input() {
