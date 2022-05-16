@@ -1,4 +1,4 @@
-package main.java.it.uniba.app;
+package it.uniba.app;
 
 public class Giocatore {
     public String input() {
