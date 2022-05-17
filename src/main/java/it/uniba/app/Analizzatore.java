@@ -3,7 +3,7 @@ package it.uniba.app;
 public final class Analizzatore{
     
     public enum Colore{GRIGIO,GIALLO,VERDE};
-    public enum Comando {NUOVA,PLAY,ESCI,ABBANDONA,HELP,SETPAROLA,GETPAROLA};
+    public enum Comando {NUOVA, MOSTRA, GIOCA, ESCI, ABBANDONA, AIUTO, SETPAROLA, GETPAROLA, ERRORE};
     
     private static String[] token;
     private static final String stringNuova = new String("/new");
@@ -61,25 +61,25 @@ public final class Analizzatore{
         
     }
 
-    public static int analizzatoreComando(String inputUser) throws InputUserNotValid {
+    public static Comando analizzatoreComando(String inputUser) throws InputUserNotValid {
 
         token = inputUser.trim().split(" ");
 
 		if (token.length <= 2) {
 
 			if (token[0].equalsIgnoreCase(stringNuova)) {
-                return 1;
+                return Comando.NUOVA;
 			} else if (token[0].equalsIgnoreCase(stringMostra)) {
-                return 2;
+                return Comando.MOSTRA;
 			} else if (token[0].equalsIgnoreCase(stringHelp) || token[0].equalsIgnoreCase(stringLessLessH)
 					|| token[0].equalsIgnoreCase(stringLessHelp)) {
-                return 3;
+                return Comando.AIUTO;
 			} else if (token[0].equalsIgnoreCase(stringPlay)) {
-                return 4;
+                return Comando.GIOCA;
 			} else if (token[0].equalsIgnoreCase(stringExit)) {
-                return 5;
+                return Comando.ESCI;
 			} else if (token[0].equalsIgnoreCase(stringQuit)) {
-                return 6;
+                return Comando.ABBANDONA;
 			} else if (token[0].charAt(0) == '/') {
 				throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
 			}
@@ -87,6 +87,6 @@ public final class Analizzatore{
 		} else
 			throw new InputUserNotValid("Comando non valido");
                 
-                return 0;
+                return Comando.ERRORE;
 	} 
 }
