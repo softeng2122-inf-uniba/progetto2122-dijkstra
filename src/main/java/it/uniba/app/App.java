@@ -12,9 +12,19 @@ public final class App {
     public String getGreeting(){
         return "BENVENUTO IN WORDLE";
     }
-    /*public void setParola(String x){
-        
-    }*/
+    
+    public static void setParola(String x) throws InputUserNotValid{
+    	if (x.length() < numeroLettereMassime)
+			throw new InputUserNotValid("Parola segreta troppo corta");
+		else if (x.length() > numeroLettereMassime)
+			throw new InputUserNotValid("Parola segreta troppo lunga");
+		else if (!x.matches("[a-z]*"))
+			throw new InputUserNotValid("Parola segreta non valida");
+		else {
+			System.out.println("OK");
+			parolaSegreta = x; 
+		}  
+    }
     
     /*public static String getParola(){
         
