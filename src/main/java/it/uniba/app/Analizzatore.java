@@ -46,6 +46,9 @@ public final class Analizzatore{
 
         } else if (token[0].equalsIgnoreCase("/mostra")) {
 
+        } else if (token[0].equalsIgnoreCase("/help") || token[0].equalsIgnoreCase("--h")
+        || token[0].equalsIgnoreCase("-help")) {
+
         }
 
 	}
