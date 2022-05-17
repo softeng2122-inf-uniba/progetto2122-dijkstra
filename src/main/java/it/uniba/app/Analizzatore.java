@@ -24,6 +24,16 @@ public final class Analizzatore{
             
         }
         
+        for(int i=0;i<input.length();i++){
+
+            if(input.charAt(i) == parolaSegreta.charAt(i)){
+
+                coloriCaratteri[i]=Colore.VERDE;
+
+            }
+
+        }
+        
         return coloriCaratteri;
         
     }
