@@ -53,6 +53,8 @@ public final class Analizzatore{
 
         } else if (token[0].equalsIgnoreCase("/exit")) {
 
+        } else if (token[0].equalsIgnoreCase("/quit")) {
+
         }
 
 	}
