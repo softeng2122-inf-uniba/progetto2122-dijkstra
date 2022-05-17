@@ -44,6 +44,8 @@ public final class Analizzatore{
 
 		if (token[0].equalsIgnoreCase("/nuova")) {
 
+        } else if (token[0].equalsIgnoreCase("/mostra")) {
+
         }
 
 	}
