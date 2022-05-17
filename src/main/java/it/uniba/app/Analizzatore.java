@@ -42,20 +42,25 @@ public final class Analizzatore{
 
         token = inputUser.trim().split(" ");
 
-		if (token[0].equalsIgnoreCase("/nuova")) {
+		if (token.length <= 2) {
 
-        } else if (token[0].equalsIgnoreCase("/mostra")) {
+			if (token[0].equalsIgnoreCase("/nuova")) {
 
-        } else if (token[0].equalsIgnoreCase("/help") || token[0].equalsIgnoreCase("--h")
-        || token[0].equalsIgnoreCase("-help")) {
+			} else if (token[0].equalsIgnoreCase("/mostra")) {
 
-        } else if (token[0].equalsIgnoreCase("/play")) {
+			} else if (token[0].equalsIgnoreCase("/help") || token[0].equalsIgnoreCase("--h")
+					|| token[0].equalsIgnoreCase("-help")) {
 
-        } else if (token[0].equalsIgnoreCase("/exit")) {
+			} else if (token[0].equalsIgnoreCase("/play")) {
 
-        } else if (token[0].equalsIgnoreCase("/quit")) {
+			} else if (token[0].equalsIgnoreCase("/exit")) {
 
-        }
+			} else if (token[0].equalsIgnoreCase("/quit")) {
+
+			} 
+
+		} else
+			throw new InputUserNotValid("Comando non valido");
 
 	}
      
