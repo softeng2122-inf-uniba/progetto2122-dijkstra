@@ -57,7 +57,9 @@ public final class Analizzatore{
 
 			} else if (token[0].equalsIgnoreCase("/quit")) {
 
-			} 
+			} else if (token[0].charAt(0) == '/') {
+				throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
+			}
 
 		} else
 			throw new InputUserNotValid("Comando non valido");
