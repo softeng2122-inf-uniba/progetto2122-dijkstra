@@ -92,6 +92,6 @@ public final class Analizzatore{
     
     public static boolean analizzatoreSintattivo(String inputUser) {
         
-        return true;
+        return inputUser.matches("[a-z]+");
     }
 }
