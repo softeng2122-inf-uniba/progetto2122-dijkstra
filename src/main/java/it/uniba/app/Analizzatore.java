@@ -51,6 +51,8 @@ public final class Analizzatore{
 
         } else if (token[0].equalsIgnoreCase("/play")) {
 
+        } else if (token[0].equalsIgnoreCase("/exit")) {
+
         }
 
 	}
