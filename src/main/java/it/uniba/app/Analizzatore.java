@@ -3,16 +3,17 @@ package it.uniba.app;
 public final class Analizzatore{
     
     public enum Colore{GRIGIO,GIALLO,VERDE};
+    public enum Comando {NUOVA,PLAY,ESCI,ABBANDONA,HELP,SETPAROLA,GETPAROLA};
     
     private static String[] token;
     private static final String stringNuova = new String("/new");
-	private static final String stringMostra = new String("/show");
-	private static final String stringHelp = new String("/help");
-	private static final String stringLessLessH = new String("--h");
-	private static final String stringLessHelp = new String("-h");
-	private static final String stringPlay = new String("/play");
-	private static final String stringExit = new String("/exit");
-	private static final String stringQuit = new String("/quit"); 
+    private static final String stringMostra = new String("/show");
+    private static final String stringHelp = new String("/help");
+    private static final String stringLessLessH = new String("--h");
+    private static final String stringLessHelp = new String("-h");
+    private static final String stringPlay = new String("/play");
+    private static final String stringExit = new String("/exit");
+    private static final String stringQuit = new String("/quit"); 
     
     public static Colore[] analizzatoreTentativo(String input,String parolaSegreta){
         
@@ -85,7 +86,7 @@ public final class Analizzatore{
 
 		} else
 			throw new InputUserNotValid("Comando non valido");
-
-	}
-     
+                
+                return 0;
+	} 
 }
