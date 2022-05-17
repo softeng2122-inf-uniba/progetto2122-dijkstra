@@ -2,7 +2,7 @@ package it.uniba.app;
 
 public final class Analizzatore{
     
-    public enum Colori{GRIGIO,GIALLO,VERDE};
+    public enum Colore{GRIGIO,GIALLO,VERDE};
     
     private static String[] token;
     private static final String stringNuova = new String("/new");
@@ -16,6 +16,15 @@ public final class Analizzatore{
     
     public static Colore[] analizzatoreTentativo(String input,String parolaSegreta){
         
+        Colore[] coloriCaratteri = new Colore[input.length()];
+        
+        for(int i=0;i<coloriCaratteri.length;i++){
+            
+            coloriCaratteri[i]=Colore.GRIGIO;
+            
+        }
+        
+        return coloriCaratteri;
         
     }
 
