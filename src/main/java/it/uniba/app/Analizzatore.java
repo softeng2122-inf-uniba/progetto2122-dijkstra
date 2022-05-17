@@ -90,8 +90,8 @@ public final class Analizzatore{
                 return Comando.ERRORE;
 	}
     
-    public static boolean analizzatoreSintattivo(String inputUser) {
-        
-        return inputUser.matches("[a-z]+");
+    public static boolean analizzatoreSintattico(String inputUser) {
+        token = inputUser.trim().toLowerCase().split(" ");
+        return inputUser.matches("[a-z]+") && token.length == 1;
     }
 }
