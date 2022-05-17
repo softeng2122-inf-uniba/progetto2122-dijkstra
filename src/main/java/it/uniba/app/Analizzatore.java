@@ -88,5 +88,10 @@ public final class Analizzatore{
 			throw new InputUserNotValid("Comando non valido");
                 
                 return Comando.ERRORE;
-	} 
+	}
+    
+    public static boolean analizzatoreSintattivo(String inputUser) {
+        
+        return true;
+    }
 }
