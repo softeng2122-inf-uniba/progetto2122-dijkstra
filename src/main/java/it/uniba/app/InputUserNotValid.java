@@ -1,3 +1,5 @@
+package it.uniba.app;
+
 class InputUserNotValid extends Exception {
 	InputUserNotValid() {}
 	
