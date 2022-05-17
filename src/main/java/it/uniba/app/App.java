@@ -6,6 +6,7 @@ package it.uniba.app;
 
 public final class App {          
     private static String parolaSegreta= new String();
+    private static int numeroLettereMassime = 5;
     //Giocatore giocatore= new Giocatore();
     
     public String getGreeting(){
