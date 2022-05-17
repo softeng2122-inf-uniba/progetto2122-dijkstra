@@ -37,5 +37,11 @@ public final class Analizzatore{
         return coloriCaratteri;
         
     }
+
+    public static void analizzatoreComando(String inputUser) throws InputUserNotValid {
+
+        
+
+	}
      
 }
