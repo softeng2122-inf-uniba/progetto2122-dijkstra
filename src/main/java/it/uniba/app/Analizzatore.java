@@ -40,7 +40,11 @@ public final class Analizzatore{
 
     public static void analizzatoreComando(String inputUser) throws InputUserNotValid {
 
-        
+        token = inputUser.trim().split(" ");
+
+		if (token[0].equalsIgnoreCase("/nuova")) {
+
+        }
 
 	}
      
