@@ -2,6 +2,8 @@ package it.uniba.app;
 
 public final class Analizzatore{
     
+    public enum Colori{GRIGIO,GIALLO,VERDE};
+    
     private static String[] token;
     private static final String stringNuova = new String("/new");
 	private static final String stringMostra = new String("/show");
