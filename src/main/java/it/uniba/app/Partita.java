@@ -4,7 +4,7 @@ public final class Partita {
 
     private String[][] matriceTentativi;
     private boolean quit = false;
-    private int numeroTentativiEffetuati;
+    private int numeroTentativiEffettuati;
     
     Partita(int numbOfWords, int numbOfTries) {
         System.out.println("Creazione partita...");
@@ -12,7 +12,7 @@ public final class Partita {
         matriceTentativi = new String [numbOfTries][numbOfWords];
         quit = false;
         
-        numeroTentativiEffetuati = 0;
+        numeroTentativiEffettuati = 0;
         
         /**inizializzazione matriceTentativi*/
         for(int i=0; i< numbOfTries; i++){
@@ -36,6 +36,20 @@ public final class Partita {
         
     }
 
+    private String ricostruzioneTentativo(int posizioneTentativo){
+        
+        String parolaTentativo = "";
+        
+        for(int i=0;i<App.numeroLettereMassime;i++){
+            
+            parolaTentativo.concat(matriceTentativi[posizioneTentativo][i]);
+            
+        }
+        
+        return parolaTentativo;
+        
+    }
+    
     public void playGame() {
 
         
@@ -48,7 +62,15 @@ public final class Partita {
                 Analizzatore.Comando comando = Analizzatore.analizzatoreComando(inputUser);
                 switch(comando){
                     case NUOVA : App.setParola(inputUser);
-                        if()
+                        if(numeroTentativiEffettuati > 0){
+                            
+                            for(int i = 0;i<numeroTentativiEffettuati;i++){
+                                
+                                String tantativo = ricostruzioneTentativo(i);
+                                
+                            }
+                            
+                        }
                         break;
                     case MOSTRA :
                         
