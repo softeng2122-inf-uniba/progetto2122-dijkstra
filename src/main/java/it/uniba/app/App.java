@@ -38,9 +38,9 @@ public final class App {
         
     }*/
     
-   /* public static void esci(){
-        
-    }*/
+    public static void esci(){
+       System.exit(0);
+    }
     
 
    
@@ -67,5 +67,7 @@ public final class App {
             default: System.out.println("Errore nell'inserimento del comando");
             break;
         }*/
+        
+      
     }
 }
