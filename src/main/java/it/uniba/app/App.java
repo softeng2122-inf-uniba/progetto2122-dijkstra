@@ -42,17 +42,16 @@ public final class App {
     
     public static void esci(){
         
-       Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         
         System.out.println("_______________________________");
         System.out.println("Si desidera terminare il programma ?\nDigitare y o s per confermare");
 
         char risposta = scanner.next().charAt(0);
+        risposta = Character.toLowerCase(risposta);  
          switch(risposta) {    
             case 'y':
-            case 'Y':   
             case 's':
-            case 'S':
                 System.out.println("Chiusura in corso....");
                 System.exit(0);   
                 break;  
@@ -90,7 +89,6 @@ public final class App {
             default: System.out.println("Errore nell'inserimento del comando");
             break;
         }*/
-        
-
+      
     }
 }
