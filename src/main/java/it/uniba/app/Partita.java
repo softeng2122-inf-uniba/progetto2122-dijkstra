@@ -32,4 +32,14 @@ public final class Partita {
         
     }
 
+    public void playGame() {
+
+        while(!quit) {
+            System.out.println("Inserire tentativo n°" + numeroTentativiEffettuati + ": ");
+            String inputUser = App.giocatore.input();
+            
+        }
+        
+    }
+
 }
