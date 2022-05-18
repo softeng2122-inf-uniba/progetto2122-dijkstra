@@ -3,6 +3,7 @@ package it.uniba.app;
 public final class Partita {
 
     private String[][] matriceTentativi;
+    private static boolean quit = false;
     
     Partita(int numbOfWords, int numbOfTries) {
         System.out.println("Creazione partita...");
