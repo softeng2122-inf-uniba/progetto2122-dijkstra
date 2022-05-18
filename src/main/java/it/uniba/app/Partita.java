@@ -2,18 +2,18 @@ package it.uniba.app;
 
 public final class Partita {
 
-    private char[][] matriceTentativi;
+    private String[][] matriceTentativi;
     
     Partita(int numbOfWords, int numbOfTries) {
         System.out.println("Creazione partita...");
         
-        matriceTentativi = new char [numbOfTries][numbOfWords];
+        matriceTentativi = new String [numbOfTries][numbOfWords];
         quit = false;
         
         /**inizializzazione matriceTentativi*/
         for(int i=0; i< numbOfTries; i++){
             for (int j=0; j<numbOfWords; j++){
-                matriceTentativi[i][j]='_';
+                matriceTentativi[i][j] = "_";
             }
         }
         
@@ -35,7 +35,7 @@ public final class Partita {
     public void playGame() {
 
         while(!quit) {
-            System.out.println("Inserire tentativo n°" + numeroTentativiEffettuati + ": ");
+            System.out.println("Inserire tentativo n " + numeroTentativiEffettuati + ": ");
             String inputUser = App.giocatore.input();
             
             try {
