@@ -3,13 +3,16 @@ package it.uniba.app;
 public final class Partita {
 
     private String[][] matriceTentativi;
-    private static boolean quit = false;
+    private boolean quit = false;
+    private int numeroTentativiEffetuati;
     
     Partita(int numbOfWords, int numbOfTries) {
         System.out.println("Creazione partita...");
         
         matriceTentativi = new String [numbOfTries][numbOfWords];
         quit = false;
+        
+        numeroTentativiEffetuati = 0;
         
         /**inizializzazione matriceTentativi*/
         for(int i=0; i< numbOfTries; i++){
@@ -35,6 +38,8 @@ public final class Partita {
 
     public void playGame() {
 
+        
+        
         while(!quit) {
             System.out.println("Inserire tentativo n " + numeroTentativiEffettuati + ": ");
             String inputUser = App.giocatore.input();
@@ -43,6 +48,7 @@ public final class Partita {
                 Analizzatore.Comando comando = Analizzatore.analizzatoreComando(inputUser);
                 switch(comando){
                     case NUOVA : App.setParola(inputUser);
+                        if()
                         break;
                     case MOSTRA :
                         
