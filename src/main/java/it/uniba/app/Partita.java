@@ -38,6 +38,14 @@ public final class Partita {
             System.out.println("Inserire tentativo n°" + numeroTentativiEffettuati + ": ");
             String inputUser = App.giocatore.input();
             
+            if(Analizzatore.analizzatoreSintattico(inputUser)) {
+                
+                
+                
+            } else {
+                System.out.println("Tentativo non valido!");
+            }
+            
         }
         
     }
