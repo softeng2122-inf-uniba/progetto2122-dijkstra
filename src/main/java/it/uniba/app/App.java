@@ -60,7 +60,12 @@ public final class App {
             case Analizzatore.Comando.EXIT: esci();
             break;
             case Analizzatore.Comando.GETPAROLA: String parola= getParola();
-            System.out.println("la parola segreta è "+ parola);
+            if (parola.isEmpty()){
+                System.out.println("la parola segreta non è stata impostata");
+            }
+            else {
+                System.out.println("la parola segreta è "+ parola);
+            }
             break;
             case Analizzatore.Comando.SETPAROLA: setParola(parolaSegreta);
             break;
