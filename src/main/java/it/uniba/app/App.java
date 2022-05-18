@@ -26,9 +26,9 @@ public final class App {
 		}  
     }
     
-    /*public static String getParola(){
-        
-    }*/
+    public static String getParola(){
+        return parolaSegreta;
+    }
     
     /*public static void gioca(){
         
