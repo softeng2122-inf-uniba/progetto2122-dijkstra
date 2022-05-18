@@ -33,7 +33,7 @@ public final class App {
     
     public static void gioca(){
             Partita partita= new Partita(numeroTentativiMassimi, numeroLettereMassime);
-            partita.playGame;
+            partita.playGame();
     }
     
     /*public static String getHelp(){
