@@ -26,9 +26,9 @@ public final class App {
 		}  
     }
     
-    /*public static String getParola(){
-        
-    }*/
+    public static String getParola(){
+        return parolaSegreta;
+    }
     
     /*public static void gioca(){
         
@@ -60,6 +60,7 @@ public final class App {
             case Analizzatore.Comando.EXIT: esci();
             break;
             case Analizzatore.Comando.GETPAROLA: String parola= getParola();
+            System.out.println("la parola segreta è "+ parola);
             break;
             case Analizzatore.Comando.SETPAROLA: setParola(parolaSegreta);
             break;
