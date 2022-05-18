@@ -7,7 +7,9 @@ package it.uniba.app;
 public final class App {          
     private static String parolaSegreta= new String();
     private static int numeroLettereMassime = 5;
-    //Giocatore giocatore= new Giocatore();
+    private static int numeroTentativiMassimi=5;
+    Giocatore giocatore= new Giocatore();
+    private static boolean partitaInCorso=false;
     
     public String getGreeting(){
         return "BENVENUTO IN WORDLE";
@@ -30,9 +32,11 @@ public final class App {
         return parolaSegreta;
     }
     
-    /*public static void gioca(){
-        
-    }*/
+    public static void gioca(){
+            Partita partita= new Partita();
+            partita.Partita(numeroTentativiMassimi, numeroLettereMassime);
+            partita.playGame;
+    }
     
     /*public static String getHelp(){
         
