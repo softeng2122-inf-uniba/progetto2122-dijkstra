@@ -1,5 +1,7 @@
 package it.uniba.app;
 
+import java.util.Scanner;
+
 /**classe main dell'applicazione*/
 
 /**Boundary class*/
@@ -39,7 +41,28 @@ public final class App {
     }*/
     
     public static void esci(){
-       System.exit(0);
+        
+       Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("_______________________________");
+        System.out.println("Si desidera terminare il programma ?\nDigitare y o s per confermare");
+
+        char risposta = scanner.next().charAt(0);
+         switch(risposta) {    
+            case 'y':
+            case 'Y':   
+            case 's':
+            case 'S':
+                System.out.println("Chiusura in corso....");
+                System.exit(0);   
+                break;  
+            default:    
+                System.out.println("_______________________________");
+                System.out.println("Chiusura annullata");
+                break; 
+         }
+        
+      
     }
     
 
@@ -68,6 +91,6 @@ public final class App {
             break;
         }*/
         
-      
+
     }
 }
