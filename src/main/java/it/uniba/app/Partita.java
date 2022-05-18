@@ -38,6 +38,33 @@ public final class Partita {
             System.out.println("Inserire tentativo n°" + numeroTentativiEffettuati + ": ");
             String inputUser = App.giocatore.input();
             
+            try {
+                Analizzatore.Comando comando = Analizzatore.analizzatoreComando(inputUser);
+                switch(comando){
+                    case NUOVA : App.setParola(inputUser);
+                        break;
+                    case MOSTRA :
+                        
+                        if(App.getParola() != null) {
+                            System.out.println("La parola segreta inserita e': " + App.getParola());
+                        } else System.out.println("Parola segreta non impostata");
+                        
+                        break;
+                    case AIUTO : App.getHelp();
+                        break;
+                    case GIOCA : System.out.println("Sei gia' in partita!");
+                        break;
+                    case ESCI : App.exit();
+                        break;
+                    case ABBANDONA : quitGame();
+                        break;
+                    default: System.out.println("Errore nell'inserimento del comando");
+                        break;
+                }
+            } catch (InputUserNotValid e) {
+                System.out.println(e.getMessage());
+            }
+            
             if(Analizzatore.analizzatoreSintattico(inputUser)) {
                 
                 
