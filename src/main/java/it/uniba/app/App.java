@@ -42,6 +42,7 @@ public final class App {
     
    /* public static void esci(){
         
+    
     }*/
     
 
@@ -55,7 +56,10 @@ public final class App {
         String comandoGiocatore= giocatore.input();
         Analizzatore.Comando comando= Analizzatore.analizzatoreComando(comandoGiocatore);
         switch(comando){
-            case Analizzatore.Comando.PLAY: gioca();
+            case Analizzatore.Comando.PLAY: 
+                if(getParola() != null){
+                   gioca();
+                } else System.out.println("La parola segreta non è stata ancora impostata");
             break;
             case Analizzatore.Comando.HELP: String messaggioHelp= getHelp();
             break;
