@@ -9,7 +9,6 @@ public final class App {
     private static int numeroLettereMassime = 5;
     private static int numeroTentativiMassimi=5;
     Giocatore giocatore= new Giocatore();
-    private static boolean partitaInCorso=false;
     
     public String getGreeting(){
         return "BENVENUTO IN WORDLE";
