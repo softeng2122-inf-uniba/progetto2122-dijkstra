@@ -81,21 +81,28 @@ public final class App {
         
         getHelp();
         
-        try{
-            
-            if(Analizzatore.analizzatoreComando(args[0]) == Analizzatore.Comando.AIUTO){
-            
-                getHelp();
-            
+        if(args.length>0){
+
+            try{
+
+
+                if(Analizzatore.analizzatoreComando(args[0]) == Analizzatore.Comando.AIUTO){
+
+                    getHelp();
+
+                }
+
+            }
+
+            catch(InputUserNotValid e){
+
+                System.err.println(e.getMessage());
+
             }
             
         }
         
-        catch(InputUserNotValid e){
-            
-            System.err.println(e.getMessage());
-            
-        }
+        
         
         while(true) {
             System.out.println("Introdurre un comando: ");
@@ -104,7 +111,9 @@ public final class App {
             try {
                 Analizzatore.Comando comando = Analizzatore.analizzatoreComando(inputUser);
                 switch(comando){
-                    case NUOVA : setParola(inputUser);
+                    case NUOVA : 
+                        String parola[] = inputUser.split(" ");
+                        setParola(parola[1]);
                         break;
                     case MOSTRA :
                         
