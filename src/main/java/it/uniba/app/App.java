@@ -96,7 +96,10 @@ public final class App {
                         break;
                     case GIOCA : gioca();
                         break;
-                    
+                    case ESCI : esci();
+                        break;
+                    default: System.out.println("Errore nell'inserimento del comando");
+                        break;
                 }
             } catch (InputUserNotValid e) {
                 System.out.println(e.getMessage());
