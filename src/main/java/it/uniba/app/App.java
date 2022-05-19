@@ -45,6 +45,12 @@ public final class App {
         System.out.println("Digita il comando '/show' per mostrare la parola segreta");
 
         System.out.println("Digita il comando '/exit' per uscire dall'applicazione\n\n");
+
+        System.out.println("##### RULES OF THE GAME #####");
+        System.out.println("Ad ogni tentativo le lettere possono colorarsi in tre modi:");
+        System.out.println(" - grigie se la lettera in questione non compare nella parola da indovinare");
+        System.out.println(" - gialle se vi compare ma non in quella posizione");
+        System.out.println(" - verdi se hai indovinato la posizione precisa");
     }
     
     public static void esci(){
