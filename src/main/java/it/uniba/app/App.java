@@ -43,6 +43,8 @@ public final class App {
     
         System.out.println("Digita il comando '/new <parolaSegreta>' per inserire una nuova parola segreta. Attenzione! La parola segreta da inserire deve avere lunghezza pari a " + numeroLettereMassime + " caratteri");
         System.out.println("Digita il comando '/show' per mostrare la parola segreta");
+
+        System.out.println("Digita il comando '/exit' per uscire dall'applicazione\n\n");
     }
     
     public static void esci(){
