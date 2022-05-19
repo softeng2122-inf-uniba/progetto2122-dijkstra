@@ -92,6 +92,8 @@ public final class App {
                         } else System.out.println("Parola segreta non impostata");
                         
                         break;
+                    case AIUTO : getHelp();
+                        break;
                     
                 }
             } catch (InputUserNotValid e) {
