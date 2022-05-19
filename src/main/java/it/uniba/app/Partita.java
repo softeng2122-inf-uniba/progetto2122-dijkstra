@@ -12,8 +12,6 @@ public final class Partita {
         matriceTentativi = new String [numbOfTries][numbOfWords];
         quit = false;
         
-        numeroTentativiEffettuati = 0;
-        
         /**inizializzazione matriceTentativi*/
         for(int i=0; i< numbOfTries; i++){
             for (int j=0; j<numbOfWords; j++){
@@ -36,70 +34,66 @@ public final class Partita {
         
     }
 
-    private String ricostruzioneTentativo(int posizioneTentativo){
-        
-        String parolaTentativo = "";
-        
-        for(int i=0;i<App.numeroLettereMassime;i++){
-            
-            parolaTentativo.concat(matriceTentativi[posizioneTentativo][i]);
-            
-        }
-        
-        return parolaTentativo;
-        
-    }
-    
     public void playGame() {
 
-        
-        
+
         while(!quit) {
+            boolean wasCommand = false;
+
             System.out.println("Inserire tentativo n " + numeroTentativiEffettuati + ": ");
             String inputUser = App.giocatore.input();
             
             try {
-                Analizzatore.Comando comando = Analizzatore.analizzatoreComando(inputUser);
-                switch(comando){
-                    case NUOVA : App.setParola(inputUser);
-                        if(numeroTentativiEffettuati > 0){
-                            
-                            for(int i = 0;i<numeroTentativiEffettuati;i++){
-                                
-                                String tantativo = ricostruzioneTentativo(i);
-                                
-                            }
-                            
-                        }
+                Analizzatore.Comando comando;
+                comando = Analizzatore.analizzatoreComando(inputUser);
+                switch (comando) {
+                    case NUOVA:
+                        App.setParola(inputUser);
+                        wasCommand = true;
                         break;
-                    case MOSTRA :
-                        
-                        if(App.getParola() != null) {
+                    case MOSTRA:
+                        wasCommand = true;
+                        if (App.getParola() != null) {
                             System.out.println("La parola segreta inserita e': " + App.getParola());
-                        } else System.out.println("Parola segreta non impostata");
-                        
+                        } else {
+                            System.out.println("Parola segreta non impostata");
+                        }
+
                         break;
-                    case AIUTO : App.getHelp();
+                    case AIUTO:
+                        wasCommand = true;
+                        App.getHelp();
                         break;
-                    case GIOCA : System.out.println("Sei gia' in partita!");
+                    case GIOCA:
+                        wasCommand = true;
+                        System.out.println("Sei gia' in partita!");
                         break;
-                    case ESCI : App.exit();
+                    case ESCI:
+                        wasCommand = true;
+                        App.exit();
                         break;
-                    case ABBANDONA : quitGame();
-                        break;
-                    default: System.out.println("Errore nell'inserimento del comando");
+                    case ABBANDONA:
+                        wasCommand = true;
+                        quitGame();
                         break;
                 }
+                
+                
             } catch (InputUserNotValid e) {
                 System.out.println(e.getMessage());
+                wasCommand = true;
             }
-            
-            if(Analizzatore.analizzatoreSintattico(inputUser)) {
+
+            if(wasCommand == false) {
+                if(Analizzatore.analizzatoreSintattico(inputUser)) {  
+
+                    String[] token = inputUser.split("");
+                    System.arraycopy(token, 0, matriceTentativi[numeroTentativiEffettuati], 0, App.numeroLettereMassime);           
+                    numeroTentativiEffettuati++;
                 
-                
-                
-            } else {
-                System.out.println("Tentativo non valido!");
+                } else {
+                    System.out.println("Tentativo non valido!");
+                }
             }
             
         }
