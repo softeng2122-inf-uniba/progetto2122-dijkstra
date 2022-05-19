@@ -94,6 +94,8 @@ public final class App {
                         break;
                     case AIUTO : getHelp();
                         break;
+                    case GIOCA : gioca();
+                        break;
                     
                 }
             } catch (InputUserNotValid e) {
