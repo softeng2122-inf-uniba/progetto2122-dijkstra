@@ -85,6 +85,14 @@ public final class App {
                 switch(comando){
                     case NUOVA : setParola(inputUser);
                         break;
+                    case MOSTRA :
+                        
+                        if(getParola() != null) {
+                            System.out.println("La parola segreta inserita e': " + getParola());
+                        } else System.out.println("Parola segreta non impostata");
+                        
+                        break;
+                    
                 }
             } catch (InputUserNotValid e) {
                 System.out.println(e.getMessage());
