@@ -33,9 +33,10 @@ public final class App {
         return parolaSegreta;
     }
     
-    /*public static void gioca(){
-        
-    }*/
+    public static void gioca(){
+        Partita partita= new Partita(numeroTentativiMassimi, numeroLettereMassime);
+        partita.playGame();
+    }
     
     public static void getHelp(){
         System.out.println("Ciao giocatore!");
@@ -91,7 +92,10 @@ public final class App {
         String comandoGiocatore= giocatore.input();
         Analizzatore.Comando comando= Analizzatore.analizzatoreComando(comandoGiocatore);
         switch(comando){
-            case Analizzatore.Comando.PLAY: gioca();
+            case Analizzatore.Comando.PLAY:
+                if(getParola()!= null){
+                    gioca();
+                }else System.out.println("Parola segreta non impostata");
             break;
             case Analizzatore.Comando.HELP: String messaggioHelp= getHelp();
             break;
