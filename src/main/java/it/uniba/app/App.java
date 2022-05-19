@@ -5,7 +5,7 @@ package it.uniba.app;
 /**Boundary class*/
 
 public final class App {          
-    private static String parolaSegreta;
+    private static String parolaSegreta = "";
     static int numeroLettereMassime = 5;
     static int numeroTentativiMassimi = 6;
     static Giocatore giocatore= new Giocatore();
