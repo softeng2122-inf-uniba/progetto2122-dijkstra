@@ -7,8 +7,9 @@ import java.util.Scanner;
 /**Boundary class*/
 
 public final class App {          
-    private static String parolaSegreta= new String();
-    private static int numeroLettereMassime = 5;
+    private static String parolaSegreta;
+    static int numeroLettereMassime = 5;
+    static int numeroTentativiMassimi = 6;
     //Giocatore giocatore= new Giocatore();
     
     public String getGreeting(){
