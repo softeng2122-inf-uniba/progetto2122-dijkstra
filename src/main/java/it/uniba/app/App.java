@@ -76,37 +76,35 @@ public final class App {
 
    
     public static void main(final String[] args) {  
-       System.out.println(new App().getGreeting());
-       
-        /*if(args[0].equals("--help")|| args[0].equals("-h")){
-            String messaggioHelp= getHelp();
-            System.out.println(messaggioHelp);
+        while(true) {
+            System.out.println("Introdurre un comando: ");
+            String inputUser = giocatore.input();
+            
+            try {
+                Analizzatore.Comando comando = Analizzatore.analizzatoreComando(inputUser);
+                switch(comando){
+                    case NUOVA : setParola(inputUser);
+                        break;
+                    case MOSTRA :
+                        
+                        if(getParola() != null) {
+                            System.out.println("La parola segreta inserita e': " + getParola());
+                        } else System.out.println("Parola segreta non impostata");
+                        
+                        break;
+                    case AIUTO : getHelp();
+                        break;
+                    case GIOCA : gioca();
+                        break;
+                    case ESCI : esci();
+                        break;
+                    default: System.out.println("Errore nell'inserimento del comando");
+                        break;
+                }
+            } catch (InputUserNotValid e) {
+                System.out.println(e.getMessage());
+            }
         }
-        String comandoGiocatore= giocatore.input();
-        Analizzatore.Comando comando= Analizzatore.analizzatoreComando(comandoGiocatore);
-        switch(comando){
-            case Analizzatore.Comando.PLAY:
-                if(getParola()!= null){
-                    gioca();
-                }else System.out.println("Parola segreta non impostata");
-            break;
-            case Analizzatore.Comando.HELP: String messaggioHelp= getHelp();
-            break;
-            case Analizzatore.Comando.EXIT: esci();
-            break;
-            case Analizzatore.Comando.GETPAROLA: String parola= getParola();
-            if (parola.isEmpty()){
-                System.out.println("la parola segreta non � stata impostata");
-            }
-            else {
-                System.out.println("la parola segreta � "+ parola);
-            }
-            break;
-            case Analizzatore.Comando.SETPAROLA: setParola(parolaSegreta);
-            break;
-            default: System.out.println("Errore nell'inserimento del comando");
-            break;
-        }*/
-      
     }
 }
+
