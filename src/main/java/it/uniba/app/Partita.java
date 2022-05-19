@@ -97,10 +97,16 @@ public final class Partita {
         }
     }
 
+    /*
+    checkWin :  variabile di supporto per controllare se ci sia almeno una parola con tutti i caratteri verdi
+                necessaria quando si fa /new <parola> per controllare se la nuova parola segreta è già stata inserita    
+    */
+
     private boolean stampaColoriTentativi() {
-        boolean youWin = true;
+        boolean checkWin, youWin = false;
         
         for(int i = 0; i < numeroTentativiEffettuati; i++) {
+            checkWin = true; 
             
             String token = "";
             
@@ -118,17 +124,21 @@ public final class Partita {
                         break;
                     case GIALLO:
                         System.out.print("\t\u001B[33m" + matriceTentativi[i][j] + "\u001B[0m");
-                        youWin = false;
+                        checkWin = false;
                         break;
                     case GRIGIO:
                         System.out.print("\t" + matriceTentativi[i][j]);
-                        youWin = false;
+                        checkWin = false;
                         break;
                     default:
                         break;
                 }
             }
             System.out.println();
+            
+            if(checkWin == true) {
+                youWin = true;
+            } 
         }
         
         return youWin;
