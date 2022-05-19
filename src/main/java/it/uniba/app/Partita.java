@@ -32,4 +32,14 @@ public final class Partita {
         }
     }
 
+    public void playGame() {
+
+        if (Analizzatore.analizzatoreSintattico(inputUser)) {
+            //da implementare l'inserimento del tentativo nella matrice
+
+        } else {
+            System.out.println("Tentativo non valido!");
+        }
+    }
+
 }
