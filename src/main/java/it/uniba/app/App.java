@@ -41,8 +41,8 @@ public final class App {
         
         else{
             
-            System.out.println("Impossibile avviare il programma in quanto non"
-                    + " è stata impostata una parola segreta");
+            System.out.println("Impossibile avviare la partita in quanto non"
+                    + " e' stata impostata una parola segreta");
             
         }
         

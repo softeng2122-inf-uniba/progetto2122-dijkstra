@@ -14,7 +14,7 @@ public final class Analizzatore{
     private static final String stringNuova = new String("/new");
     private static final String stringMostra = new String("/show");
     private static final String stringHelp = new String("/help");
-    private static final String stringLessLessH = new String("--h");
+    private static final String stringLessLessH = new String("--help");
     private static final String stringLessHelp = new String("-h");
     private static final String stringPlay = new String("/play");
     private static final String stringExit = new String("/exit");
