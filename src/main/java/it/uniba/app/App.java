@@ -33,9 +33,10 @@ public final class App {
         return parolaSegreta;
     }
     
-    /*public static void gioca(){
-        
-    }*/
+    public static void gioca(){
+        Partita partita= new Partita(numeroTentativiMassimi,numeroLettereMassime);
+        partita.playGame();
+    }
     
     public static void getHelp(){
         System.out.println("Ciao giocatore!");
