@@ -79,7 +79,7 @@ public final class Partita {
                         break;
                     case ESCI:
                         wasCommand = true;
-                        App.exit();
+                        App.esci();
                         break;
                     case ABBANDONA:
                         wasCommand = true;
