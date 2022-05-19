@@ -36,9 +36,11 @@ public final class App {
         
     }*/
     
-    /*public static String getHelp(){
-        
-    }*/
+    public static void getHelp(){
+        System.out.println("Ciao giocatore!");
+        System.out.println("Digita il comando '/play' per avviare una nuova partita");
+        System.out.println("Digita il comando '/quit' per uscire dalla partita. Attenzione questo comando e' disponibile solo se hai avviato la partita!");
+    }
     
     public static void esci(){
         
@@ -83,10 +85,10 @@ public final class App {
             break;
             case Analizzatore.Comando.GETPAROLA: String parola= getParola();
             if (parola.isEmpty()){
-                System.out.println("la parola segreta non è stata impostata");
+                System.out.println("la parola segreta non ï¿½ stata impostata");
             }
             else {
-                System.out.println("la parola segreta è "+ parola);
+                System.out.println("la parola segreta ï¿½ "+ parola);
             }
             break;
             case Analizzatore.Comando.SETPAROLA: setParola(parolaSegreta);
