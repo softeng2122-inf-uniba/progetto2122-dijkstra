@@ -76,37 +76,12 @@ public final class App {
 
    
     public static void main(final String[] args) {  
-       System.out.println(new App().getGreeting());
-       
-        /*if(args[0].equals("--help")|| args[0].equals("-h")){
-            String messaggioHelp= getHelp();
-            System.out.println(messaggioHelp);
+        while(true) {
+            System.out.println("Introdurre un comando: ");
+            String inputUser = giocatore.input();
+            
+            
         }
-        String comandoGiocatore= giocatore.input();
-        Analizzatore.Comando comando= Analizzatore.analizzatoreComando(comandoGiocatore);
-        switch(comando){
-            case Analizzatore.Comando.PLAY:
-                if(getParola()!= null){
-                    gioca();
-                }else System.out.println("Parola segreta non impostata");
-            break;
-            case Analizzatore.Comando.HELP: String messaggioHelp= getHelp();
-            break;
-            case Analizzatore.Comando.EXIT: esci();
-            break;
-            case Analizzatore.Comando.GETPAROLA: String parola= getParola();
-            if (parola.isEmpty()){
-                System.out.println("la parola segreta non � stata impostata");
-            }
-            else {
-                System.out.println("la parola segreta � "+ parola);
-            }
-            break;
-            case Analizzatore.Comando.SETPAROLA: setParola(parolaSegreta);
-            break;
-            default: System.out.println("Errore nell'inserimento del comando");
-            break;
-        }*/
-      
     }
 }
+
