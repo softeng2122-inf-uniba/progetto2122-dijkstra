@@ -84,7 +84,11 @@ public final class Partita {
             }
             
             if(wasCommand == false) {
-                if (Analizzatore.analizzatoreSintattico(inputUser)) {           
+                if (Analizzatore.analizzatoreSintattico(inputUser)) {
+                    
+                    String[] token = inputUser.split("");
+                    System.arraycopy(token, 0, matriceTentativi[numeroTentativiEffettuati], 0, App.numeroLettereMassime);           
+                    numeroTentativiEffettuati++;
 
                 } else {
                     System.out.println("Tentativo non valido!");
