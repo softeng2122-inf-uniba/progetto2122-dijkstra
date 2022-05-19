@@ -97,7 +97,8 @@ public final class Partita {
         }
     }
 
-    private void stampaColoriTentativi() {
+    private boolean stampaColoriTentativi() {
+        boolean youWin = true;
         
         for(int i = 0; i < numeroTentativiEffettuati; i++) {
             
@@ -108,7 +109,7 @@ public final class Partita {
             }
             
             Analizzatore.Colore[] coloriCaratteri = Analizzatore.analizzatoreTentativo(token, App.getParola());
-
+             
             for (int j = 0; j < App.numeroLettereMassime; j++) {
                 
                 if(null != coloriCaratteri[j]) switch (coloriCaratteri[j]) {
@@ -117,9 +118,11 @@ public final class Partita {
                         break;
                     case GIALLO:
                         System.out.print("\t\u001B[33m" + matriceTentativi[i][j] + "\u001B[0m");
+                        youWin = false;
                         break;
                     case GRIGIO:
                         System.out.print("\t" + matriceTentativi[i][j]);
+                        youWin = false;
                         break;
                     default:
                         break;
@@ -127,5 +130,7 @@ public final class Partita {
             }
             System.out.println();
         }
+        
+        return youWin;
     }
 }
