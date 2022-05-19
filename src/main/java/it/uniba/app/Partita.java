@@ -36,6 +36,7 @@ public final class Partita {
     public void playGame() {
 
         while (quit == false) {
+            boolean wasCommand = false;
                  
             System.out.println("Inserire tentativo n " + (numeroTentativiEffettuati + 1) + ": ");
             String inputUser = App.giocatore.input();
@@ -46,8 +47,10 @@ public final class Partita {
                 switch (comando) {
                     case NUOVA:
                         App.setParola(inputUser);
+                        wasCommand = true;
                         break;
                     case MOSTRA:
+                        wasCommand = true;
                         if (App.getParola() != null) {
                             System.out.println("La parola segreta inserita e': " + App.getParola());
                         } else {
@@ -56,15 +59,19 @@ public final class Partita {
 
                         break;
                     case AIUTO:
+                        wasCommand = true;
                         App.getHelp();
                         break;
                     case GIOCA:
+                        wasCommand = true;
                         System.out.println("Sei gia' in partita!");
                         break;
                     case ESCI:
+                        wasCommand = true;
                         App.exit();
                         break;
                     case ABBANDONA:
+                        wasCommand = true;
                         quitGame();
                         break;
                 }
@@ -72,15 +79,19 @@ public final class Partita {
                 
             } catch (InputUserNotValid e) {
                 System.out.println(e.getMessage());
+                wasCommand = true;
             }
             
-            if (Analizzatore.analizzatoreSintattico(inputUser)) {
+            if(wasCommand == false) {
+                if (Analizzatore.analizzatoreSintattico(inputUser)) {
 
-            } else {
-                System.out.println("Tentativo non valido!");
+                } else {
+                    System.out.println("Tentativo non valido!");
+                }
             }
         }
     }
+    
     
 
 }
