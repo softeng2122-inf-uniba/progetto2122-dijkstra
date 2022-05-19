@@ -164,4 +164,23 @@ public final class Partita {
         
         return youWin;
     }
+    
+    private void quitGame(){
+        
+        System.out.println("_______________________________");
+        System.out.println("Si desidera abbandonare la partita?\nDigitare y o s per confermare");
+
+        String risposta = App.giocatore.input();
+        risposta = risposta.toLowerCase(); 
+        
+        if(risposta.equals("y")|| risposta.equals("s")){
+             System.out.println("Abbandono partita in corso....");
+             quit = true; 
+        }else{
+             System.out.println("_______________________________");
+             System.out.println("Abbandono annullato");
+        }        
+      
+    }
+    
 }
