@@ -76,6 +76,27 @@ public final class App {
 
    
     public static void main(final String[] args) {  
+        
+        System.out.println(new App().getGreeting());
+        
+        getHelp();
+        
+        try{
+            
+            if(Analizzatore.analizzatoreComando(args[0]) == Analizzatore.Comando.AIUTO){
+            
+                getHelp();
+            
+            }
+            
+        }
+        
+        catch(InputUserNotValid e){
+            
+            System.err.println(e.getMessage());
+            
+        }
+        
         while(true) {
             System.out.println("Introdurre un comando: ");
             String inputUser = giocatore.input();
