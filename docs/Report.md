@@ -16,6 +16,7 @@
 
 ## **Introduzione**
 
+Wordle è un gioco di parole, i giocatori hanno un numero limitato di tentativi per indovinare una parola, con un feedback fornito per ogni ipotesi sotto forma forma di variazione di colore che indicano quando le lettere corrispondono o occupano la posizione corretta.
 
 
 ## **Il modello di dominio**
