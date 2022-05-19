@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public final class App {          
     private static String parolaSegreta= new String();
-    private static int numeroLettereMassime = 5;
+    public static final int numeroLettereMassime = 5;
     //Giocatore giocatore= new Giocatore();
     
     public String getGreeting(){
