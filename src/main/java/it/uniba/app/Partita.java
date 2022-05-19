@@ -2,6 +2,7 @@ package it.uniba.app;
 
 public final class Partita {
     private String[][] matriceTentativi;
+    private boolean quit = false;
 
     Partita(int numbOfWords, int numbOfTries) {
         System.out.println("Creazione partita...");
@@ -34,12 +35,52 @@ public final class Partita {
 
     public void playGame() {
 
-        if (Analizzatore.analizzatoreSintattico(inputUser)) {
-            //da implementare l'inserimento del tentativo nella matrice
+        while (quit == false) {
+                 
+            System.out.println("Inserire tentativo n " + (numeroTentativiEffettuati + 1) + ": ");
+            String inputUser = App.giocatore.input();
 
-        } else {
-            System.out.println("Tentativo non valido!");
+            try {
+                Analizzatore.Comando comando;
+                comando = Analizzatore.analizzatoreComando(inputUser);
+                switch (comando) {
+                    case NUOVA:
+                        App.setParola(inputUser);
+                        break;
+                    case MOSTRA:
+                        if (App.getParola() != null) {
+                            System.out.println("La parola segreta inserita e': " + App.getParola());
+                        } else {
+                            System.out.println("Parola segreta non impostata");
+                        }
+
+                        break;
+                    case AIUTO:
+                        App.getHelp();
+                        break;
+                    case GIOCA:
+                        System.out.println("Sei gia' in partita!");
+                        break;
+                    case ESCI:
+                        App.exit();
+                        break;
+                    case ABBANDONA:
+                        quitGame();
+                        break;
+                }
+                
+                
+            } catch (InputUserNotValid e) {
+                System.out.println(e.getMessage());
+            }
+            
+            if (Analizzatore.analizzatoreSintattico(inputUser)) {
+
+            } else {
+                System.out.println("Tentativo non valido!");
+            }
         }
     }
+    
 
 }
