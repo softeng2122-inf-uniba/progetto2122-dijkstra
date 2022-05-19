@@ -51,6 +51,8 @@ public final class App {
         System.out.println(" - grigie se la lettera in questione non compare nella parola da indovinare");
         System.out.println(" - gialle se vi compare ma non in quella posizione");
         System.out.println(" - verdi se hai indovinato la posizione precisa");
+
+        System.out.println("\nRicorda che hai a disposizione " + numeroTentativiMassimi + " tentativi per indovinare la parola."); 
     }
     
     public static void esci(){
