@@ -32,8 +32,20 @@ public final class App {
     }
     
     public static void gioca(){
-        Partita partita= new Partita(numeroLettereMassime,numeroTentativiMassimi);
-        partita.playGame();
+        if(!parolaSegreta.isEmpty()){
+            
+            Partita partita= new Partita(numeroLettereMassime,numeroTentativiMassimi);
+            partita.playGame();
+            
+        }
+        
+        else{
+            
+            System.out.println("Impossibile avviare il programma in quanto non"
+                    + " è stata impostata una parola segreta");
+            
+        }
+        
     }
     
     public static void getHelp(){
