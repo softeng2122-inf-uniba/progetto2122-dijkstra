@@ -80,7 +80,12 @@ public final class App {
             System.out.println("Introdurre un comando: ");
             String inputUser = giocatore.input();
             
-            
+            try {
+                Analizzatore.Comando comando = Analizzatore.analizzatoreComando(inputUser);
+                
+            } catch (InputUserNotValid e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 }
