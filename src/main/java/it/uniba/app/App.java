@@ -40,6 +40,9 @@ public final class App {
         System.out.println("Ciao giocatore!");
         System.out.println("Digita il comando '/play' per avviare una nuova partita");
         System.out.println("Digita il comando '/quit' per uscire dalla partita. Attenzione questo comando e' disponibile solo se hai avviato la partita!");
+    
+        System.out.println("Digita il comando '/new <parolaSegreta>' per inserire una nuova parola segreta. Attenzione! La parola segreta da inserire deve avere lunghezza pari a " + numeroLettereMassime + " caratteri");
+        System.out.println("Digita il comando '/show' per mostrare la parola segreta");
     }
     
     public static void esci(){
