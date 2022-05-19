@@ -82,7 +82,10 @@ public final class App {
             
             try {
                 Analizzatore.Comando comando = Analizzatore.analizzatoreComando(inputUser);
-                
+                switch(comando){
+                    case NUOVA : setParola(inputUser);
+                        break;
+                }
             } catch (InputUserNotValid e) {
                 System.out.println(e.getMessage());
             }
