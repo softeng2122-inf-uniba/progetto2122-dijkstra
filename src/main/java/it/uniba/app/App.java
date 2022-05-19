@@ -77,7 +77,7 @@ public final class App {
    
     public static void main(final String[] args) {  
        System.out.println(new App().getGreeting());
-       esci();
+       
         /*if(args[0].equals("--help")|| args[0].equals("-h")){
             String messaggioHelp= getHelp();
             System.out.println(messaggioHelp);
