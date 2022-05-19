@@ -5,7 +5,7 @@ package it.uniba.app;
 /**Boundary class*/
 
 public final class App {          
-    private static String parolaSegreta;
+    private static String parolaSegreta = "";
     static int numeroLettereMassime = 5;
     static int numeroTentativiMassimi = 6;
     static Giocatore giocatore= new Giocatore();
@@ -32,8 +32,20 @@ public final class App {
     }
     
     public static void gioca(){
-        Partita partita= new Partita(numeroTentativiMassimi, numeroLettereMassime);
-        partita.playGame();
+        if(!parolaSegreta.isEmpty()){
+            
+            Partita partita= new Partita(numeroLettereMassime,numeroTentativiMassimi);
+            partita.playGame();
+            
+        }
+        
+        else{
+            
+            System.out.println("Impossibile avviare il programma in quanto non"
+                    + " è stata impostata una parola segreta");
+            
+        }
+        
     }
     
     public static void getHelp(){
@@ -81,21 +93,28 @@ public final class App {
         
         getHelp();
         
-        try{
-            
-            if(Analizzatore.analizzatoreComando(args[0]) == Analizzatore.Comando.AIUTO){
-            
-                getHelp();
-            
+        if(args.length>0){
+
+            try{
+
+
+                if(Analizzatore.analizzatoreComando(args[0]) == Analizzatore.Comando.AIUTO){
+
+                    getHelp();
+
+                }
+
+            }
+
+            catch(InputUserNotValid e){
+
+                System.err.println(e.getMessage());
+
             }
             
         }
         
-        catch(InputUserNotValid e){
-            
-            System.err.println(e.getMessage());
-            
-        }
+        
         
         while(true) {
             System.out.println("Introdurre un comando: ");
@@ -104,7 +123,9 @@ public final class App {
             try {
                 Analizzatore.Comando comando = Analizzatore.analizzatoreComando(inputUser);
                 switch(comando){
-                    case NUOVA : setParola(inputUser);
+                    case NUOVA : 
+                        String parola[] = inputUser.split(" ");
+                        setParola(parola[1]);
                         break;
                     case MOSTRA :
                         

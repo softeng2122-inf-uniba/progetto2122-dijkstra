@@ -115,7 +115,7 @@ public final class Partita {
             System.out.println("E' stato raggiunto il numero dei tentativi possibili");
         }
         
-        System.out.println("Chiusura partita in corso...");
+        System.out.println("Abbandono partita in corso....");
     }
 
     //funzione di calcolo dei colori corrispondenti ai tentativi effettuati
@@ -174,7 +174,6 @@ public final class Partita {
         risposta = risposta.toLowerCase(); 
         
         if(risposta.equals("y")|| risposta.equals("s")){
-             System.out.println("Abbandono partita in corso....");
              quit = true; 
         }else{
              System.out.println("_______________________________");
