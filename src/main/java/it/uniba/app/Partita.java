@@ -36,7 +36,8 @@ public final class Partita {
 
     public void playGame() {
 
-        while (quit == false) {
+        boolean youWin = false;
+        while (quit == false && youWin == false && numeroTentativiEffettuati < App.numeroTentativiMassimi) {
             boolean wasCommand = false;
                  
             System.out.println("Inserire tentativo n " + (numeroTentativiEffettuati + 1) + ": ");
@@ -48,6 +49,7 @@ public final class Partita {
                 switch (comando) {
                     case NUOVA:
                         App.setParola(inputUser);
+                        youWin = stampaColoriTentativi();
                         wasCommand = true;
                         break;
                     case MOSTRA:
@@ -89,12 +91,19 @@ public final class Partita {
                     String[] token = inputUser.split("");
                     System.arraycopy(token, 0, matriceTentativi[numeroTentativiEffettuati], 0, App.numeroLettereMassime);           
                     numeroTentativiEffettuati++;
+                                        
+                    youWin = stampaColoriTentativi();
 
                 } else {
                     System.out.println("Tentativo non valido!");
                 }
             }
         }
+        
+        if(youWin == true) {
+            System.out.println("Hai vinto!");
+        }
+        
     }
 
     /*
