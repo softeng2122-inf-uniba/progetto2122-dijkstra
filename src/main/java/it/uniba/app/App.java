@@ -32,7 +32,7 @@ public final class App {
     }
     
     public static void gioca(){
-        Partita partita= new Partita(numeroTentativiMassimi, numeroLettereMassime);
+        Partita partita= new Partita(numeroLettereMassime,numeroTentativiMassimi);
         partita.playGame();
     }
     
