@@ -7,8 +7,9 @@ import java.util.Scanner;
 /**Boundary class*/
 
 public final class App {          
-    private static String parolaSegreta= new String();
-    private static int numeroLettereMassime = 5;
+    private static String parolaSegreta;
+    static int numeroLettereMassime = 5;
+    static int numeroTentativiMassimi = 6;
     //Giocatore giocatore= new Giocatore();
     
     public String getGreeting(){
@@ -36,9 +37,24 @@ public final class App {
         
     }*/
     
-    /*public static String getHelp(){
-        
-    }*/
+    public static void getHelp(){
+        System.out.println("Ciao giocatore!");
+        System.out.println("Digita il comando '/play' per avviare una nuova partita");
+        System.out.println("Digita il comando '/quit' per uscire dalla partita. Attenzione questo comando e' disponibile solo se hai avviato la partita!");
+    
+        System.out.println("Digita il comando '/new <parolaSegreta>' per inserire una nuova parola segreta. Attenzione! La parola segreta da inserire deve avere lunghezza pari a " + numeroLettereMassime + " caratteri");
+        System.out.println("Digita il comando '/show' per mostrare la parola segreta");
+
+        System.out.println("Digita il comando '/exit' per uscire dall'applicazione\n\n");
+
+        System.out.println("##### RULES OF THE GAME #####");
+        System.out.println("Ad ogni tentativo le lettere possono colorarsi in tre modi:");
+        System.out.println(" - grigie se la lettera in questione non compare nella parola da indovinare");
+        System.out.println(" - gialle se vi compare ma non in quella posizione");
+        System.out.println(" - verdi se hai indovinato la posizione precisa");
+
+        System.out.println("\nRicorda che hai a disposizione " + numeroTentativiMassimi + " tentativi per indovinare la parola."); 
+    }
     
     public static void esci(){
         
@@ -83,10 +99,10 @@ public final class App {
             break;
             case Analizzatore.Comando.GETPAROLA: String parola= getParola();
             if (parola.isEmpty()){
-                System.out.println("la parola segreta non è stata impostata");
+                System.out.println("la parola segreta non ï¿½ stata impostata");
             }
             else {
-                System.out.println("la parola segreta è "+ parola);
+                System.out.println("la parola segreta ï¿½ "+ parola);
             }
             break;
             case Analizzatore.Comando.SETPAROLA: setParola(parolaSegreta);
