@@ -103,7 +103,11 @@ public final class Partita {
         if(youWin == true) {
             System.out.println("Hai vinto!");
         }
+        else if(numeroTentativiEffettuati == App.numeroTentativiMassimi) {
+            System.out.println("E' stato raggiunto il numero dei tentativi possibili");
+        }
         
+        System.out.println("Chiusura partita in corso...");
     }
 
     /*
