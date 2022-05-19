@@ -96,8 +96,18 @@ public final class Partita {
             }
         }
     }
-    
-    
-    
 
+    private void stampaColoriTentativi() {
+        
+        for(int i = 0; i < numeroTentativiEffettuati; i++) {
+            
+            String token = "";
+            
+            for(int k = 0; k < App.numeroLettereMassime; k++) {
+                token = token.concat(matriceTentativi[i][k]);
+            }
+            
+            Analizzatore.Colore[] coloriCaratteri = Analizzatore.analizzatoreTentativo(token, App.getParola());
+        }
+    }
 }
