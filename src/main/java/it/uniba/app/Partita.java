@@ -111,6 +111,24 @@ public final class Partita {
             
             Analizzatore.Colore[] coloriCaratteri = Analizzatore.analizzatoreTentativo(token, App.getParola());
              
+            for (int j = 0; j < App.numeroLettereMassime; j++) {
+                
+                if(null != coloriCaratteri[j]) switch (coloriCaratteri[j]) {
+                    case VERDE:
+                        System.out.print("\t\u001B[32m" + matriceTentativi[i][j] + "\u001B[0m");
+                        break;
+                    case GIALLO:
+                        System.out.print("\t\u001B[33m" + matriceTentativi[i][j] + "\u001B[0m");
+                        break;
+                    case GRIGIO:
+                        System.out.print("\t" + matriceTentativi[i][j]);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            System.out.println();
+
         }
         
     }
