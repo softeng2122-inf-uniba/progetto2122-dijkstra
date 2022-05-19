@@ -1,10 +1,16 @@
 package it.uniba.app;
 
-public final class Partita {
-    private String[][] matriceTentativi;
-    private boolean quit = false;
-    private int numeroTentativiEffettuati;
+/** classe che descrive la sessione di una partita */
 
+/** Boundary class */
+
+public final class Partita {
+    private String[][] matriceTentativi;    // matrice contenete i caratteri dei tentativi effettuati
+    private boolean quit = false;           // variabile booleana per uscire dalla partita
+    private int numeroTentativiEffettuati;  // contatore del numero di tentativi che sono stati effettuati
+
+
+    // metodo costruttore
     Partita(int numbOfWords, int numbOfTries) {
         System.out.println("Creazione partita...");
 
@@ -24,6 +30,7 @@ public final class Partita {
         System.out.println("Partita creata! Puoi cominciare a giocare");
     }
 
+    //metodo di stampa della matrice
     private void stampaMatrice() {
 
         for (int i = 0; i < App.numeroTentativiMassimi; i++) {
@@ -34,16 +41,17 @@ public final class Partita {
         }
     }
 
+    //funzione principale per inserire un tentativo o un comando
     public void playGame() {
 
-        boolean youWin = false;
+        boolean youWin = false;             //variabile per controllo se si ha vinto la partita
         while (quit == false && youWin == false && numeroTentativiEffettuati < App.numeroTentativiMassimi) {
-            boolean wasCommand = false;
+            boolean wasCommand = false;     //variabile di controllo per differenziare i tentativi effettuati da eventuali comandi inseriti
                  
             System.out.println("Inserire tentativo n " + (numeroTentativiEffettuati + 1) + ": ");
             String inputUser = App.giocatore.input();
 
-            try {
+            try {                           //controllo di inserimento di un eventuale comando
                 Analizzatore.Comando comando;
                 comando = Analizzatore.analizzatoreComando(inputUser);
                 switch (comando) {
@@ -89,7 +97,7 @@ public final class Partita {
                 if (Analizzatore.analizzatoreSintattico(inputUser)) {
                     
                     String[] token = inputUser.split("");
-                    System.arraycopy(token, 0, matriceTentativi[numeroTentativiEffettuati], 0, App.numeroLettereMassime);           
+                    System.arraycopy(token, 0, matriceTentativi[numeroTentativiEffettuati], 0, App.numeroLettereMassime);   //copia l'input dell'utente all'interno della matrice        
                     numeroTentativiEffettuati++;
                                         
                     youWin = stampaColoriTentativi();
@@ -110,11 +118,11 @@ public final class Partita {
         System.out.println("Chiusura partita in corso...");
     }
 
+    //funzione di calcolo dei colori corrispondenti ai tentativi effettuati
     /*
     checkWin :  variabile di supporto per controllare se ci sia almeno una parola con tutti i caratteri verdi
                 necessaria quando si fa /new <parola> per controllare se la nuova parola segreta è già stata inserita    
     */
-
     private boolean stampaColoriTentativi() {
         boolean checkWin, youWin = false;
         
