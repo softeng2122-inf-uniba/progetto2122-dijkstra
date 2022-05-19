@@ -3,6 +3,7 @@ package it.uniba.app;
 public final class Partita {
     private String[][] matriceTentativi;
     private boolean quit = false;
+    private int numeroTentativiEffettuati;
 
     Partita(int numbOfWords, int numbOfTries) {
         System.out.println("Creazione partita...");
@@ -83,7 +84,7 @@ public final class Partita {
             }
             
             if(wasCommand == false) {
-                if (Analizzatore.analizzatoreSintattico(inputUser)) {
+                if (Analizzatore.analizzatoreSintattico(inputUser)) {           
 
                 } else {
                     System.out.println("Tentativo non valido!");
@@ -91,6 +92,7 @@ public final class Partita {
             }
         }
     }
+    
     
     
 
