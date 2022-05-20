@@ -97,10 +97,16 @@ public final class Partita {
                 if (Analizzatore.analizzatoreSintattico(inputUser)) {
                     
                     String[] token = inputUser.split("");
-                    System.arraycopy(token, 0, matriceTentativi[numeroTentativiEffettuati], 0, App.numeroLettereMassime);   //copia l'input dell'utente all'interno della matrice        
-                    numeroTentativiEffettuati++;
+                    if (inputUser.length() < App.numeroLettereMassime)
+                    	System.out.println("Tentativo incompleto");
+                    else if (inputUser.length() > App.numeroLettereMassime)
+                    	System.out.println("Tentativo eccessivo");
+                    else {
+                    	System.arraycopy(token, 0, matriceTentativi[numeroTentativiEffettuati], 0, App.numeroLettereMassime);   //copia l'input dell'utente all'interno della matrice        
+                    	numeroTentativiEffettuati++;
                                         
-                    youWin = stampaColoriTentativi();
+                    	youWin = stampaColoriTentativi();
+                    }
 
                 } else {
                     System.out.println("Tentativo non valido!");
