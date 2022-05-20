@@ -183,6 +183,13 @@ ___
 ___
 ### **Design pattern**
 
+Le principari componenti che sono stati individuate sono:
+ - classe Giocatore
+ - classe Gioco
+ - classe Partita
+
+Un giocatore che si interfaccia con il gioco avrà la possibilità di dare in input dei comandi per ricevere informazioni sul gioco o poter avviare una partita. All’interno del gioco è definita la parola segreta utile per il confronto dei tentativi effettuati all’interno della partita. Il giocatore, avviata la partità avrà la possibilità di inserire comandi - i quali hanno prefisso ‘/’ - e tentativi. Ogni input che viene effettuato dall’utente - tentativo o comando che sia - passa da un analizzatore per verificare la correttezza sintattica e/o per la verifica dell’esistenza del comando inserito.
+
 ___
 ### **Commenti decisioni prese**
 
