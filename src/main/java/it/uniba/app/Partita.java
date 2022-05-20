@@ -62,12 +62,6 @@ public final class Partita {
                         break;
                     case MOSTRA:
                         wasCommand = true;
-                        if (App.getParola() != null) {
-                            System.out.println("La parola segreta inserita e': " + App.getParola());
-                        } else {
-                            System.out.println("Parola segreta non impostata");
-                        }
-
                         break;
                     case AIUTO:
                         wasCommand = true;
