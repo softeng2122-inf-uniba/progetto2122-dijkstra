@@ -68,31 +68,34 @@ public final class Analizzatore{
 
     public static Comando analizzatoreComando(String inputUser) throws InputUserNotValid {
 
-        token = inputUser.trim().split(" ");
+        if(inputUser.length() > 0) {
 
-		if (token.length <= 2) {
+            token = inputUser.trim().split(" ");
 
-			if (token[0].equalsIgnoreCase(stringNuova)) {
-                return Comando.NUOVA;
-			} else if (token[0].equalsIgnoreCase(stringMostra)) {
-                return Comando.MOSTRA;
-			} else if (token[0].equalsIgnoreCase(stringHelp) || token[0].equalsIgnoreCase(stringLessLessH)
-					|| token[0].equalsIgnoreCase(stringLessHelp)) {
-                return Comando.AIUTO;
-			} else if (token[0].equalsIgnoreCase(stringPlay)) {
-                return Comando.GIOCA;
-			} else if (token[0].equalsIgnoreCase(stringExit)) {
-                return Comando.ESCI;
-			} else if (token[0].equalsIgnoreCase(stringQuit)) {
-                return Comando.ABBANDONA;
-			} else if (token[0].charAt(0) == '/') {
-				throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
-			}
+            if (token.length <= 2) {
 
-		} else
-			throw new InputUserNotValid("Comando non valido");
+                if (token[0].equalsIgnoreCase(stringNuova)) {
+                    return Comando.NUOVA;
+                } else if (token[0].equalsIgnoreCase(stringMostra)) {
+                    return Comando.MOSTRA;
+                } else if (token[0].equalsIgnoreCase(stringHelp) || token[0].equalsIgnoreCase(stringLessLessH)
+                        || token[0].equalsIgnoreCase(stringLessHelp)) {
+                    return Comando.AIUTO;
+                } else if (token[0].equalsIgnoreCase(stringPlay)) {
+                    return Comando.GIOCA;
+                } else if (token[0].equalsIgnoreCase(stringExit)) {
+                    return Comando.ESCI;
+                } else if (token[0].equalsIgnoreCase(stringQuit)) {
+                    return Comando.ABBANDONA;
+                } else if (token[0].charAt(0) == '/') {
+                    throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
+                }
+
+            } else throw new InputUserNotValid("Comando non valido");
+
+        } else throw new InputUserNotValid("Comando non valido");
                 
-                return Comando.ERRORE;
+        return Comando.ERRORE;
 	}
     
     public static boolean analizzatoreSintattico(String inputUser) {

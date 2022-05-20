@@ -90,31 +90,19 @@ public final class App {
         
         System.out.println(new App().getGreeting());
         
-        getHelp();
-        
-        if(args.length>0){
-
+        if(args.length > 0){
             try{
-
-
                 if(Analizzatore.analizzatoreComando(args[0]) == Analizzatore.Comando.AIUTO){
-
                     getHelp();
-
                 }
-
             }
-
             catch(InputUserNotValid e){
-
                 System.err.println(e.getMessage());
-
-            }
-            
+            }  
+        } else {
+            getHelp();
         }
-        
-        
-        
+
         while(true) {
             System.out.println("Introdurre un comando: ");
             String inputUser = giocatore.input();
