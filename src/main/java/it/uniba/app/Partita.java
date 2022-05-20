@@ -62,12 +62,6 @@ public final class Partita {
                         break;
                     case MOSTRA:
                         wasCommand = true;
-                        if (App.getParola() != null) {
-                            System.out.println("La parola segreta inserita e': " + App.getParola());
-                        } else {
-                            System.out.println("Parola segreta non impostata");
-                        }
-
                         break;
                     case AIUTO:
                         wasCommand = true;
@@ -97,10 +91,16 @@ public final class Partita {
                 if (Analizzatore.analizzatoreSintattico(inputUser)) {
                     
                     String[] token = inputUser.split("");
-                    System.arraycopy(token, 0, matriceTentativi[numeroTentativiEffettuati], 0, App.numeroLettereMassime);   //copia l'input dell'utente all'interno della matrice        
-                    numeroTentativiEffettuati++;
+                    if (inputUser.length() < App.numeroLettereMassime)
+                    	System.out.println("Tentativo incompleto");
+                    else if (inputUser.length() > App.numeroLettereMassime)
+                    	System.out.println("Tentativo eccessivo");
+                    else {
+                    	System.arraycopy(token, 0, matriceTentativi[numeroTentativiEffettuati], 0, App.numeroLettereMassime);   //copia l'input dell'utente all'interno della matrice        
+                    	numeroTentativiEffettuati++;
                                         
-                    youWin = stampaColoriTentativi();
+                    	youWin = stampaColoriTentativi();
+                    }
 
                 } else {
                     System.out.println("Tentativo non valido!");
@@ -109,13 +109,13 @@ public final class Partita {
         }
         
         if(youWin == true) {
-            System.out.println("Hai vinto!");
+            System.out.println("Parola segreta indovinata\nNumero tentativi: " + numeroTentativiEffettuati);
         }
         else if(numeroTentativiEffettuati == App.numeroTentativiMassimi) {
-            System.out.println("E' stato raggiunto il numero dei tentativi possibili");
+            System.out.println("Hai raggiunto il numero massimo di tentativi\nLa parola segreta e': " +  App.getParola());
         }
         
-        System.out.println("Abbandono partita in corso....");
+        System.out.println("Abbandono partita in corso...");
     }
 
     //funzione di calcolo dei colori corrispondenti ai tentativi effettuati

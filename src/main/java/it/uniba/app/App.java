@@ -5,7 +5,7 @@ package it.uniba.app;
 /**Boundary class*/
 
 public final class App {          
-    private static String parolaSegreta = "";
+    private static String parolaSegreta = null;
     static int numeroLettereMassime = 5;
     static int numeroTentativiMassimi = 6;
     static Giocatore giocatore= new Giocatore();
@@ -32,7 +32,7 @@ public final class App {
     }
     
     public static void gioca(){
-        if(!parolaSegreta.isEmpty()){
+        if(parolaSegreta != null){
             
             Partita partita= new Partita(numeroLettereMassime,numeroTentativiMassimi);
             partita.playGame();
@@ -41,8 +41,7 @@ public final class App {
         
         else{
             
-            System.out.println("Impossibile avviare la partita in quanto non"
-                    + " e' stata impostata una parola segreta");
+            System.out.println("Parola segreta mancante");
             
         }
         
@@ -131,7 +130,7 @@ public final class App {
                         
                         if(getParola() != null) {
                             System.out.println("La parola segreta inserita e': " + getParola());
-                        } else System.out.println("Parola segreta non impostata");
+                        } else System.out.println("Parola segreta mancante");
                         
                         break;
                     case AIUTO : getHelp();
