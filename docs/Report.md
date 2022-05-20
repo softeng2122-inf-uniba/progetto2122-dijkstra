@@ -16,8 +16,9 @@
 
 ## **Introduzione**
 
-Wordle è un gioco di parole, i giocatori hanno un numero limitato di tentativi per indovinare una parola, con un feedback fornito per ogni ipotesi sotto forma forma di variazione di colore che indicano quando le lettere corrispondono o occupano la posizione corretta.
+Wordle è un gioco in cui, il giocatore ha un numero limitato di tentativi - solitamente 6 - per indovinare una parola, con un feedback fornito per ogni tentativo effettuato sotto forma di variazione di colore che indicano quando le lettere corrispondono o occupano la posizione corretta rispetto alla parola da indovinare.
 
+L'applicativo è una versione semplificata che rispetta specifici requisiti funzionali.
 
 ## **Il modello di dominio**
 
@@ -137,7 +138,11 @@ La classe **Partita** implementa le seguenti user story:
 
 La classe **Analizzatore** implementa i controlli necessari sull'input inserito dall'utente.
 
+![Classe App](./img/annalizzatore.png)
+
 La classe **Giocatore** identifica i permessi del giocatore.
+
+![Classe App](./img/annalizzatore.png)
 
 
 ___
