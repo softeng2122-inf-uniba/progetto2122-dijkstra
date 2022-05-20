@@ -109,13 +109,13 @@ public final class Partita {
         }
         
         if(youWin == true) {
-            System.out.println("Hai vinto!");
+            System.out.println("Parola segreta indovinata\\nNumero tentativi: " + numeroTentativiEffettuati);
         }
         else if(numeroTentativiEffettuati == App.numeroTentativiMassimi) {
-            System.out.println("E' stato raggiunto il numero dei tentativi possibili");
+            System.out.println("Hai raggiunto il numero massimo di tentativi\\nLa parola segreta e': " +  App.getParola());
         }
         
-        System.out.println("Abbandono partita in corso....");
+        System.out.println("Abbandono partita in corso...");
     }
 
     //funzione di calcolo dei colori corrispondenti ai tentativi effettuati

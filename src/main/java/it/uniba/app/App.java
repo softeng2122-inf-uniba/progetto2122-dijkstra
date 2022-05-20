@@ -41,8 +41,7 @@ public final class App {
         
         else{
             
-            System.out.println("Impossibile avviare la partita in quanto non"
-                    + " e' stata impostata una parola segreta");
+            System.out.println("Parola segreta mancante");
             
         }
         
@@ -131,7 +130,7 @@ public final class App {
                         
                         if(getParola() != null) {
                             System.out.println("La parola segreta inserita e': " + getParola());
-                        } else System.out.println("Parola segreta non impostata");
+                        } else System.out.println("Parola segreta mancante");
                         
                         break;
                     case AIUTO : getHelp();
