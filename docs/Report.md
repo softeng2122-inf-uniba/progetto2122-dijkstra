@@ -142,7 +142,7 @@ La classe **Analizzatore** implementa i controlli necessari sull'input inserito 
 
 La classe **Giocatore** identifica i permessi del giocatore.
 
-![Classe App](./img/annalizzatore.png)
+![Classe App](./img/giocatore.png)
 
 
 ___
@@ -185,6 +185,10 @@ ___
 
 ___
 ### **Commenti decisioni prese**
+
+Abbiamo fatto in modo che ogni componenente custodisca al proprio interno i propri attributi e metodi, rendendo pubblici solo i membri, operazioni e attributi strettamente necessari, che offrono un servizio - principio di **information hiding**.
+
+Ogni componente del sistema è ad alta coesione, con un obbiettivo e una responsabilità ben definita. Dunque ogni classe è facile da comprendere, da utilizzare ed eventuali modifiche non impatteranno sulle altre classi. Da cui deriva un **basso grado di accoppiamento** / dipendenza tra componenti diversi.
 
 
 
