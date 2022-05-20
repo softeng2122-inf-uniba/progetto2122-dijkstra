@@ -109,10 +109,10 @@ public final class Partita {
         }
         
         if(youWin == true) {
-            System.out.println("Parola segreta indovinata\\nNumero tentativi: " + numeroTentativiEffettuati);
+            System.out.println("Parola segreta indovinata\nNumero tentativi: " + numeroTentativiEffettuati);
         }
         else if(numeroTentativiEffettuati == App.numeroTentativiMassimi) {
-            System.out.println("Hai raggiunto il numero massimo di tentativi\\nLa parola segreta e': " +  App.getParola());
+            System.out.println("Hai raggiunto il numero massimo di tentativi\nLa parola segreta e': " +  App.getParola());
         }
         
         System.out.println("Abbandono partita in corso...");
