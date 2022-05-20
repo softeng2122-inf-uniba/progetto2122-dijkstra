@@ -101,7 +101,6 @@ public final class App {
             }  
         } else {
             getHelp();
-
         }
 
         while(true) {
