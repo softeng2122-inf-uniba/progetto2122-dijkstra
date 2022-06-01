@@ -26,14 +26,14 @@ public final class Partita {
             }
         }
 
-        stampaMatrice();
+        stampaMatrice(0);
         System.out.println("Partita creata! Puoi cominciare a giocare");
     }
 
     //metodo di stampa della matrice
-    private void stampaMatrice() {
+    private void stampaMatrice(int startingRow) {
 
-        for (int i = 0; i < App.numeroTentativiMassimi; i++) {
+        for (int i = startingRow; i < App.numeroTentativiMassimi; i++) {
             for (int j = 0; j < App.numeroLettereMassime; j++) {
                 System.out.print("\t" + matriceTentativi[i][j]);
             }
