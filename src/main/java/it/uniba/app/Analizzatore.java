@@ -101,9 +101,9 @@ public final class Analizzatore{
                 
             }
             
-            else throw new InputUserNotValid("Comando non valido");
+            else throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
 
-        } else throw new InputUserNotValid("Comando non valido");
+        } else throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
                 
         return Comando.ERRORE;
 	}
