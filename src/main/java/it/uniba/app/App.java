@@ -1,3 +1,4 @@
+
 package it.uniba.app;
 
 /**classe main dell'applicazione*/
@@ -127,7 +128,7 @@ public final class App {
                         break;
                     case ESCI : esci();
                         break;
-                    default: System.out.println("Errore nell'inserimento del comando");
+                    default: System.out.println("Comando non valido. Digita /help per avere maggiori informazioni");
                         break;
                 }
             } catch (InputUserNotValid e) {
