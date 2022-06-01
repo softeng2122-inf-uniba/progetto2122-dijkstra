@@ -100,7 +100,7 @@ public final class App {
                 System.err.println(e.getMessage());
             }  
         } else {
-            getHelp();
+            System.out.println("*** Per avere la lista dei comandi digita '-h' / '--help' ***");
         }
 
         while(true) {
