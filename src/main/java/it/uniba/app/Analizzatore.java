@@ -72,11 +72,9 @@ public final class Analizzatore{
 
             token = inputUser.trim().split(" ");
 
-            if (token.length <= 2) {
+            if (token.length == 1) {
 
-                if (token[0].equalsIgnoreCase(stringNuova)) {
-                    return Comando.NUOVA;
-                } else if (token[0].equalsIgnoreCase(stringMostra)) {
+                if (token[0].equalsIgnoreCase(stringMostra)) {
                     return Comando.MOSTRA;
                 } else if (token[0].equalsIgnoreCase(stringHelp) || token[0].equalsIgnoreCase(stringLessLessH)
                         || token[0].equalsIgnoreCase(stringLessHelp)) {
@@ -91,7 +89,19 @@ public final class Analizzatore{
                     throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
                 }
 
-            } else throw new InputUserNotValid("Comando non valido");
+            }
+            
+            else if(token.length == 2){
+                
+                if (token[0].equalsIgnoreCase(stringNuova)) {
+                    return Comando.NUOVA;
+                }
+                
+                else throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
+                
+            }
+            
+            else throw new InputUserNotValid("Comando non valido");
 
         } else throw new InputUserNotValid("Comando non valido");
                 
