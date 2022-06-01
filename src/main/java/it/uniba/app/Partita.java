@@ -5,7 +5,7 @@ package it.uniba.app;
 /** Boundary class */
 
 public final class Partita {
-    private String[][] matriceTentativi;    // matrice contenete i caratteri dei tentativi effettuati
+    private final String[][] matriceTentativi;    // matrice contenete i caratteri dei tentativi effettuati
     private boolean quit = false;           // variabile booleana per uscire dalla partita
     private int numeroTentativiEffettuati;  // contatore del numero di tentativi che sono stati effettuati
 
