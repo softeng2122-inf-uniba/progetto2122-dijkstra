@@ -44,13 +44,13 @@ public final class Partita {
     //funzione principale per inserire un tentativo o un comando
     public void playGame() {
 
-        boolean youWin = false;             //variabile per controllo se si ha vinto la partita
+    	boolean youWin = false;             //variabile per controllo se si ha vinto la partita
         while (quit == false && youWin == false && numeroTentativiEffettuati < App.numeroTentativiMassimi) {
             boolean wasCommand = false;     //variabile di controllo per differenziare i tentativi effettuati da eventuali comandi inseriti
                  
             System.out.println("Inserire tentativo n " + (numeroTentativiEffettuati + 1) + ": ");
             String inputUser = App.giocatore.input();
-
+            
             try {                           //controllo di inserimento di un eventuale comando
                 Analizzatore.Comando comando;
                 comando = Analizzatore.analizzatoreComando(inputUser);
@@ -88,10 +88,10 @@ public final class Partita {
             }
             
             if(wasCommand == false) {
-                if (Analizzatore.analizzatoreSintattico(inputUser)) {
+            	if (Analizzatore.analizzatoreSintattico(inputUser)) {
                     
                     String[] token = inputUser.split("");
-                    if (inputUser.length() < App.numeroLettereMassime)
+                   if (inputUser.length()< App.numeroLettereMassime )
                     	System.out.println("Tentativo incompleto");
                     else if (inputUser.length() > App.numeroLettereMassime)
                     	System.out.println("Tentativo eccessivo");
@@ -102,7 +102,10 @@ public final class Partita {
                     	youWin = stampaColoriTentativi();
                     }
 
-                } else {
+                }
+                else if (inputUser.length() == 0)
+                	System.out.println("Tentativo incompleto");
+                else {
                     System.out.println("Tentativo non valido!");
                 }
             }
