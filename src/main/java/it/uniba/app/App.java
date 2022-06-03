@@ -49,13 +49,13 @@ public final class App {
     
     public static void getHelp(){
         System.out.println("Ciao giocatore!");
-        System.out.println("Digita il comando '/play' per avviare una nuova partita");
-        System.out.println("Digita il comando '/quit' per uscire dalla partita. Attenzione questo comando e' disponibile solo se hai avviato la partita!");
+        System.out.println("Digita il comando '/gioca' per avviare una nuova partita");
+        System.out.println("Digita il comando '/abbandona' per uscire dalla partita. Attenzione questo comando e' disponibile solo se hai avviato la partita!");
     
-        System.out.println("Digita il comando '/new <parolaSegreta>' per inserire una nuova parola segreta. Attenzione! La parola segreta da inserire deve avere lunghezza pari a " + numeroLettereMassime + " caratteri");
-        System.out.println("Digita il comando '/show' per mostrare la parola segreta");
+        System.out.println("Digita il comando '/nuova <parolaSegreta>' per inserire una nuova parola segreta. Attenzione! La parola segreta da inserire deve avere lunghezza pari a " + numeroLettereMassime + " caratteri");
+        System.out.println("Digita il comando '/mostra' per mostrare la parola segreta");
 
-        System.out.println("Digita il comando '/exit' per uscire dall'applicazione\n\n");
+        System.out.println("Digita il comando '/esci' per uscire dall'applicazione\n\n");
 
         System.out.println("##### RULES OF THE GAME #####");
         System.out.println("Ad ogni tentativo le lettere possono colorarsi in tre modi:");
