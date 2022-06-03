@@ -80,7 +80,7 @@ public final class Analizzatore{
                         || token[0].equalsIgnoreCase(stringLessHelp)) {
                     return Comando.AIUTO;
                 } else if (token[0].equalsIgnoreCase(stringPlay)) {
-                    return Comando.GIOCA;
+                	return Comando.GIOCA;
                 } else if (token[0].equalsIgnoreCase(stringExit)) {
                     return Comando.ESCI;
                 } else if (token[0].equalsIgnoreCase(stringQuit)) {
@@ -103,8 +103,8 @@ public final class Analizzatore{
             
             else throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
 
-        } else throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
-                
+        } 
+        
         return Comando.ERRORE;
 	}
     
