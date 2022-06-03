@@ -5,8 +5,8 @@ package it.uniba.app;
 /** Boundary class */
 
 public final class Partita {
-    private String[][] matriceTentativi;    // matrice contenete i caratteri dei tentativi effettuati
-    private boolean quit = false;           // variabile booleana per uscire dalla partita
+    private final String[][] matriceTentativi;    // matrice contenete i caratteri dei tentativi effettuati
+    private boolean quit;           // variabile booleana per uscire dalla partita
     private int numeroTentativiEffettuati;  // contatore del numero di tentativi che sono stati effettuati
 
 
@@ -17,8 +17,8 @@ public final class Partita {
         matriceTentativi = new String[numbOfTries][numbOfWords];
         quit = false;
 
-        /**
-         * inizializzazione matriceTentativi
+        /*
+          inizializzazione matriceTentativi
          */
         for (int i = 0; i < numbOfTries; i++) {
             for (int j = 0; j < numbOfWords; j++) {
@@ -26,14 +26,14 @@ public final class Partita {
             }
         }
 
-        stampaMatrice();
+        stampaMatrice(0);
         System.out.println("Partita creata! Puoi cominciare a giocare");
     }
 
     //metodo di stampa della matrice
-    private void stampaMatrice() {
+    private void stampaMatrice(int startingRow) {
 
-        for (int i = 0; i < App.numeroTentativiMassimi; i++) {
+        for (int i = startingRow; i < App.numeroTentativiMassimi; i++) {
             for (int j = 0; j < App.numeroLettereMassime; j++) {
                 System.out.print("\t" + matriceTentativi[i][j]);
             }
@@ -44,8 +44,8 @@ public final class Partita {
     //funzione principale per inserire un tentativo o un comando
     public void playGame() {
 
-    	boolean youWin = false;             //variabile per controllo se si ha vinto la partita
-        while (quit == false && youWin == false && numeroTentativiEffettuati < App.numeroTentativiMassimi) {
+ boolean youWin = false;             //variabile per controllo se si ha vinto la partita
+        while (!quit && !youWin && numeroTentativiEffettuati < App.numeroTentativiMassimi) {
             boolean wasCommand = false;     //variabile di controllo per differenziare i tentativi effettuati da eventuali comandi inseriti
                  
             System.out.println("Inserire tentativo n " + (numeroTentativiEffettuati + 1) + ": ");
@@ -87,8 +87,8 @@ public final class Partita {
                 wasCommand = true;
             }
             
-            if(wasCommand == false) {
-            	if (Analizzatore.analizzatoreSintattico(inputUser)) {
+          if(!wasCommand) {
+                if (Analizzatore.analizzatoreSintattico(inputUser)) {
                     
                     String[] token = inputUser.split("");
                    if (inputUser.length()< App.numeroLettereMassime )
@@ -111,7 +111,7 @@ public final class Partita {
             }
         }
         
-        if(youWin == true) {
+        if(youWin) {
             System.out.println("Parola segreta indovinata\nNumero tentativi: " + numeroTentativiEffettuati);
         }
         else if(numeroTentativiEffettuati == App.numeroTentativiMassimi) {
@@ -128,8 +128,9 @@ public final class Partita {
     */
     private boolean stampaColoriTentativi() {
         boolean checkWin, youWin = false;
-        
-        for(int i = 0; i < numeroTentativiEffettuati; i++) {
+
+        int i;
+        for(i = 0; i < numeroTentativiEffettuati; i++) {
             checkWin = true; 
             
             String token = "";
@@ -139,7 +140,7 @@ public final class Partita {
             }
             
             Analizzatore.Colore[] coloriCaratteri = Analizzatore.analizzatoreTentativo(token, App.getParola());
-             
+
             for (int j = 0; j < App.numeroLettereMassime; j++) {
                 
                 if(null != coloriCaratteri[j]) switch (coloriCaratteri[j]) {
@@ -160,10 +161,12 @@ public final class Partita {
             }
             System.out.println();
             
-            if(checkWin == true) {
+            if(checkWin) {
                 youWin = true;
             } 
         }
+
+        stampaMatrice(i);
         
         return youWin;
     }
