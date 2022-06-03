@@ -11,14 +11,14 @@ public final class Analizzatore{
     public enum Comando {NUOVA, MOSTRA, GIOCA, ESCI, ABBANDONA, AIUTO, SETPAROLA, GETPAROLA, ERRORE};
     
     private static String[] token;
-    private static final String stringNuova = new String("/new");
-    private static final String stringMostra = new String("/show");
+    private static final String stringNuova = new String("/nuova");
+    private static final String stringMostra = new String("/mostra");
     private static final String stringHelp = new String("/help");
     private static final String stringLessLessH = new String("--help");
     private static final String stringLessHelp = new String("-h");
-    private static final String stringPlay = new String("/play");
-    private static final String stringExit = new String("/exit");
-    private static final String stringQuit = new String("/quit"); 
+    private static final String stringPlay = new String("/gioca");
+    private static final String stringExit = new String("/esci");
+    private static final String stringQuit = new String("/abbandona"); 
     
     public static Colore[] analizzatoreTentativo(String input,String parolaSegreta){
         
