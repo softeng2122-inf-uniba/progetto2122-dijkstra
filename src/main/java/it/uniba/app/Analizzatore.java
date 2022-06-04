@@ -1,10 +1,15 @@
 package it.uniba.app;
 
-/**Classe con lo scopo di analizzare gli input inseriti dall'utente per l'identificazine
- dei: tentativi, tipo di comando inserito e, nel caso di una parola, sia stata inserita
- una parola valida*/
+/**
+ * Classe con lo scopo di analizzare gli input inseriti dall'utente per 
+ * l'identificazine dei: tentativi, tipo di comando inserito e, nel 
+ * caso di una parola, sia stata inserita una parola valida
+ */
 
-/**<<Control>>*/
+/**
+ * <<control>>
+ */
+
 public final class Analizzatore{
     
     public enum Colore{GRIGIO,GIALLO,VERDE};
