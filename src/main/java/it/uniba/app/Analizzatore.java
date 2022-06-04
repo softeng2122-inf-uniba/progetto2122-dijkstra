@@ -18,7 +18,7 @@ public final class Analizzatore{
     public enum Colore{GRIGIO, GIALLO, VERDE};
     
     /**
-     * lista dei comandi accettati
+     * lista dei comandi accettati.
      */
     public enum Comando {NUOVA, MOSTRA, GIOCA, ESCI, ABBANDONA, AIUTO, SETPAROLA, GETPAROLA, ERRORE};
     
@@ -40,7 +40,7 @@ public final class Analizzatore{
     }
     
     /**
-     * metodo che analizza i tentativi fatti dall'utente dal suo input assegnando il colore al carattere
+     * metodo che analizza i tentativi fatti dall'utente dal suo input assegnando il colore al carattere.
      * @param input
      * @param parolaSegreta
      * @return Colore[]
@@ -74,7 +74,7 @@ public final class Analizzatore{
     }
 
     /**
-     * metodo che analizza il comando tramite l'input dell'utente
+     * metodo che analizza il comando tramite l'input dell'utente.
      * @param inputUser
      * @return Comando
      * @throws InputUserNotValid 
@@ -118,7 +118,7 @@ public final class Analizzatore{
     }
     
     /**
-     * metodo che verifica che una stringa sia priva di spazi e composta da soli caratteri alfabetici
+     * metodo che verifica che una stringa sia priva di spazi e composta da soli caratteri alfabetici.
      * @param inputUser
      * @return boolean
      */
