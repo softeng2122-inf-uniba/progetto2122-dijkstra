@@ -11,14 +11,14 @@ public final class Analizzatore{
     public enum Comando {NUOVA, MOSTRA, GIOCA, ESCI, ABBANDONA, AIUTO, SETPAROLA, GETPAROLA, ERRORE};
     
     private static String[] token;
-    private static final String stringNuova = new String("/nuova");
-    private static final String stringMostra = new String("/mostra");
-    private static final String stringHelp = new String("/help");
-    private static final String stringLessLessH = new String("--help");
-    private static final String stringLessHelp = new String("-h");
-    private static final String stringPlay = new String("/gioca");
-    private static final String stringExit = new String("/esci");
-    private static final String stringQuit = new String("/abbandona"); 
+    private static final String STRINGNUOVA = new String("/nuova");
+    private static final String STRINGMOSTRA = new String("/mostra");
+    private static final String STRINGHELP = new String("/help");
+    private static final String STRINGLESSLESSH= new String("--help");
+    private static final String STRINGLESSHELP = new String("-h");
+    private static final String STRINGPLAY = new String("/gioca");
+    private static final String STRINGEXIT = new String("/esci");
+    private static final String STRINGQUIT = new String("/abbandona"); 
     
     public static Colore[] analizzatoreTentativo(String input,String parolaSegreta){
         
@@ -74,16 +74,16 @@ public final class Analizzatore{
 
             if (token.length == 1) {
 
-                if (token[0].equalsIgnoreCase(stringMostra)) {
+                if (token[0].equalsIgnoreCase(STRINGMOSTRA)) {
                     return Comando.MOSTRA;
-                } else if (token[0].equalsIgnoreCase(stringHelp) || token[0].equalsIgnoreCase(stringLessLessH)
-                        || token[0].equalsIgnoreCase(stringLessHelp)) {
+                } else if (token[0].equalsIgnoreCase(STRINGHELP) || token[0].equalsIgnoreCase(STRINGLESSLESSH)
+                        || token[0].equalsIgnoreCase(STRINGLESSHELP)) {
                     return Comando.AIUTO;
-                } else if (token[0].equalsIgnoreCase(stringPlay)) {
+                } else if (token[0].equalsIgnoreCase(STRINGPLAY)) {
                 	return Comando.GIOCA;
-                } else if (token[0].equalsIgnoreCase(stringExit)) {
+                } else if (token[0].equalsIgnoreCase(STRINGEXIT)) {
                     return Comando.ESCI;
-                } else if (token[0].equalsIgnoreCase(stringQuit)) {
+                } else if (token[0].equalsIgnoreCase(STRINGQUIT)) {
                     return Comando.ABBANDONA;
                 } else if (token[0].charAt(0) == '/') {
                     throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
@@ -93,7 +93,7 @@ public final class Analizzatore{
             
             else if(token.length == 2){
                 
-                if (token[0].equalsIgnoreCase(stringNuova)) {
+                if (token[0].equalsIgnoreCase(STRINGNUOVA)) {
                     return Comando.NUOVA;
                 }
                 
