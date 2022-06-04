@@ -12,7 +12,7 @@ package it.uniba.app;
 
 public final class Analizzatore{
     
-    public enum Colore{GRIGIO,GIALLO,VERDE};
+    public enum Colore{GRIGIO, GIALLO, VERDE};
     public enum Comando {NUOVA, MOSTRA, GIOCA, ESCI, ABBANDONA, AIUTO, SETPAROLA, GETPAROLA, ERRORE};
     
     private static String[] token;
@@ -23,56 +23,41 @@ public final class Analizzatore{
     private static final String STRINGLESSHELP = "-h";
     private static final String STRINGPLAY = "/gioca";
     private static final String STRINGEXIT = "/esci";
-    private static final String STRINGQUIT = "/abbandona"; 
+    private static final String STRINGQUIT = "/abbandona";
     
+    /**
+     * Costruttore classe Analizzatore.
+     */
     public Analizzatore(){
         
     }
     
     public static Colore[] analizzatoreTentativo(String input,String parolaSegreta){
-        
         Colore[] coloriCaratteri = new Colore[input.length()];
         
         for(int i=0;i<coloriCaratteri.length;i++){
-            
-            coloriCaratteri[i]=Colore.GRIGIO;
-            
+            coloriCaratteri[i]=Colore.GRIGIO;      
         }
-        
+       
         for(int i=0;i<input.length();i++){
-
             if(input.charAt(i) == parolaSegreta.charAt(i)){
-
                 coloriCaratteri[i]=Colore.VERDE;
-
             }
-
         }
         
         for(int i=0;i<input.length();i++){
-
             if(coloriCaratteri[i]!=Colore.VERDE){
-
                 for(int j=0;j<parolaSegreta.length();j++){
-
                     if(coloriCaratteri[j]!=Colore.VERDE){
-
-                        if(input.charAt(i)==parolaSegreta.charAt(j)){
-
-                            coloriCaratteri[i] = Colore.GIALLO;
-
-                        }
-
+                            if(input.charAt(i)==parolaSegreta.charAt(j)){
+                                coloriCaratteri[i] = Colore.GIALLO;
+                             }
                     }
-
                 }
-
             }
-
         }
         
         return coloriCaratteri;
-        
     }
 
     public static Comando analizzatoreComando(String inputUser) throws InputUserNotValid {
