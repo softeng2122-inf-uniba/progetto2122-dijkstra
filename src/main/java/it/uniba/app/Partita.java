@@ -145,10 +145,10 @@ public final class Partita {
                 
                 if(null != coloriCaratteri[j]) switch (coloriCaratteri[j]) {
                     case VERDE:
-                        System.out.print("\t\u001B[32m" + matriceTentativi[i][j] + "\u001B[0m");
+                        System.out.print("\t\u001B[42m" + matriceTentativi[i][j] + "\u001B[0m");
                         break;
                     case GIALLO:
-                        System.out.print("\t\u001B[33m" + matriceTentativi[i][j] + "\u001B[0m");
+                        System.out.print("\t\u001B[43m" + matriceTentativi[i][j] + "\u001B[0m");
                         checkWin = false;
                         break;
                     case GRIGIO:
