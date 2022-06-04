@@ -23,6 +23,11 @@ public final class App {
     */
     static Giocatore giocatore= new Giocatore();
     
+    /**
+     * Restituisce il messaggio di benvenuto durante l'avvio del gioco.
+     * 
+     * @return messaggio di benvenuto.
+    */
     public String getGreeting(){
         return "BENVENUTO IN WORDLE";
     }
