@@ -25,6 +25,10 @@ public final class Analizzatore{
     private static final String STRINGEXIT = "/esci";
     private static final String STRINGQUIT = "/abbandona"; 
     
+    public Analizzatore(){
+        
+    }
+    
     public static Colore[] analizzatoreTentativo(String input,String parolaSegreta){
         
         Colore[] coloriCaratteri = new Colore[input.length()];
