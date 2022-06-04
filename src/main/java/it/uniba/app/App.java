@@ -1,10 +1,11 @@
 
 package it.uniba.app;
 
-/**classe main dell'applicazione*/
-
-/**Boundary class.*/
-
+/**
+ * classe main dell'applicazione
+ * 
+ * Boundary class.
+ */
 public final class App {          
     /**
      * Riferimento alla parola segreta impostata.
@@ -18,14 +19,23 @@ public final class App {
      * Riferimento al numero massimo di tentativi .
     */
     static final int NUMEROTENTATIVIMASSIMI = 6;
+
     /**
-     * Inizializzazione di un oggetto di classe giocatore.
+     * Oggetto di classe giocatore.
     */
-    static Giocatore giocatore= new Giocatore();
+    private static Giocatore giocatore= new Giocatore();
+    
+    
+    /**
+     * Restituisce il giocatore.
+     * @return giocatore
+    */
+    public static Giocatore getGiocatore(){
+        return giocatore;
+    }
     
     /**
      * Restituisce il messaggio di benvenuto durante l'avvio del gioco.
-     * 
      * @return messaggio di benvenuto.
     */
     public String getGreeting(){
@@ -97,7 +107,7 @@ public final class App {
     public static void esci(){
         System.out.println("_______________________________");
         System.out.println("Si desidera terminare il programma ?\nDigitare y o s per confermare");
-        String risposta = giocatore.input();
+        String risposta = getGiocatore().input();
         risposta = risposta.toLowerCase(); 
         if (risposta.equals("y")|| risposta.equals("s")){
              System.out.println("Chiusura in corso....");
@@ -129,7 +139,7 @@ public final class App {
         }
         while(true) {
             System.out.println("Introdurre un comando: ");
-            String inputUser = giocatore.input();
+            String inputUser = getGiocatore().input();
             
             try {
                 Analizzatore.Comando comando = Analizzatore.analizzatoreComando(inputUser);

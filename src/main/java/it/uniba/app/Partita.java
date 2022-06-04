@@ -49,7 +49,7 @@ public final class Partita {
             boolean wasCommand = false;     //variabile di controllo per differenziare i tentativi effettuati da eventuali comandi inseriti
                  
             System.out.println("Inserire tentativo n " + (numeroTentativiEffettuati + 1) + ": ");
-            String inputUser = App.giocatore.input();
+            String inputUser = App.getGiocatore().input();
             
             try {                           //controllo di inserimento di un eventuale comando
                 Analizzatore.Comando comando;
@@ -178,7 +178,7 @@ public final class Partita {
         System.out.println("_______________________________");
         System.out.println("Si desidera abbandonare la partita?\nDigitare y o s per confermare");
 
-        String risposta = App.giocatore.input();
+        String risposta = App.getGiocatore().input();
         risposta = risposta.toLowerCase(); 
         
         if(risposta.equals("y")|| risposta.equals("s")){
