@@ -105,7 +105,7 @@ public final class Partita {
                 if (Analizzatore.analizzatoreSintattico(inputUser)) {
                     
                     String[] token = inputUser.split("");
-                    if (inputUser.length()< App.NUMEROLETTEREMASSIME ){
+                    if (inputUser.length() < App.NUMEROLETTEREMASSIME ){
                     	System.out.println("Tentativo incompleto");
                    }else if (inputUser.length() > App.NUMEROLETTEREMASSIME){
                     	System.out.println("Tentativo eccessivo");

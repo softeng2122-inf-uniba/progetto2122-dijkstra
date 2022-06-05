@@ -6,9 +6,6 @@ package it.uniba.app;
  * caso di una parola, sia stata inserita una parola valida.
  * Control class.
  */
-
-
-
 public final class Analizzatore{
     
     /**
@@ -21,20 +18,55 @@ public final class Analizzatore{
      */
     public enum Comando {NUOVA, MOSTRA, GIOCA, ESCI, ABBANDONA, AIUTO, SETPAROLA, GETPAROLA, ERRORE};
     
+    /**
+     * Token in input contenente il comando.
+    */
     private static String[] token;
+    
+    /**
+     * Stringa che identifica il comando nuova.
+    */
     private static final String STRINGNUOVA = "/nuova";
+    
+    /**
+     * Stringa che identifica il comando mostra.
+    */
     private static final String STRINGMOSTRA = "/mostra";
+    
+    /**
+     * Stringa che indentifivìca il comando help.
+    */
     private static final String STRINGHELP = "/help";
+    
+    /**
+     * Stringa che identifica il comando --help.
+    */
     private static final String STRINGLESSLESSH = "--help";
+    
+    /**
+     * Stringa che identifica il comando --h.
+    */
     private static final String STRINGLESSHELP = "-h";
+    
+    /**
+     * Stringa che identifica il comando gioca.
+    */
     private static final String STRINGPLAY = "/gioca";
+    
+    /**
+     * Stringa che identifica il comando esci.
+    */
     private static final String STRINGEXIT = "/esci";
+    
+    /**
+     * Stringa che identifica il comando esci.
+    */
     private static final String STRINGQUIT = "/abbandona";
     
     /**
      * Costruttore classe Analizzatore.
      */
-    public Analizzatore(){
+     public Analizzatore(){
         
     }
     
@@ -47,21 +79,21 @@ public final class Analizzatore{
     public static Colore[] analizzatoreTentativo(final String input,final String parolaSegreta){
         Colore[] coloriCaratteri = new Colore[input.length()];
         
-        for (int i=0;i<coloriCaratteri.length;i++){
-            coloriCaratteri[i]=Colore.GRIGIO;
+        for (int i = 0; i < coloriCaratteri.length;i++){
+            coloriCaratteri[i] = Colore.GRIGIO;
         }
        
-        for (int i=0;i<input.length();i++){
+        for (int i = 0;i < input.length();i++){
             if(input.charAt(i) == parolaSegreta.charAt(i)){
-                coloriCaratteri[i]=Colore.VERDE;
+                coloriCaratteri[i] = Colore.VERDE;
             }
         }
         
-        for (int i=0;i<input.length();i++){
-            if(coloriCaratteri[i]!=Colore.VERDE){
-                for (int j=0;j<parolaSegreta.length();j++){
-                    if(coloriCaratteri[j]!=Colore.VERDE){
-                            if(input.charAt(i)==parolaSegreta.charAt(j)){
+        for (int i = 0; i < input.length();i++){
+            if(coloriCaratteri[i] != Colore.VERDE){
+                for (int j = 0; j < parolaSegreta.length();j++){
+                    if(coloriCaratteri[j] != Colore.VERDE){
+                            if(input.charAt(i) == parolaSegreta.charAt(j)){
                                 coloriCaratteri[i] = Colore.GIALLO;
                              }
                     }
@@ -98,10 +130,7 @@ public final class Analizzatore{
                 } else if (token[0].charAt(0) == '/') {
                     throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
                 }
-            }
-            
-            else if(token.length == 2){
-                
+            }else if(token.length == 2){
                 if (token[0].equalsIgnoreCase(STRINGNUOVA)) {
                     return Comando.NUOVA;
                 }

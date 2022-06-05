@@ -23,7 +23,7 @@ public final class App {
     /**
      * Oggetto di classe giocatore.
     */
-    private static Giocatore giocatore= new Giocatore();
+    private static Giocatore giocatore = new Giocatore();
     
     
     /**
@@ -73,7 +73,7 @@ public final class App {
     */
     public static void gioca(){
         if (parolaSegreta != null){
-            Partita partita= new Partita(NUMEROLETTEREMASSIME,NUMEROTENTATIVIMASSIMI);
+            Partita partita = new Partita(NUMEROLETTEREMASSIME,NUMEROTENTATIVIMASSIMI);
             partita.playGame();    
         }else{
             System.out.println("Parola segreta mancante");
