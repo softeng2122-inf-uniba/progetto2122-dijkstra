@@ -19,7 +19,7 @@ public final class Partita {
 
 
     /**
-     *  Metod costruttore.
+     * Metodo costruttore.
      * @param numbOfWords
      * @param numbOfTries
     */
@@ -137,7 +137,7 @@ public final class Partita {
     */
     private boolean stampaColoriTentativi() {
         //checkWin :  variabile di supporto per controllare se ci sia almeno una parola con tutti i caratteri verdi
-        //necessaria quando si fa /new <parola> per controllare se la nuova parola segreta è già stata inserita 
+        //necessaria quando si fa /nuova <parola> per controllare se la nuova parola segreta è già stata inserita 
         boolean checkWin;
         boolean youWin = false;
 

@@ -45,7 +45,7 @@ public final class App {
     /**
      * Imposta la nuova parola segreta.
      * @param x nuova parola da impostare.
-     * @exception InputUserNotValid richiamato se utente non valido.
+     * @exception InputUserNotValid input dell'utente non  valido .
     */
     public static void setParola(String x) throws InputUserNotValid{
         if (x.length() < NUMEROLETTEREMASSIME){
@@ -62,14 +62,14 @@ public final class App {
     
     /**
      * Restituisce la parola segreta.
-     * @return messaggio di benvenuto.
+     * @return parola segreta.
     */
     public static String getParola(){
         return parolaSegreta;
     }
     
     /**
-     * Iniazia una nuova partita.
+     * iniza una nuova partita.
     */
     public static void gioca(){
         if (parolaSegreta != null){
@@ -102,7 +102,7 @@ public final class App {
     }
     
     /**
-     * Chiude il programma, implemnetata anche una richiesta di conferma.
+     * Chiude il programma, implementata anche una richiesta di conferma.
     */
     public static void esci(){
         System.out.println("_______________________________");
