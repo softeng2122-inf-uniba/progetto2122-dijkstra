@@ -69,7 +69,7 @@ public final class App {
     }
     
     /**
-     * iniza una nuova partita.
+     * inizia una nuova partita.
     */
     public static void gioca(){
         if (parolaSegreta != null){
