@@ -18,7 +18,7 @@ public class Giocatore {
      * Gestisce input giocatore da terminale.
      * @return input da terminale
     */
-    public static String input() {
+    public String input() {
         Scanner keyboard = new Scanner(System.in);
         String userInput = keyboard.nextLine();
         return userInput;
