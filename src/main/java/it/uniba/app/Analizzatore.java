@@ -3,17 +3,16 @@ package it.uniba.app;
 /**
  * Classe con lo scopo di analizzare gli input inseriti dall'utente per 
  * l'identificazine dei: tentativi, tipo di comando inserito e, nel 
- * caso di una parola, sia stata inserita una parola valida
+ * caso di una parola, sia stata inserita una parola valida.
+ * Control class.
  */
 
-/**
- * <<control>>
- */
+
 
 public final class Analizzatore{
     
     /**
-     * lista di colori usati sui caratteri durante la partita
+     * lista di colori usati sui caratteri durante la partita.
      */
     public enum Colore{GRIGIO, GIALLO, VERDE};
     
@@ -45,7 +44,7 @@ public final class Analizzatore{
      * @param parolaSegreta
      * @return Colore[]
      */
-    public static Colore[] analizzatoreTentativo(String input,String parolaSegreta){
+    public static Colore[] analizzatoreTentativo(final String input,final String parolaSegreta){
         Colore[] coloriCaratteri = new Colore[input.length()];
         
         for (int i=0;i<coloriCaratteri.length;i++){
@@ -122,7 +121,7 @@ public final class Analizzatore{
      * @param inputUser
      * @return boolean
      */
-    public static boolean analizzatoreSintattico(String inputUser) {
+    public static boolean analizzatoreSintattico( final String inputUser) {
         token = inputUser.trim().toLowerCase().split(" ");
         return inputUser.matches("[a-z]+") && token.length == 1;
     }

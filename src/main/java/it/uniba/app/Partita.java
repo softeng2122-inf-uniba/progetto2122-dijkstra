@@ -39,9 +39,10 @@ public final class Partita {
     }
 
     /** classe che descrive la sessione di una partita 
+     * @param  startingRow
      * Boundary class 
     */
-    private void stampaMatrice(int startingRow) {
+    private void stampaMatrice(final int startingRow) {
 
         for (int i = startingRow; i < App.NUMEROTENTATIVIMASSIMI; i++) {
             for (int j = 0; j < App.NUMEROLETTEREMASSIME; j++) {
@@ -91,6 +92,8 @@ public final class Partita {
                         wasCommand = true;
                         quitGame();
                         break;
+                    default:
+                        break;
                 }
                 
                 
@@ -98,11 +101,11 @@ public final class Partita {
                 System.out.println(e.getMessage());
                 wasCommand = true;
             }
-          if(!wasCommand) {
+            if (!wasCommand) {
                 if (Analizzatore.analizzatoreSintattico(inputUser)) {
                     
                     String[] token = inputUser.split("");
-                   if (inputUser.length()< App.NUMEROLETTEREMASSIME ){
+                    if (inputUser.length()< App.NUMEROLETTEREMASSIME ){
                     	System.out.println("Tentativo incompleto");
                    }else if (inputUser.length() > App.NUMEROLETTEREMASSIME){
                     	System.out.println("Tentativo eccessivo");
@@ -129,13 +132,14 @@ public final class Partita {
     }
 
     /**
-     * funzione di calcolo dei colori corrispondenti ai tentativi effettuati
+     * funzione di calcolo dei colori corrispondenti ai tentativi effettuati.
      * @return youWin
     */
     private boolean stampaColoriTentativi() {
         //checkWin :  variabile di supporto per controllare se ci sia almeno una parola con tutti i caratteri verdi
         //necessaria quando si fa /new <parola> per controllare se la nuova parola segreta è già stata inserita 
-        boolean checkWin, youWin = false;
+        boolean checkWin;
+        boolean youWin = false;
 
         int i;
         for(i = 0; i < numeroTentativiEffettuati; i++) {
@@ -150,21 +154,22 @@ public final class Partita {
             Analizzatore.Colore[] coloriCaratteri = Analizzatore.analizzatoreTentativo(token, App.getParola());
 
             for (int j = 0; j < App.NUMEROLETTEREMASSIME; j++) {
-                
-                if(null != coloriCaratteri[j]) switch (coloriCaratteri[j]) {
-                    case VERDE:
-                        System.out.print("\t\u001B[42m" + matriceTentativi[i][j] + "\u001B[0m");
-                        break;
-                    case GIALLO:
-                        System.out.print("\t\u001B[43m" + matriceTentativi[i][j] + "\u001B[0m");
-                        checkWin = false;
-                        break;
-                    case GRIGIO:
-                        System.out.print("\t" + matriceTentativi[i][j]);
-                        checkWin = false;
-                        break;
-                    default:
-                        break;
+                if(null != coloriCaratteri[j]){
+                    switch (coloriCaratteri[j]) {
+                        case VERDE:
+                            System.out.print("\t\u001B[42m" + matriceTentativi[i][j] + "\u001B[0m");
+                            break;
+                        case GIALLO:
+                            System.out.print("\t\u001B[43m" + matriceTentativi[i][j] + "\u001B[0m");
+                            checkWin = false;
+                            break;
+                        case GRIGIO:
+                            System.out.print("\t" + matriceTentativi[i][j]);
+                            checkWin = false;
+                            break;
+                        default:
+                            break;
+                    }   
                 }
             }
             System.out.println();
@@ -176,6 +181,9 @@ public final class Partita {
         return youWin;
     }
     
+    /**
+     * metodo che consente l'abbandono della partita.
+     */
     private void quitGame(){
         System.out.println("_______________________________");
         System.out.println("Si desidera abbandonare la partita?\nDigitare y o s per confermare");

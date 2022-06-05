@@ -4,7 +4,7 @@ package it.uniba.app;
 /**
  * classe main dell'applicazione
  * 
- * Boundary class.
+ * Boundary class
  */
 public final class App {          
     /**
