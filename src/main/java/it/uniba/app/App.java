@@ -1,6 +1,5 @@
 
 package it.uniba.app;
-
 /**
  * classe main dell'applicazione
  * 
@@ -30,7 +29,7 @@ public final class App {
      * Restituisce il giocatore.
      * @return giocatore
     */
-    public static Giocatore getGiocatore(){
+    public static Giocatore getGiocatore() {
         return giocatore;
     }
     
@@ -38,7 +37,7 @@ public final class App {
      * Restituisce il messaggio di benvenuto durante l'avvio del gioco.
      * @return messaggio di benvenuto.
     */
-    public String getGreeting(){
+    public String getGreeting() {
         return "BENVENUTO IN WORDLE";
     }
     
@@ -47,14 +46,14 @@ public final class App {
      * @param x nuova parola da impostare.
      * @exception InputUserNotValid input dell'utente non  valido .
     */
-    public static void setParola(String x) throws InputUserNotValid{
-        if (x.length() < NUMEROLETTEREMASSIME){
+    public static void setParola(String x) throws InputUserNotValid {
+        if (x.length() < NUMEROLETTEREMASSIME) {
             throw new InputUserNotValid("Parola segreta troppo corta");
-        }else if (x.length() > NUMEROLETTEREMASSIME){
+        }else if (x.length() > NUMEROLETTEREMASSIME) {
             throw new InputUserNotValid("Parola segreta troppo lunga");
-        }else if (!x.matches("[a-z]*")){
+        }else if (!x.matches("[a-z]*")) {
             throw new InputUserNotValid("Parola segreta non valida");
-        }else{
+        }else {
             System.out.println("OK");
             parolaSegreta = x; 
         }  
@@ -64,18 +63,18 @@ public final class App {
      * Restituisce la parola segreta.
      * @return parola segreta.
     */
-    public static String getParola(){
+    public static String getParola() {
         return parolaSegreta;
     }
     
     /**
      * inizia una nuova partita.
     */
-    public static void gioca(){
-        if (parolaSegreta != null){
+    public static void gioca() {
+        if (parolaSegreta != null) {
             Partita partita = new Partita(NUMEROLETTEREMASSIME,NUMEROTENTATIVIMASSIMI);
             partita.playGame();    
-        }else{
+        }else {
             System.out.println("Parola segreta mancante");
         }
     }
@@ -83,7 +82,7 @@ public final class App {
     /**
      * Stampa a video gli aiuti.
     */
-    public static void getHelp(){
+    public static void getHelp() {
         System.out.println("Ciao giocatore!");
         System.out.println("Digita il comando '/gioca' per avviare una nuova partita");
         System.out.println("Digita il comando '/abbandona' per uscire dalla partita. "
@@ -104,15 +103,15 @@ public final class App {
     /**
      * Chiude il programma, implementata anche una richiesta di conferma.
     */
-    public static void esci(){
+    public static void esci() {
         System.out.println("_______________________________");
         System.out.println("Si desidera terminare il programma ?\nDigitare y o s per confermare");
         String risposta = getGiocatore().input();
         risposta = risposta.toLowerCase(); 
-        if (risposta.equals("y")|| risposta.equals("s")){
+        if (risposta.equals("y")|| risposta.equals("s")) {
              System.out.println("Chiusura in corso....");
              System.exit(0); 
-        }else{
+        }else {
              System.out.println("_______________________________");
              System.out.println("Chiusura annullata");
         }        
@@ -126,12 +125,12 @@ public final class App {
         
         System.out.println(new App().getGreeting());
         
-        if (args.length > 0){
-            try{
+        if (args.length > 0) {
+            try {
                 if(Analizzatore.analizzatoreComando(args[0]) == Analizzatore.Comando.AIUTO){
                     getHelp();
                 }
-            }catch(InputUserNotValid e){
+            }catch(InputUserNotValid e) {
                 System.err.println(e.getMessage());
             }  
         } else {
@@ -143,7 +142,7 @@ public final class App {
             
             try {
                 Analizzatore.Comando comando = Analizzatore.analizzatoreComando(inputUser);
-                switch(comando){
+                switch(comando) {
                     case NUOVA : 
                         String[] parola = inputUser.split(" ");
                         setParola(parola[1]);
@@ -151,7 +150,7 @@ public final class App {
                     case MOSTRA :
                         if(getParola() != null) {
                             System.out.println("La parola segreta inserita e': " + getParola());
-                        } else{ 
+                        } else { 
                             System.out.println("Parola segreta mancante");
                         }
                         break;

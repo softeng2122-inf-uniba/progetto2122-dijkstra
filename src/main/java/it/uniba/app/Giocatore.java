@@ -11,9 +11,9 @@ public class Giocatore {
     /**
      * Costruttore.
     */
-    public Giocatore(){
+    public Giocatore() {
     }
-    
+ 
     /**
      * Gestisce input giocatore da terminale.
      * @return input da terminale

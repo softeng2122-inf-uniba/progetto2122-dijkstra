@@ -5,7 +5,8 @@ package it.uniba.app;
  * NoECB class.
  */
 class InputUserNotValid extends Exception {
-	InputUserNotValid() {}
+	InputUserNotValid() {
+        }
 	
         /**
          * metodo costruttore per il richiamo di una eccezione.

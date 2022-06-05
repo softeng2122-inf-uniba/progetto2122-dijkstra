@@ -1,13 +1,11 @@
 package it.uniba.app;
-
 /**
  * Classe con lo scopo di analizzare gli input inseriti dall'utente per 
  * l'identificazine dei: tentativi, tipo di comando inserito e, nel 
  * caso di una parola, sia stata inserita una parola valida.
  * Control class.
  */
-public final class Analizzatore{
-    
+public final class Analizzatore {
     /**
      * lista di colori usati sui caratteri durante la partita.
      */
@@ -17,12 +15,10 @@ public final class Analizzatore{
      * lista dei comandi accettati.
      */
     public enum Comando {NUOVA, MOSTRA, GIOCA, ESCI, ABBANDONA, AIUTO, SETPAROLA, GETPAROLA, ERRORE};
-    
     /**
      * Token in input contenente il comando.
     */
     private static String[] token;
-    
     /**
      * Stringa che identifica il comando nuova.
     */
@@ -32,27 +28,22 @@ public final class Analizzatore{
      * Stringa che identifica il comando mostra.
     */
     private static final String STRINGMOSTRA = "/mostra";
-    
     /**
      * Stringa che indentifivìca il comando help.
     */
     private static final String STRINGHELP = "/help";
-    
     /**
      * Stringa che identifica il comando --help.
     */
     private static final String STRINGLESSLESSH = "--help";
-    
     /**
      * Stringa che identifica il comando --h.
     */
     private static final String STRINGLESSHELP = "-h";
-    
     /**
      * Stringa che identifica il comando gioca.
     */
     private static final String STRINGPLAY = "/gioca";
-    
     /**
      * Stringa che identifica il comando esci.
     */
@@ -66,7 +57,7 @@ public final class Analizzatore{
     /**
      * Costruttore classe Analizzatore.
      */
-     public Analizzatore(){
+     public Analizzatore() {
         
     }
     
@@ -76,31 +67,27 @@ public final class Analizzatore{
      * @param parolaSegreta
      * @return Colore[]
      */
-    public static Colore[] analizzatoreTentativo(final String input,final String parolaSegreta){
+    public static Colore[] analizzatoreTentativo(final String input,final String parolaSegreta) {
         Colore[] coloriCaratteri = new Colore[input.length()];
-        
-        for (int i = 0; i < coloriCaratteri.length;i++){
+        for (int i = 0; i < coloriCaratteri.length; i++) {
             coloriCaratteri[i] = Colore.GRIGIO;
         }
-       
-        for (int i = 0;i < input.length();i++){
-            if(input.charAt(i) == parolaSegreta.charAt(i)){
+        for (int i = 0; i < input.length(); i++) {
+            if(input.charAt(i) == parolaSegreta.charAt(i)) {
                 coloriCaratteri[i] = Colore.VERDE;
             }
         }
-        
-        for (int i = 0; i < input.length();i++){
-            if(coloriCaratteri[i] != Colore.VERDE){
-                for (int j = 0; j < parolaSegreta.length();j++){
-                    if(coloriCaratteri[j] != Colore.VERDE){
-                            if(input.charAt(i) == parolaSegreta.charAt(j)){
+        for (int i = 0; i < input.length(); i++) {
+            if(coloriCaratteri[i] != Colore.VERDE) {
+                for (int j = 0; j < parolaSegreta.length(); j++) {
+                    if(coloriCaratteri[j] != Colore.VERDE) {
+                            if(input.charAt(i) == parolaSegreta.charAt(j)) {
                                 coloriCaratteri[i] = Colore.GIALLO;
                              }
                     }
                 }
             }
         }
-        
         return coloriCaratteri;
     }
 
@@ -111,7 +98,6 @@ public final class Analizzatore{
      * @throws InputUserNotValid 
      */
     public static Comando analizzatoreComando(String inputUser) throws InputUserNotValid {
-
         if(inputUser.length() > 0) {
             token = inputUser.trim().split(" ");
             if (token.length == 1) {
@@ -130,7 +116,7 @@ public final class Analizzatore{
                 } else if (token[0].charAt(0) == '/') {
                     throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
                 }
-            }else if(token.length == 2){
+            }else if(token.length == 2) {
                 if (token[0].equalsIgnoreCase(STRINGNUOVA)) {
                     return Comando.NUOVA;
                 }
@@ -138,13 +124,13 @@ public final class Analizzatore{
                     throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
                 }
             }
-            else{
+            else {
                 throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
             }
         } 
         return Comando.ERRORE;
     }
-    
+ 
     /**
      * metodo che verifica che una stringa sia priva di spazi e composta da soli caratteri alfabetici.
      * @param inputUser

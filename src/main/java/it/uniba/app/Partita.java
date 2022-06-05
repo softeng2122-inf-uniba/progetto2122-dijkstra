@@ -154,7 +154,7 @@ public final class Partita {
             Analizzatore.Colore[] coloriCaratteri = Analizzatore.analizzatoreTentativo(token, App.getParola());
 
             for (int j = 0; j < App.NUMEROLETTEREMASSIME; j++) {
-                if(null != coloriCaratteri[j]){
+                if(null != coloriCaratteri[j]) {
                     switch (coloriCaratteri[j]) {
                         case VERDE:
                             System.out.print("\t\u001B[42m" + matriceTentativi[i][j] + "\u001B[0m");
@@ -191,9 +191,9 @@ public final class Partita {
         String risposta = App.getGiocatore().input();
         risposta = risposta.toLowerCase(); 
         
-        if(risposta.equals("y")|| risposta.equals("s")){
+        if(risposta.equals("y")|| risposta.equals("s")) {
              quit = true; 
-        }else{
+        }else {
              System.out.println("_______________________________");
              System.out.println("Abbandono annullato");
         }        
