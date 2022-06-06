@@ -29,7 +29,7 @@ public final class Analizzatore {
     */
     private static final String STRINGMOSTRA = "/mostra";
     /**
-     * Stringa che indentifivìca il comando help.
+     * Stringa che identifica il comando help.
     */
     private static final String STRINGHELP = "/help";
     /**
