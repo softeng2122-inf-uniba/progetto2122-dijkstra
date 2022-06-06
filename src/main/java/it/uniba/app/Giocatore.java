@@ -19,8 +19,11 @@ public class Giocatore {
      * @return input da terminale
     */
     public String input() {
-        Scanner keyboard = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in, "UTF-8");
         String userInput = keyboard.nextLine();
         return userInput;
     }  
 }
+
+//StandardCharsets.UTF_8
+//Charset.defaultCharset()
