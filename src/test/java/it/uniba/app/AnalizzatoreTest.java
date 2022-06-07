@@ -24,5 +24,9 @@ class AnalizzatoreTest {
     void commandAnalyseMostra() throws InputUserNotValid {
         assertEquals(Analizzatore.Comando.MOSTRA, Analizzatore.analizzatoreComando("/mostra"));
     }
+    @Test
+    void commandAnalyseHelp() throws InputUserNotValid {
+        assertEquals(Analizzatore.Comando.AIUTO, Analizzatore.analizzatoreComando("/help"));
+    }
 
 }
