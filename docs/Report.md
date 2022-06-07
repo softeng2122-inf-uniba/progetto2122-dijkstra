@@ -6,11 +6,18 @@
 - [3. Requisiti specifici](#requisiti-specifici)
     - [3.1 Requisiti funzionali](#requisiti-funzionali)
     - [3.2 Requisiti non funzionali](#requisiti-non-funzionali)
+- [4. System Design](#system-design)
+    - [4.1 Stile architetturale adottato](#design-architettura)
+    - [4.2 Diagramma dei package, diagramma dei componenti](#design-diagramma)
+    - [4.2 Commentare le decisioni prese](#decisioni-prese)
 - [5. OO Design](#oo-design)
     - [5.1 Diagrammi delle classi](#diagrammi-delle-classi)
     - [5.2 Diagrammi di sequenza](#diagrammi-di-sequenza)
     - [5.3 Design pattern](#design-pattern)
     - [5.4 Commenti decisioni prese](#design-pattern)
+- [6. Manuale utente](#manuale-utente)
+- [7. Riepilogo del test](#riepilogo-test)
+- [9. Analisi retrospettiva](#analisi-retrospettiva)
 
 
 
