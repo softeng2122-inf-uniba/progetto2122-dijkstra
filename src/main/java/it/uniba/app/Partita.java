@@ -177,7 +177,14 @@ public final class Partita {
                 youWin = true;
             } 
         }
-        stampaMatrice(i);
+
+        for (int k = i; k < App.NUMEROTENTATIVIMASSIMI; k++) {
+            for (int j = 0; j < App.NUMEROLETTEREMASSIME; j++) {
+                System.out.print("\t" + matriceTentativi[k][j]);
+            }
+            System.out.println();
+        }
+
         return youWin;
     }
     
