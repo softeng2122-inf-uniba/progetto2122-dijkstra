@@ -10,4 +10,9 @@ class AnalizzatoreTest {
         assertFalse(Analizzatore.analizzatoreSintattico("p0rt4"));
     }
 
+    @Test
+    void syntaxAnalyseStringWithSpace() {
+        assertFalse(Analizzatore.analizzatoreSintattico("port a"));
+    }
+
 }
