@@ -14,7 +14,7 @@ public final class Analizzatore {
     /**
      * lista dei comandi accettati.
      */
-    public enum Comando {NUOVA, MOSTRA, GIOCA, ESCI, ABBANDONA, AIUTO, SETPAROLA, GETPAROLA, ERRORE};
+    public enum Comando {NUOVA, MOSTRA, GIOCA, ESCI, ABBANDONA, AIUTO, ERRORE};
     /**
      * Token in input contenente il comando.
     */
