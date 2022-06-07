@@ -205,6 +205,10 @@ Abbiamo fatto in modo che ogni componenente custodisca al proprio interno i prop
 Ogni componente del sistema è ad alta coesione, con un obbiettivo e una responsabilità ben definita. Dunque ogni classe è facile da comprendere, da utilizzare ed eventuali modifiche non impatteranno sulle altre classi. Da cui deriva un **basso grado di accoppiamento** / dipendenza tra componenti diversi.
 
 
+___
+## **Analisi retrospettiva**
 
+
+ ![Analisi retrospettiva sprint 1](./img/Analisi_retrospettiva_sprint_1.png)
 
 
