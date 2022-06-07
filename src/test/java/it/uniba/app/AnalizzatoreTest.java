@@ -103,4 +103,21 @@ class AnalizzatoreTest {
             assertEquals(coloriCaratteri[i], arrayOfColors[i]);
         }
     }
+
+    @Test
+    void tryAnalyseIncorrectWord() {
+        Analizzatore.Colore green = Analizzatore.Colore.VERDE;
+        Analizzatore.Colore yellow = Analizzatore.Colore.GIALLO;
+        Analizzatore.Colore gray = Analizzatore.Colore.GRIGIO;
+
+        Analizzatore.Colore[] coloriCaratteri = {green, yellow, gray , yellow, green}; //aspettato
+        String input = "rules";
+        String parolaSegreta = "rebus";
+
+        Analizzatore.Colore[] arrayOfColors = Analizzatore.analizzatoreTentativo(input, parolaSegreta);
+
+        for(int i = 0; i < arrayOfColors.length; i++) {
+            assertEquals(coloriCaratteri[i], arrayOfColors[i]);
+        }
+    }
 }
