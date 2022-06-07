@@ -23,7 +23,7 @@
 
 ## **Introduzione**
 
-Wordle è un gioco in cui, il giocatore ha un numero limitato di tentativi - solitamente 6 - per indovinare una parola, con un feedback fornito per ogni tentativo effettuato sotto forma di variazione di colore che indicano quando le lettere corrispondono o occupano la posizione corretta rispetto alla parola da indovinare.
+Wordle è un gioco in cui, il giocatore ha un numero limitato di tentativi - solitamente 6 - per indovinare una parola, con un feedback fornito, per ogni tentativo effettuato, sotto forma di variazione di colore che indica con il colore verde che una lettera è nella posizione giusta, con il colore giallo che la lettera appartiene alla parola segreta, ma in una posizione diversa, e con il colore grigio che la lettera non appartiene alla parola segreta.
 
 L'applicativo è una versione semplificata che rispetta specifici requisiti funzionali.
 
@@ -36,7 +36,7 @@ L'applicativo è una versione semplificata che rispetta specifici requisiti funz
 
 ### **Requisiti funzionali**
 
-- Come paroliere voglio impostare una parola segreta manualment.
+- Come paroliere voglio impostare una parola segreta manualmente.
 
         Al comando /nuova <parola>
         l’applicazione risponde:
@@ -127,7 +127,7 @@ ___
 ![Classe App](./img/app.png)
 
 La classe **App** implementa le seguenti user story:
-- Come paroliere voglio impostare una parola segreta manualment.
+- Come paroliere voglio impostare una parola segreta manualmente.
 - Come paroliere voglio mostrare la parola segreta.
 - Come giocatore voglio mostrare l'help con elenco comandi.
 - Come giocatore voglio iniziare una nuova partita.
@@ -141,7 +141,7 @@ La classe **App** implementa le seguenti user story:
     
 La classe **Partita** implementa le seguenti user story:
 - Come giocatore voglio abbandonare la partita.
-- Come giocatore voglio effettuare un tentativo per indovinare la parola segreta
+- Come giocatore voglio effettuare un tentativo per indovinare la parola segreta.
 
 La classe **Analizzatore** implementa i controlli necessari sull'input inserito dall'utente.
 
@@ -155,7 +155,7 @@ La classe **Giocatore** identifica i permessi del giocatore.
 ___
 ### **Diagrammi di sequenza**
 
-- **Diagramma di sequenza di 'Come paroliere voglio impostare una parola segreta manualment'**
+- **Diagramma di sequenza di 'Come paroliere voglio impostare una parola segreta manualmente'**
 
     ![Diagramma nuova parola](./img/diagramma_di_sequenza_nuova.png)
 
@@ -190,12 +190,12 @@ ___
 ___
 ### **Design pattern**
 
-Le principari componenti che sono stati individuate sono:
+Le principali componenti che sono stati individuate sono:
  - classe Giocatore
  - classe Gioco
  - classe Partita
 
-Un giocatore che si interfaccia con il gioco avrà la possibilità di dare in input dei comandi per ricevere informazioni sul gioco o poter avviare una partita. All’interno del gioco è definita la parola segreta utile per il confronto dei tentativi effettuati all’interno della partita. Il giocatore, avviata la partità avrà la possibilità di inserire comandi - i quali hanno prefisso ‘/’ - e tentativi. Ogni input che viene effettuato dall’utente - tentativo o comando che sia - passa da un analizzatore per verificare la correttezza sintattica e/o per la verifica dell’esistenza del comando inserito.
+Un giocatore che si interfaccia con il gioco avrà la possibilità di dare in input dei comandi per ricevere informazioni sul gioco o poter avviare una partita. All’interno del gioco è definita la parola segreta utile per il confronto dei tentativi effettuati all’interno della partita. Il giocatore, avviata la partità, avrà la possibilità di inserire comandi - i quali hanno prefisso ‘/’ - e tentativi. Ogni input che viene effettuato dall’utente - tentativo o comando che sia - passa da un analizzatore per verificare la correttezza sintattica e/o per la verifica dell’esistenza del comando inserito.
 
 ___
 ### **Commenti decisioni prese**
