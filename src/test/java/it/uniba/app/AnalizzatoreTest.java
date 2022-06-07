@@ -90,4 +90,17 @@ class AnalizzatoreTest {
     void commandAnalyseNullCommand() throws InputUserNotValid {
         assertEquals(Analizzatore.Comando.ERRORE, Analizzatore.analizzatoreComando(""));
     }
+
+    @Test
+    void tryAnalyseCorrectWord() {
+        Analizzatore.Colore green = Analizzatore.Colore.VERDE;
+        Analizzatore.Colore[] coloriCaratteri = {green, green,green, green, green}; //aspettato
+        String input = "porta";
+
+        Analizzatore.Colore[] arrayOfColors = Analizzatore.analizzatoreTentativo(input, input);
+
+        for(int i = 0; i < arrayOfColors.length; i++) {
+            assertEquals(coloriCaratteri[i], arrayOfColors[i]);
+        }
+    }
 }
