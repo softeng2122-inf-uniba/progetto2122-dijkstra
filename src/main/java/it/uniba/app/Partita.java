@@ -38,20 +38,6 @@ public final class Partita {
         System.out.println("Partita creata! Puoi cominciare a giocare");
     }
 
-    /** classe che descrive la sessione di una partita 
-     * @param  startingRow
-     * Boundary class 
-    */
-    private void stampaMatrice(final int startingRow) {
-
-        for (int i = startingRow; i < App.NUMEROTENTATIVIMASSIMI; i++) {
-            for (int j = 0; j < App.NUMEROLETTEREMASSIME; j++) {
-                System.out.print("\t" + matriceTentativi[i][j]);
-            }
-            System.out.println();
-        }
-    }
-
     /**
      * funzione principale per inserire un tentativo o un comando
      */
