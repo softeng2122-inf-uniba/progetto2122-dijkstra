@@ -40,8 +40,18 @@ class AnalizzatoreTest {
     }
 
     @Test
-    void commandAnalyseNuova() throws InputUserNotValid {
+    void commandAnalyseNuovaWithWord() throws InputUserNotValid {
         assertEquals(Analizzatore.Comando.NUOVA, Analizzatore.analizzatoreComando("/nuova porta"));
     }
+
+    @Test
+    void commandAnalyseNuovaWithoutWord() {
+        assertThrows(InputUserNotValid.class,
+                () -> {
+                    Analizzatore.analizzatoreComando("/nuova");
+                }
+                );
+    }
+
 
 }
