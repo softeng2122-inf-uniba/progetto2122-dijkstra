@@ -15,4 +15,9 @@ class AnalizzatoreTest {
         assertFalse(Analizzatore.analizzatoreSintattico("port a"));
     }
 
+    @Test
+    void syntaxAnalyseString() {
+        assertTrue(Analizzatore.analizzatoreSintattico("pippo"));
+    }
+
 }
