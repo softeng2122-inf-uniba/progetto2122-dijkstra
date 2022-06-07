@@ -34,7 +34,7 @@ public final class Partita {
             }
         }
 
-        stampaMatrice(0);
+        stampaColoriTentativi();
         System.out.println("Partita creata! Puoi cominciare a giocare");
     }
 
