@@ -24,6 +24,3 @@ public class Giocatore {
         return userInput;
     }  
 }
-
-//StandardCharsets.UTF_8
-//Charset.defaultCharset()
