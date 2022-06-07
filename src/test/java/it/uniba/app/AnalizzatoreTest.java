@@ -20,4 +20,9 @@ class AnalizzatoreTest {
         assertTrue(Analizzatore.analizzatoreSintattico("pippo"));
     }
 
+    @Test
+    void commandAnalyseMostra() throws InputUserNotValid {
+        assertEquals(Analizzatore.Comando.MOSTRA, Analizzatore.analizzatoreComando("/mostra"));
+    }
+
 }
