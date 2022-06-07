@@ -39,4 +39,9 @@ class AnalizzatoreTest {
         assertEquals(Analizzatore.Comando.AIUTO, Analizzatore.analizzatoreComando("-h"));
     }
 
+    @Test
+    void commandAnalyseNuova() throws InputUserNotValid {
+        assertEquals(Analizzatore.Comando.NUOVA, Analizzatore.analizzatoreComando("/nuova porta"));
+    }
+
 }
