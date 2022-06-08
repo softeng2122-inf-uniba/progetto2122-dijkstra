@@ -250,6 +250,9 @@ Una volta avviata la partita, viene inizialmente visualizzata la griglia dei ten
 - se, invece, ha sfondo giallo vuol dire che tale lettera fa parte della parola segreta ma si trova nel posto sbagliato;
 - se, infine, una lettera non ha nessun colore di sfondo significa che non fa parte della parola segreta impostata e pertanto non è da digitare nei tentativi successivi.
 
+![](./img/ImgPartita1.jpeg)
+
+![](./img/ImgPartita2.jpeg)
 
 
 Una volta indovinata la parola verrà visualizzato un messaggio che attesti la vittoria e la sessione di gioco in corso verrà chiusa.
