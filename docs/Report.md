@@ -243,6 +243,17 @@ E' ovvio che la parola non può essere visualizzata durante la partita in corso!
 
 Una volta avviata la partita, viene inizialmente visualizzata la griglia dei tentativi vuota che man mano si popolerà dei tentativi immessi dall'utente.
 
+![Manuale utente](./img/ImgGioca2.jpg)
+
+**6** Ad ogni tentativo le lettere del tentativo inserito dall'utente avranno un diverso colore di sfondo (verde o giallo) a seconda della loro presenza all’interno della parola segreta: 
+- se ha sfondo verde significa che la lettera immessa dell'utente è corretta e che si trova nel posto giusto rispetto alla parola segreta da indovinare;
+- se, invece, ha sfondo giallo vuol dire che tale lettera fa parte della parola segreta ma si trova nel posto sbagliato;
+- se, infine, una lettera non ha nessun colore di sfondo significa che non fa parte della parola segreta impostata e pertanto non è da digitare nei tentativi successivi.
+
+
+
+Una volta indovinata la parola verrà visualizzato un messaggio che attesti la vittoria e la sessione di gioco in corso verrà chiusa.
+
 
 
 
