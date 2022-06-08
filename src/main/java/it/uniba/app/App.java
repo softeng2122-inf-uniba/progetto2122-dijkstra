@@ -13,11 +13,11 @@ public final class App {
     /**
      * Riferimento al numero massimo di lettere ammesse.
     */
-    static final int NUMEROLETTEREMASSIME  = 5;
+    private static final int NUMEROLETTEREMASSIME  = 5;
     /**
      * Riferimento al numero massimo di tentativi .
     */
-    static final int NUMEROTENTATIVIMASSIMI = 6;
+    private static final int NUMEROTENTATIVIMASSIMI = 6;
 
     /**
      * Oggetto di classe giocatore.
