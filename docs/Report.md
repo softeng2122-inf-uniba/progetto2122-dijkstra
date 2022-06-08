@@ -231,13 +231,17 @@ In caso contrario, viene visualizzato un messaggio d'errore che avvisa l'utente 
 
 **4.**  E' possibile visualizzare la parola segreta impostata prima dell'inizio di una partita:
 
-
+![Manuale utente](./img/ImgMostra1.jpg)
 
 oppure una volta terminata la sessione di gioco attraverso il comando '/mostra':
 
-
+![Manuale utente](./img/ImgMostra2.jpg)
 
 E' ovvio che la parola non può essere visualizzata durante la partita in corso!
+
+**5.** Per entrare finalmente nel vivo del gioco è necessario digitare il comando '/gioca' e iniziare a digitare i 6 tentativi massimi che si hanno a disposizione.
+
+Una volta avviata la partita, viene inizialmente visualizzata la griglia dei tentativi vuota che man mano si popolerà dei tentativi immessi dall'utente.
 
 
 
