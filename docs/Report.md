@@ -225,7 +225,19 @@ In caso contrario, viene visualizzato un messaggio d'errore che avvisa l'utente 
 
 - parola troppo corta o parola troppo lunga
 
+   ![Manuale utente](./img/ImgNuova1.jpg)
+
 - parola non valida se contiene caratteri non corrispondenti alle lettere  dell'alfabeto
+
+**4.**  E' possibile visualizzare la parola segreta impostata prima dell'inizio di una partita:
+
+
+
+oppure una volta terminata la sessione di gioco attraverso il comando '/mostra':
+
+
+
+E' ovvio che la parola non può essere visualizzata durante la partita in corso!
 
 
 
