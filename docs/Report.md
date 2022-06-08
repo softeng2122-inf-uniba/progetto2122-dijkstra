@@ -217,6 +217,16 @@ Wordle è un web-puzzle che consiste nel richiedere al giocatore di indovinare u
 
 **2.** Il comando '/gioca' permette di avviare il gioco soltanto se la parola segreta da indovinare è stata precedentemente impostata.
 
+![Manuale utente](./img/ImgGioca1.jpg)
+
+In caso contrario, viene visualizzato un messaggio d'errore che avvisa l'utente della mancanza della parola segreta.
+
+**3.** Con il comando '/nuova parolaSegreta' è possibile impostare la parola da indovinare, la quale può avere una lunghezza massima pari a cinque caratteri. Se la lunghezza della parola non soddisfa i requisiti verranno visualizzati i messaggi di errore di:
+
+- parola troppo corta o parola troppo lunga
+
+- parola non valida se contiene caratteri non corrispondenti alle lettere  dell'alfabeto
+
 
 
 
