@@ -204,8 +204,15 @@ Abbiamo fatto in modo che ogni componenente custodisca al proprio interno i prop
 
 Ogni componente del sistema è ad alta coesione, con un obbiettivo e una responsabilità ben definita. Dunque ogni classe è facile da comprendere, da utilizzare ed eventuali modifiche non impatteranno sulle altre classi. Da cui deriva un **basso grado di accoppiamento** / dipendenza tra componenti diversi.
 
+# **Manuale Utente**
+Wordle è un web-puzzle che consiste nel richiedere al giocatore di indovinare una parola segreta di cinque lettere avendo a disposizione sei tentativi.
 
-___
+**Come funziona?**
+
+**1.** Il gioco si avvia con una frase di Benvenuto, seguita da un invito all'utente di digitare il comando '-h', '--help' per avere la lista dei comandi disponibili
+
+
+
 ## **Analisi retrospettiva**
 
 
