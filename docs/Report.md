@@ -254,10 +254,10 @@ Una volta avviata la partita, viene inizialmente visualizzata la griglia dei ten
 
 ![](./img/ImgPartita1.jpeg)
 
-![](./img/ImgPartita2.jpeg)
-
 
 Una volta indovinata la parola verrà visualizzato un messaggio che attesti la vittoria e la sessione di gioco in corso verrà chiusa.
+
+![](./img/ImgPartita2.jpeg)
 
 
 
