@@ -261,6 +261,10 @@ Una volta indovinata la parola verrà visualizzato un messaggio che attesti la v
 
 **7.** E' possibile abbandonare la partita durante la sessione di gioco attraverso il comando '/abbandona'.
 
+![Comando abbandona](./img/ImgAbbandona.jpeg)
+
+
+
 
 
 
