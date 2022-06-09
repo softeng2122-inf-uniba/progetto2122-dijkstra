@@ -263,7 +263,11 @@ Una volta indovinata la parola verrà visualizzato un messaggio che attesti la v
 
 ![Comando abbandona](./img/ImgAbbandona.jpeg)
 
-
+**8.** Il comando '/esci' consente l'uscita dall'applicazione in cinque casi:
+- una volta terminata la partita;
+- durante la sessione di gioco;
+- prima di iniziare il gioco;
+- anche all'avvio del programma e prima di impostare la parola segreta;
 
 
 
