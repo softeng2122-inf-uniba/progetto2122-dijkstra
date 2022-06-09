@@ -280,6 +280,7 @@ Una volta indovinata la parola verrà visualizzato un messaggio che attesti la v
 
     ![Comando esci](./img/ImgEsci4.png)
 
+**9.** Infine con il comando '/help è possibile richiamare l'help dei comandi in qualsiasi momento.
 
 
 
