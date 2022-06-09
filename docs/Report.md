@@ -229,6 +229,8 @@ In caso contrario, viene visualizzato un messaggio d'errore che avvisa l'utente 
 
 - parola non valida se contiene caratteri non corrispondenti alle lettere  dell'alfabeto
 
+    ![Manuale utente](./img/ImgNuova2.png)
+
 **4.**  E' possibile visualizzare la parola segreta impostata prima dell'inizio di una partita:
 
 ![Manuale utente](./img/ImgMostra1.jpg)
