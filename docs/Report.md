@@ -259,6 +259,8 @@ Una volta indovinata la parola verrà visualizzato un messaggio che attesti la v
 
 ![](./img/ImgPartita2.jpeg)
 
+**7.** E' possibile abbandonare la partita durante la sessione di gioco attraverso il comando '/abbandona'.
+
 
 
 
