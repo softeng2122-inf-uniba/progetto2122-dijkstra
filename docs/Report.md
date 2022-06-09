@@ -209,19 +209,20 @@ Wordle è un web-puzzle che consiste nel richiedere al giocatore di indovinare u
 
 **Come funziona?**
 
-**1.** Il gioco si avvia con una frase di Benvenuto, seguita da un invito all'utente di digitare il comando '-h', '--help' per avere la lista dei comandi disponibili.
+**1.** Il gioco si avvia con una frase di Benvenuto, seguita da un invito all'utente di digitare il comando   
+*'-h'*, *'--help'* per avere la lista dei comandi disponibili.
 
 ![Benvenuto](./img/ImgBenvenuto.jpg)
 
 ![Comando help](./img/ImgHelp1.jpg)
 
-**2.** Il comando '/gioca' permette di avviare il gioco soltanto se la parola segreta da indovinare è stata precedentemente impostata.
+**2.** Il comando *'/gioca'* permette di avviare il gioco soltanto se la parola segreta da indovinare è stata precedentemente impostata.
 
 ![Comando gioca](./img/ImgGioca1.jpg)
 
 In caso contrario, viene visualizzato un messaggio d'errore che avvisa l'utente della mancanza della parola segreta.
 
-**3.** Con il comando '/nuova parolaSegreta' è possibile impostare la parola da indovinare, la quale può avere una lunghezza massima pari a cinque caratteri.  
+**3.** Con il comando *'/nuova parolaSegreta'* è possibile impostare la parola da indovinare, la quale può avere una lunghezza massima pari a cinque caratteri.  
 Se la lunghezza della parola non soddisfa i requisiti verranno visualizzati i messaggi di errore di:
 
 - parola troppo corta o parola troppo lunga;
@@ -236,13 +237,13 @@ Se la lunghezza della parola non soddisfa i requisiti verranno visualizzati i me
 
 ![Comando mostra](./img/ImgMostra1.jpg)
 
-oppure una volta terminata la sessione di gioco attraverso il comando '/mostra':
+oppure una volta terminata la sessione di gioco attraverso il comando *'/mostra'*:
 
 ![Comando mostra](./img/ImgMostra2.jpg)
 
 E' ovvio che la parola non può essere visualizzata durante la partita in corso!
 
-**5.** Per entrare finalmente nel vivo del gioco è necessario digitare il comando '/gioca' e iniziare a digitare i sei tentativi massimi che si hanno a disposizione.  
+**5.** Per entrare finalmente nel vivo del gioco è necessario digitare il comando *'/gioca'* e iniziare a digitare i sei tentativi massimi che si hanno a disposizione.  
 Una volta avviata la partita, viene inizialmente visualizzata la griglia dei tentativi vuota che man mano si popolerà dei tentativi immessi dall'utente.
 
 ![Avvio partita](./img/ImgGioca2.jpg)
@@ -259,11 +260,11 @@ Una volta indovinata la parola verrà visualizzato un messaggio che attesti la v
 
 ![Inserimento tentativo](./img/ImgPartita2.jpeg)
 
-**7.** E' possibile abbandonare la partita durante la sessione di gioco attraverso il comando '/abbandona'.
+**7.** E' possibile abbandonare la partita durante la sessione di gioco attraverso il comando *'/abbandona'*.
 
 ![Comando abbandona](./img/ImgAbbandona.jpeg)
 
-**8.** Il comando '/esci' consente l'uscita dall'applicazione in quattro casi:
+**8.** Il comando *'/esci'* consente l'uscita dall'applicazione in quattro casi:
 - una volta terminata la partita;
 
     ![Comando esci](./img/ImgEsci1.png)
@@ -280,7 +281,7 @@ Una volta indovinata la parola verrà visualizzato un messaggio che attesti la v
 
     ![Comando esci](./img/ImgEsci4.png)
 
-**9.** Infine con il comando '/help' è possibile richiamare l'help dei comandi in qualsiasi momento.
+**9.** Infine con il comando *'/help'* è possibile richiamare l'help dei comandi in qualsiasi momento.
 
 ![Comando help](./img/ImgHelp2.png)
 
