@@ -271,8 +271,11 @@ Una volta indovinata la parola verrà visualizzato un messaggio che attesti la v
 - durante la sessione di gioco;
 
     ![Comando esci](./img/ImgEsci2.png)
-    
+
 - prima di iniziare il gioco;
+
+    ![Comando esci](./img/ImgEsci3.png)
+    
 - anche all'avvio del programma e prima di impostare la parola segreta;
 
 
