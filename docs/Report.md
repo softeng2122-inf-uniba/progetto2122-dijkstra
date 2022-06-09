@@ -211,13 +211,13 @@ Wordle è un web-puzzle che consiste nel richiedere al giocatore di indovinare u
 
 **1.** Il gioco si avvia con una frase di Benvenuto, seguita da un invito all'utente di digitare il comando '-h', '--help' per avere la lista dei comandi disponibili.
 
-![Manuale utente](./img/ImgBenvenuto.jpg)
+![Benvenuto](./img/ImgBenvenuto.jpg)
 
-![Manuale utente](./img/ImgHelp1.jpg)
+![Comando help](./img/ImgHelp1.jpg)
 
 **2.** Il comando '/gioca' permette di avviare il gioco soltanto se la parola segreta da indovinare è stata precedentemente impostata.
 
-![Manuale utente](./img/ImgGioca1.jpg)
+![Comando gioca](./img/ImgGioca1.jpg)
 
 In caso contrario, viene visualizzato un messaggio d'errore che avvisa l'utente della mancanza della parola segreta.
 
@@ -226,38 +226,38 @@ Se la lunghezza della parola non soddisfa i requisiti verranno visualizzati i me
 
 - parola troppo corta o parola troppo lunga;
 
-   ![Manuale utente](./img/ImgNuova1.jpg)
+   ![Comando nuova](./img/ImgNuova1.jpg)
 
 - parola non valida se contiene caratteri non corrispondenti alle lettere  dell'alfabeto.
 
-    ![Manuale utente](./img/ImgNuova2.png)
+    ![comando nuova](./img/ImgNuova2.png)
 
 **4.**  E' possibile visualizzare la parola segreta impostata prima dell'inizio di una partita:
 
-![Manuale utente](./img/ImgMostra1.jpg)
+![Comando mostra](./img/ImgMostra1.jpg)
 
 oppure una volta terminata la sessione di gioco attraverso il comando '/mostra':
 
-![Manuale utente](./img/ImgMostra2.jpg)
+![Comando mostra](./img/ImgMostra2.jpg)
 
 E' ovvio che la parola non può essere visualizzata durante la partita in corso!
 
 **5.** Per entrare finalmente nel vivo del gioco è necessario digitare il comando '/gioca' e iniziare a digitare i sei tentativi massimi che si hanno a disposizione.  
 Una volta avviata la partita, viene inizialmente visualizzata la griglia dei tentativi vuota che man mano si popolerà dei tentativi immessi dall'utente.
 
-![Manuale utente](./img/ImgGioca2.jpg)
+![Avvio partita](./img/ImgGioca2.jpg)
 
 **6** Ad ogni tentativo le lettere del tentativo inserito dall'utente avranno un diverso colore di sfondo (verde o giallo) a seconda della loro presenza all’interno della parola segreta: 
 - se ha sfondo verde significa che la lettera immessa dell'utente è corretta e che si trova nel posto giusto rispetto alla parola segreta da indovinare;
 - se, invece, ha sfondo giallo vuol dire che tale lettera fa parte della parola segreta ma si trova nel posto sbagliato;
 - se, infine, una lettera non ha nessun colore di sfondo significa che non fa parte della parola segreta impostata e pertanto non è da digitare nei tentativi successivi.
 
-![](./img/ImgPartita1.jpeg)
+![Inserimento tentativo](./img/ImgPartita1.jpeg)
 
 
 Una volta indovinata la parola verrà visualizzato un messaggio che attesti la vittoria e la sessione di gioco in corso verrà chiusa.
 
-![](./img/ImgPartita2.jpeg)
+![Inserimento tentativo](./img/ImgPartita2.jpeg)
 
 **7.** E' possibile abbandonare la partita durante la sessione di gioco attraverso il comando '/abbandona'.
 
