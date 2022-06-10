@@ -286,6 +286,14 @@ Una volta indovinata la parola verrà visualizzato un messaggio che attesti la v
 
 ![Comando help](./img/ImgHelp2.png)
 
+## **Riepilogo Test**
+___
+I casi di test effettuati non sono altro che la descrizione delle attività necessarie per confrontare un comportamento aspettato con quello osservato. 
+
+Sono stati selezionati i casi di test che approssimano un caso ideale, cercando il giusto compromesso tra il numero dei casi dei test e il numero di malfunzionamenti e definendo i criteri di accettazione, in particolare il criterio di copertura definito come obbiettivo pari al 90% per ciascuna classe. 
+
+I casi di test selezionati sono di tipo Black Box, ossia selezioanti esclusivamente dalle specifiche.
+
 ## **Analisi retrospettiva**
 
 
