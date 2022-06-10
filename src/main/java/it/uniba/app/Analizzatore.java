@@ -104,8 +104,7 @@ public final class Analizzatore {
                 
                 if (token[0].equalsIgnoreCase(STRINGMOSTRA)) {
                     return Comando.MOSTRA;
-                } else if (token[0].equalsIgnoreCase(STRINGHELP) || token[0].equalsIgnoreCase(STRINGLESSLESSH)
-                        || token[0].equalsIgnoreCase(STRINGLESSHELP)) {
+                } else if (token[0].equalsIgnoreCase(STRINGHELP)) {
                     return Comando.AIUTO;
                 } else if (token[0].equalsIgnoreCase(STRINGPLAY)) {
                     return Comando.GIOCA;
