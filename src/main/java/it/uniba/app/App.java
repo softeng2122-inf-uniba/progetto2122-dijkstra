@@ -28,7 +28,7 @@ public final class App {
     */
     private static final String STRINGLESSLESSH = "--help";
     /**
-     * Stringa che identifica il comando --h.
+     * Stringa che identifica il comando -h.
     */
     private static final String STRINGLESSHELP = "-h";
     /**
@@ -142,8 +142,7 @@ public final class App {
             }
               
         } else {
-            System.out.println("*** Per avere la lista dei comandi all'avvio del programma"
-                    + " digita '-h' / '--help' come argomenti. ***");
+            System.out.println("*** Per avere la lista dei comandi digita '/help'. ***");
         }
         while(true) {
             System.out.println("Introdurre un comando: ");
