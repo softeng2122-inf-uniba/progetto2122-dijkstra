@@ -140,7 +140,13 @@ public final class App {
                 getHelp();
             
             }
-              
+            
+            else{
+                
+                System.out.println("*** Per avere la lista dei comandi digita '/help'. ***");
+                
+            }
+            
         } else {
             System.out.println("*** Per avere la lista dei comandi digita '/help'. ***");
         }
