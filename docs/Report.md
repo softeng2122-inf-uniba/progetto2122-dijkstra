@@ -17,6 +17,7 @@
     - [5.4 Commenti decisioni prese](#design-pattern)
 - [6. Manuale utente](#manuale-utente)
 - [7. Riepilogo del test](#riepilogo-test)
+- [8. Processo di sviluppo e organizzazione del lavoro](#processo-organizzazione)
 - [9. Analisi retrospettiva](#analisi-retrospettiva)
 
 
