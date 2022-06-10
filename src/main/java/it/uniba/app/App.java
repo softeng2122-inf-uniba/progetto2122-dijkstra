@@ -142,7 +142,8 @@ public final class App {
             }
               
         } else {
-            System.out.println("*** Per avere la lista dei comandi digita '-h' / '--help' ***");
+            System.out.println("*** Per avere la lista dei comandi all'avvio del programma"
+                    + " digita '-h' / '--help' come argomenti. ***");
         }
         while(true) {
             System.out.println("Introdurre un comando: ");
