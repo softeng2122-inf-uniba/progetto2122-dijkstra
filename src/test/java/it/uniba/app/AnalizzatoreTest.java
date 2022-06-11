@@ -36,10 +36,12 @@ class AnalizzatoreTest {
     }
     */
 
+    /*
     @Test
     void commandAnalyseLessH() throws InputUserNotValid {
         assertEquals(Analizzatore.Comando.AIUTO, Analizzatore.analizzatoreComando("-h"));
     }
+    */
 
     @Test
     void commandAnalyseNuovaWithWord() throws InputUserNotValid {
