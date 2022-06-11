@@ -29,10 +29,12 @@ class AnalizzatoreTest {
         assertEquals(Analizzatore.Comando.AIUTO, Analizzatore.analizzatoreComando("/help"));
     }
 
+    /*
     @Test
     void commandAnalyseLessLessHelp() throws InputUserNotValid {
         assertEquals(Analizzatore.Comando.AIUTO, Analizzatore.analizzatoreComando("--help"));
     }
+    */
 
     @Test
     void commandAnalyseLessH() throws InputUserNotValid {
