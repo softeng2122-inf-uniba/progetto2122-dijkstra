@@ -3,6 +3,8 @@ package it.uniba.app;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import it.uniba.app.Comandi;
+
 class AnalizzatoreTest {
 
     @Test
@@ -22,12 +24,12 @@ class AnalizzatoreTest {
 
     @Test
     void commandAnalyseMostra() throws InputUserNotValid {
-        assertEquals(Analizzatore.Comando.MOSTRA, Analizzatore.analizzatoreComando("/mostra"));
+        assertEquals(Comandi.MOSTRA, Analizzatore.analizzatoreComando("/mostra"));
     }
 
     @Test
     void commandAnalyseHelp() throws InputUserNotValid {
-        assertEquals(Analizzatore.Comando.AIUTO, Analizzatore.analizzatoreComando("/help"));
+        assertEquals(Comandi.AIUTO, Analizzatore.analizzatoreComando("/help"));
     }
 
     /*
@@ -46,7 +48,7 @@ class AnalizzatoreTest {
 
     @Test
     void commandAnalyseNuovaWithWord() throws InputUserNotValid {
-        assertEquals(Analizzatore.Comando.NUOVA, Analizzatore.analizzatoreComando("/nuova porta"));
+        assertEquals(Comandi.NUOVA, Analizzatore.analizzatoreComando("/nuova porta"));
     }
 
     @Test
@@ -60,17 +62,17 @@ class AnalizzatoreTest {
 
     @Test
     void commandAnalyseGioca() throws InputUserNotValid {
-        assertEquals(Analizzatore.Comando.GIOCA, Analizzatore.analizzatoreComando("/gioca"));
+        assertEquals(Comandi.GIOCA, Analizzatore.analizzatoreComando("/gioca"));
     }
 
     @Test
     void commandAnalyseAbbandona() throws InputUserNotValid {
-        assertEquals(Analizzatore.Comando.ABBANDONA, Analizzatore.analizzatoreComando("/abbandona"));
+        assertEquals(Comandi.ABBANDONA, Analizzatore.analizzatoreComando("/abbandona"));
     }
 
     @Test
     void commandAnalyseEsci() throws InputUserNotValid {
-        assertEquals(Analizzatore.Comando.ESCI, Analizzatore.analizzatoreComando("/esci"));
+        assertEquals(Comandi.ESCI, Analizzatore.analizzatoreComando("/esci"));
     }
 
     @Test
@@ -93,7 +95,7 @@ class AnalizzatoreTest {
 
     @Test
     void commandAnalyseNullCommand() throws InputUserNotValid {
-        assertEquals(Analizzatore.Comando.ERRORE, Analizzatore.analizzatoreComando(""));
+        assertEquals(Comandi.ERRORE, Analizzatore.analizzatoreComando(""));
     }
 
     @Test
