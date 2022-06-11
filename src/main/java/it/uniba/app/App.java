@@ -134,13 +134,9 @@ public final class App {
         System.out.println(new App().getGreeting());
         
         if (args.length > 0) {
-            try {
-                if(Analizzatore.analizzatoreComando(args[0]) == Comandi.AIUTO){
-                    getHelp();
-                }
-            }catch(InputUserNotValid e) {
-                System.err.println(e.getMessage());
-            }  
+            if(args[0].equalsIgnoreCase(STRINGLESSLESSH) || args[0].equalsIgnoreCase(STRINGLESSHELP)){
+                getHelp();
+            } 
         } else {
             System.out.println("*** Per avere la lista dei comandi digita '-h' / '--help' ***");
         }
