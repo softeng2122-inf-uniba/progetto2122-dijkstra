@@ -6,15 +6,7 @@ package it.uniba.app;
  * Control class.
  */
 public final class Analizzatore {
-    /**
-     * lista di colori usati sui caratteri durante la partita.
-     */
-    public enum Colore{GRIGIO, GIALLO, VERDE};
     
-    /**
-     * lista dei comandi accettati.
-     */
-    public enum Comando {NUOVA, MOSTRA, GIOCA, ESCI, ABBANDONA, AIUTO, SETPAROLA, GETPAROLA, ERRORE};
     /**
      * Token in input contenente il comando.
     */
@@ -67,22 +59,22 @@ public final class Analizzatore {
      * @param parolaSegreta
      * @return Colore[]
      */
-    public static Colore[] analizzatoreTentativo(final String input,final String parolaSegreta) {
-        Colore[] coloriCaratteri = new Colore[input.length()];
+    public static Colori[] analizzatoreTentativo(final String input,final String parolaSegreta) {
+        Colori[] coloriCaratteri = new Colori[input.length()];
         for (int i = 0; i < coloriCaratteri.length; i++) {
-            coloriCaratteri[i] = Colore.GRIGIO;
+            coloriCaratteri[i] = Colori.GRIGIO;
         }
         for (int i = 0; i < input.length(); i++) {
             if(input.charAt(i) == parolaSegreta.charAt(i)) {
-                coloriCaratteri[i] = Colore.VERDE;
+                coloriCaratteri[i] = Colori.VERDE;
             }
         }
         for (int i = 0; i < input.length(); i++) {
-            if(coloriCaratteri[i] != Colore.VERDE) {
+            if(coloriCaratteri[i] != Colori.VERDE) {
                 for (int j = 0; j < parolaSegreta.length(); j++) {
-                    if(coloriCaratteri[j] != Colore.VERDE) {
+                    if(coloriCaratteri[j] != Colori.VERDE) {
                             if(input.charAt(i) == parolaSegreta.charAt(j)) {
-                                coloriCaratteri[i] = Colore.GIALLO;
+                                coloriCaratteri[i] = Colori.GIALLO;
                              }
                     }
                 }
@@ -97,28 +89,28 @@ public final class Analizzatore {
      * @return Comando
      * @throws InputUserNotValid 
      */
-    public static Comando analizzatoreComando(String inputUser) throws InputUserNotValid {
+    public static Comandi analizzatoreComando(String inputUser) throws InputUserNotValid {
         if(inputUser.length() > 0) {
             token = inputUser.trim().split(" ");
             if (token.length == 1) {
                 
                 if (token[0].equalsIgnoreCase(STRINGMOSTRA)) {
-                    return Comando.MOSTRA;
+                    return Comandi.MOSTRA;
                 } else if (token[0].equalsIgnoreCase(STRINGHELP) || token[0].equalsIgnoreCase(STRINGLESSLESSH)
                         || token[0].equalsIgnoreCase(STRINGLESSHELP)) {
-                    return Comando.AIUTO;
+                    return Comandi.AIUTO;
                 } else if (token[0].equalsIgnoreCase(STRINGPLAY)) {
-                    return Comando.GIOCA;
+                    return Comandi.GIOCA;
                 } else if (token[0].equalsIgnoreCase(STRINGEXIT)) {
-                    return Comando.ESCI;
+                    return Comandi.ESCI;
                 } else if (token[0].equalsIgnoreCase(STRINGQUIT)) {
-                    return Comando.ABBANDONA;
+                    return Comandi.ABBANDONA;
                 } else if (token[0].charAt(0) == '/') {
                     throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
                 }
             }else if(token.length == 2) {
                 if (token[0].equalsIgnoreCase(STRINGNUOVA)) {
-                    return Comando.NUOVA;
+                    return Comandi.NUOVA;
                 }
                 else {
                     throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
@@ -128,7 +120,7 @@ public final class Analizzatore {
                 throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
             }
         } 
-        return Comando.ERRORE;
+        return Comandi.ERRORE;
     }
  
     /**

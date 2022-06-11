@@ -7,7 +7,17 @@ public final class Partita {
     /**
      *  Matrice contenete i caratteri dei tentativi effettuati.
     */
-    private final String[][] matriceTentativi;    
+    private final String[][] matriceTentativi;
+    /**
+     *  Variabile costante contenente il numero massimo di lettere di cui
+     *  può essere composta la parola
+     */
+    private final int numeroletteremassime;
+    /**
+     * Variabile costante contenente il numero massimo di tentativi che
+     * si possono effettuare
+     */
+    private final int numerotentativimassimi;
     /**
      * variabile booleana per uscire dalla partita.
      */
@@ -25,31 +35,19 @@ public final class Partita {
     */
     Partita(final int numbOfWords, final int numbOfTries) {
         System.out.println("Creazione partita...");
-        matriceTentativi = new String[numbOfTries][numbOfWords];
+        numeroletteremassime = numbOfWords;
+        numerotentativimassimi = numbOfTries;
+        matriceTentativi = new String[numerotentativimassimi][numeroletteremassime];
         quit = false;
         //inizializzazione matriceTentativi
-        for (int i = 0; i < numbOfTries; i++) {
-            for (int j = 0; j < numbOfWords; j++) {
+        for (int i = 0; i < numerotentativimassimi; i++) {
+            for (int j = 0; j < numeroletteremassime; j++) {
                 matriceTentativi[i][j] = "_";
             }
         }
 
-        stampaMatrice(0);
+        stampaColoriTentativi();
         System.out.println("Partita creata! Puoi cominciare a giocare");
-    }
-
-    /** classe che descrive la sessione di una partita 
-     * @param  startingRow
-     * Boundary class 
-    */
-    private void stampaMatrice(final int startingRow) {
-
-        for (int i = startingRow; i < App.NUMEROTENTATIVIMASSIMI; i++) {
-            for (int j = 0; j < App.NUMEROLETTEREMASSIME; j++) {
-                System.out.print("\t" + matriceTentativi[i][j]);
-            }
-            System.out.println();
-        }
     }
 
     /**
@@ -58,14 +56,14 @@ public final class Partita {
     public void playGame() {
 
         boolean youWin = false;             //variabile per controllo se si ha vinto la partita
-        while (!quit && !youWin && numeroTentativiEffettuati < App.NUMEROTENTATIVIMASSIMI) {
+        while (!quit && !youWin && numeroTentativiEffettuati < numerotentativimassimi) {
             boolean wasCommand = false;     //variabile di controllo per differenziare i tentativi effettuati da eventuali comandi inseriti
                  
             System.out.println("Inserire tentativo n " + (numeroTentativiEffettuati + 1) + ": ");
             String inputUser = App.getGiocatore().input();
             
             try {                           //controllo di inserimento di un eventuale comando
-                Analizzatore.Comando comando;
+                Comandi comando;
                 comando = Analizzatore.analizzatoreComando(inputUser);
                 switch (comando) {
                     case NUOVA:
@@ -105,12 +103,12 @@ public final class Partita {
                 if (Analizzatore.analizzatoreSintattico(inputUser)) {
                     
                     String[] token = inputUser.split("");
-                    if (inputUser.length() < App.NUMEROLETTEREMASSIME ){
+                    if (inputUser.length() < numeroletteremassime ){
                     	System.out.println("Tentativo incompleto");
-                   }else if (inputUser.length() > App.NUMEROLETTEREMASSIME){
+                   }else if (inputUser.length() > numeroletteremassime){
                     	System.out.println("Tentativo eccessivo");
                    }else {
-                    	System.arraycopy(token, 0, matriceTentativi[numeroTentativiEffettuati], 0, App.NUMEROLETTEREMASSIME);   //copia l'input dell'utente all'interno della matrice        
+                    	System.arraycopy(token, 0, matriceTentativi[numeroTentativiEffettuati], 0, numeroletteremassime);   //copia l'input dell'utente all'interno della matrice        
                     	numeroTentativiEffettuati++;            
                     	youWin = stampaColoriTentativi();
                     }
@@ -125,7 +123,7 @@ public final class Partita {
             System.out.println("\n+++++++++++++++++++++++++++++++++++++++++++++++");
             System.out.println("Parola segreta indovinata\nNumero tentativi: " + numeroTentativiEffettuati);
             System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++\n");
-        }else if(numeroTentativiEffettuati == App.NUMEROTENTATIVIMASSIMI) {
+        }else if(numeroTentativiEffettuati == numerotentativimassimi) {
             System.out.println("Hai raggiunto il numero massimo di tentativi\nLa parola segreta e': " +  App.getParola());
         }
         System.out.println("Abbandono partita in corso...");
@@ -147,13 +145,13 @@ public final class Partita {
             
             String token = "";
             
-            for(int k = 0; k < App.NUMEROLETTEREMASSIME; k++) {
+            for(int k = 0; k < numeroletteremassime; k++) {
                 token = token.concat(matriceTentativi[i][k]);
             }
             
-            Analizzatore.Colore[] coloriCaratteri = Analizzatore.analizzatoreTentativo(token, App.getParola());
+            Colori[] coloriCaratteri = Analizzatore.analizzatoreTentativo(token, App.getParola());
 
-            for (int j = 0; j < App.NUMEROLETTEREMASSIME; j++) {
+            for (int j = 0; j < numeroletteremassime; j++) {
                 if(null != coloriCaratteri[j]) {
                     switch (coloriCaratteri[j]) {
                         case VERDE:
@@ -177,7 +175,14 @@ public final class Partita {
                 youWin = true;
             } 
         }
-        stampaMatrice(i);
+
+        for (int k = i; k < numerotentativimassimi; k++) {
+            for (int j = 0; j < numeroletteremassime; j++) {
+                System.out.print("\t" + matriceTentativi[k][j]);
+            }
+            System.out.println();
+        }
+
         return youWin;
     }
     
