@@ -23,17 +23,20 @@
 
 
 ## **Introduzione**
+___
 
 Wordle è un gioco in cui, il giocatore ha un numero limitato di tentativi - solitamente 6 - per indovinare una parola, con un feedback fornito, per ogni tentativo effettuato, sotto forma di variazione di colore che indica con il colore verde che una lettera è nella posizione giusta, con il colore giallo che la lettera appartiene alla parola segreta, ma in una posizione diversa, e con il colore grigio che la lettera non appartiene alla parola segreta.
 
 L'applicativo è una versione semplificata che rispetta specifici requisiti funzionali.
 
 ## **Il modello di dominio**
+___
 
   ![Modello di dominio](./img/Diagramma_di_dominio.png)
 
 
 ## **Requisiti specifici**
+___
 
 ### **Requisiti funzionali**
 
@@ -111,16 +114,17 @@ L'applicativo è una versione semplificata che rispetta specifici requisiti funz
         Parola segreta mancante
 
 
-### Requisiti non funzionali
+### **Requisiti non funzionali**
 - RNF1: il container docker dell’app deve essere eseguito da terminali che supportano Unicode con encoding UTF-8 o UTF-16.
 
 ## **System Design**
+___
 Il *System Design* viene principalmente adottato nella progettazione di software di alto livello e consiste nell'identificazione dei principali componenti e delle relazioni tra questi.  
 Solitamente, l'architettura di un software deve essere definita nella prima fase di progettazione (inizio fase Sprint 1), ma il nostro Team non ha ritenuto importante definire uno stile architetturale ben preciso. 
 
 Di conseguenza non c'è stato alcun modo di rappresentarlo e difatto non è stato necessario realizzare nessun diagramma a tale scopo.
 Nonostante l'assenza di tutto ciò, si è comunque seguito lo stile di un sistema software robusto e di facile comprensione.  
-Infine, si è cercato di rispettare i 4 principi sui cambiamenti ideali, applicando a pieno il **principio di Information Hiding**.
+Infine, si è cercato di rispettare i 4 principi sui cambiamenti ideali, applicando appieno il **principio di Information Hiding**.
 
 
 ## **OO Design**
@@ -316,7 +320,7 @@ Sono stati selezionati i casi di test che approssimano un caso ideale, cercando 
 I casi di test selezionati sono di tipo Black Box, ossia selezioanti esclusivamente dalle specifiche.
 
 ## **Analisi retrospettiva**
-
+___
 
  ![Analisi retrospettiva sprint 1](./img/Analisi_retrospettiva_sprint_1.png)
 
