@@ -127,7 +127,7 @@ public final class App {
         
         if (args.length > 0) {
             try {
-                if(Analizzatore.analizzatoreComando(args[0]) == Analizzatore.Comando.AIUTO){
+                if(Analizzatore.analizzatoreComando(args[0]) == Comandi.AIUTO){
                     getHelp();
                 }
             }catch(InputUserNotValid e) {
@@ -141,7 +141,7 @@ public final class App {
             String inputUser = getGiocatore().input();
             
             try {
-                Analizzatore.Comando comando = Analizzatore.analizzatoreComando(inputUser);
+                Comandi comando = Analizzatore.analizzatoreComando(inputUser);
                 switch(comando) {
                     case NUOVA : 
                         String[] parola = inputUser.split(" ");

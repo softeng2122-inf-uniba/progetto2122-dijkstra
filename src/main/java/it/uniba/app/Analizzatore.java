@@ -7,8 +7,6 @@ package it.uniba.app;
  */
 public final class Analizzatore {
     
-    
-    
     /**
      * Token in input contenente il comando.
     */
@@ -91,28 +89,28 @@ public final class Analizzatore {
      * @return Comando
      * @throws InputUserNotValid 
      */
-    public static Comando analizzatoreComando(String inputUser) throws InputUserNotValid {
+    public static Comandi analizzatoreComando(String inputUser) throws InputUserNotValid {
         if(inputUser.length() > 0) {
             token = inputUser.trim().split(" ");
             if (token.length == 1) {
                 
                 if (token[0].equalsIgnoreCase(STRINGMOSTRA)) {
-                    return Comando.MOSTRA;
+                    return Comandi.MOSTRA;
                 } else if (token[0].equalsIgnoreCase(STRINGHELP) || token[0].equalsIgnoreCase(STRINGLESSLESSH)
                         || token[0].equalsIgnoreCase(STRINGLESSHELP)) {
-                    return Comando.AIUTO;
+                    return Comandi.AIUTO;
                 } else if (token[0].equalsIgnoreCase(STRINGPLAY)) {
-                    return Comando.GIOCA;
+                    return Comandi.GIOCA;
                 } else if (token[0].equalsIgnoreCase(STRINGEXIT)) {
-                    return Comando.ESCI;
+                    return Comandi.ESCI;
                 } else if (token[0].equalsIgnoreCase(STRINGQUIT)) {
-                    return Comando.ABBANDONA;
+                    return Comandi.ABBANDONA;
                 } else if (token[0].charAt(0) == '/') {
                     throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
                 }
             }else if(token.length == 2) {
                 if (token[0].equalsIgnoreCase(STRINGNUOVA)) {
-                    return Comando.NUOVA;
+                    return Comandi.NUOVA;
                 }
                 else {
                     throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
@@ -122,7 +120,7 @@ public final class Analizzatore {
                 throw new InputUserNotValid("Comando non valido, digita /help per avere maggiori informazioni");
             }
         } 
-        return Comando.ERRORE;
+        return Comandi.ERRORE;
     }
  
     /**

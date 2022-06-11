@@ -63,7 +63,7 @@ public final class Partita {
             String inputUser = App.getGiocatore().input();
             
             try {                           //controllo di inserimento di un eventuale comando
-                Analizzatore.Comando comando;
+                Comandi comando;
                 comando = Analizzatore.analizzatoreComando(inputUser);
                 switch (comando) {
                     case NUOVA:
@@ -149,7 +149,7 @@ public final class Partita {
                 token = token.concat(matriceTentativi[i][k]);
             }
             
-            Analizzatore.Colore[] coloriCaratteri = Analizzatore.analizzatoreTentativo(token, App.getParola());
+            Colori[] coloriCaratteri = Analizzatore.analizzatoreTentativo(token, App.getParola());
 
             for (int j = 0; j < numeroletteremassime; j++) {
                 if(null != coloriCaratteri[j]) {
