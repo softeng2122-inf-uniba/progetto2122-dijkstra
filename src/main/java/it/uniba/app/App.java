@@ -102,10 +102,10 @@ public final class App {
         System.out.println("Digita il comando '/mostra' per mostrare la parola segreta");
         System.out.println("Digita il comando '/esci' per uscire dall'applicazione\n\n");
         System.out.println("##### RULES OF THE GAME #####");
-        System.out.println("Ad ogni tentativo le lettere possono colorarsi in tre modi:");
-        System.out.println(" - grigie se la lettera in questione non compare nella parola da indovinare");
-        System.out.println(" - gialle se vi compare ma non in quella posizione");
-        System.out.println(" - verdi se hai indovinato la posizione precisa");
+        System.out.println("Ad ogni tentativo lo sfondo delle lettere puo' colorarsi in due modi:");
+        System.out.println(" - giallo se la lettera in questione compare nella parola da indovinare ma non in quella posizione;");
+        System.out.println(" - verde se hai indovinato la posizione precisa;");
+        System.out.println(" - se, invece, la lettera non ha nessun colore di sfondo significa che non compare nella parola da indovinare.");
         System.out.println("\nRicorda che hai a disposizione " + NUMEROTENTATIVIMASSIMI + " tentativi per indovinare la parola."); 
     }
     
