@@ -5,10 +5,35 @@
 package it.uniba.app;
 
 /**
-* lista dei comandi accettati.
+* Lista dei comandi accettati.
 */
 public enum Comandi {
-    
-    NUOVA, MOSTRA, GIOCA, ESCI, ABBANDONA, AIUTO, ERRORE
-    
+    /**
+     * Riferimento all'inserimento del comando "/nuova".
+     */
+    NUOVA,
+    /**
+     * Riferimento all'inserimento del comando "/mostra".
+     */
+    MOSTRA,
+    /**
+     * Riferimento all'inserimento del comando "/gioca".
+     */
+    GIOCA,
+    /**
+     * Riferimento all'inserimento del comando "/esci".
+     */
+    ESCI,
+    /**
+     * Riferimento all'inserimento del comando "/abbandona".
+     */
+    ABBANDONA,
+    /**
+     * Riferimento all'inserimento del comando "/help".
+     */
+    AIUTO,
+    /**
+     * Riferimento all'inserimento di un comando non esistente.
+     */
+    ERRORE
 }
