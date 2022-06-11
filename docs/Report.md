@@ -219,7 +219,7 @@ Wordle è un web-puzzle che consiste nel richiedere al giocatore di indovinare u
 
 ![Benvenuto](./img/ImgBenvenuto.jpeg)
 
-![Comando help](./img/ImgHelp1.jpg)
+![Comando help](./img/ImgHelp1.jpeg)
 
 **2.** Il comando *'/gioca'* permette di avviare il gioco soltanto se la parola segreta da indovinare è stata precedentemente impostata.
 
