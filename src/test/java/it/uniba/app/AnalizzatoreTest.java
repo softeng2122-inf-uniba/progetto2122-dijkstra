@@ -30,6 +30,20 @@ class AnalizzatoreTest {
         assertEquals(Analizzatore.Comando.AIUTO, Analizzatore.analizzatoreComando("/help"));
     }
 
+    /*
+    @Test
+    void commandAnalyseLessLessHelp() throws InputUserNotValid {
+        assertEquals(Analizzatore.Comando.AIUTO, Analizzatore.analizzatoreComando("--help"));
+    }
+    */
+    
+    /*
+    @Test
+    void commandAnalyseLessH() throws InputUserNotValid {
+        assertEquals(Analizzatore.Comando.AIUTO, Analizzatore.analizzatoreComando("-h"));
+    }
+    */<
+
     @Test
     void commandAnalyseNuovaWithWord() throws InputUserNotValid {
         assertEquals(Analizzatore.Comando.NUOVA, Analizzatore.analizzatoreComando("/nuova porta"));
