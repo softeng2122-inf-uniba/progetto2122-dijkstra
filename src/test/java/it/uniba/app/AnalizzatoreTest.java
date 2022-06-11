@@ -67,4 +67,13 @@ class AnalizzatoreTest {
                 }
         );
     }
+
+    @Test
+    void commandAnalyseLengthGreaterTwo() {
+        assertThrows(InputUserNotValid.class,
+                () -> {
+                    Analizzatore.analizzatoreComando("/mostra parola nuova");
+                }
+        );
+    }
 }
