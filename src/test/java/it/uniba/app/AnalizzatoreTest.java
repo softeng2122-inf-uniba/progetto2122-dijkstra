@@ -53,4 +53,9 @@ class AnalizzatoreTest {
     void commandAnalyseAbbandona() throws InputUserNotValid {
         assertEquals(Analizzatore.Comando.ABBANDONA, Analizzatore.analizzatoreComando("/abbandona"));
     }
+
+    @Test
+    void commandAnalyseEsci() throws InputUserNotValid {
+        assertEquals(Analizzatore.Comando.ESCI, Analizzatore.analizzatoreComando("/esci"));
+    }
 }
