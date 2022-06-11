@@ -58,4 +58,13 @@ class AnalizzatoreTest {
     void commandAnalyseEsci() throws InputUserNotValid {
         assertEquals(Analizzatore.Comando.ESCI, Analizzatore.analizzatoreComando("/esci"));
     }
+
+    @Test
+    void commandAnalyseLengthEqualsTwoButNoTExists() {
+        assertThrows(InputUserNotValid.class,
+                () -> {
+                    Analizzatore.analizzatoreComando("/mostra parola");
+                }
+        );
+    }
 }
