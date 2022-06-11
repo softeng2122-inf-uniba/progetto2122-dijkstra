@@ -139,11 +139,11 @@ public final class App {
             } 
             
             else {
-                System.out.println("*** Per avere la lista dei comandi digita '-h' / '--help' ***");
+                System.out.println("*** Per avere la lista dei comandi digita '/help' ***");
             }
             
         } else {
-            System.out.println("*** Per avere la lista dei comandi digita '-h' / '--help' ***");
+            System.out.println("*** Per avere la lista dei comandi digita '/help' ***");
         }
         while(true) {
             System.out.println("Introdurre un comando: ");
