@@ -23,8 +23,14 @@ public final class App {
      * Oggetto di classe giocatore.
     */
     private static Giocatore giocatore = new Giocatore();
-    
-    
+    /**
+     * Stringa che identifica il comando --help.
+    */
+    private static final String STRINGLESSLESSH = "--help";
+    /**
+     * Stringa che identifica il comando -h.
+    */
+    private static final String STRINGLESSHELP = "-h";
     /**
      * Restituisce il giocatore.
      * @return giocatore
@@ -84,6 +90,7 @@ public final class App {
     */
     public static void getHelp() {
         System.out.println("Ciao giocatore!");
+        System.out.println("Digita il comando '/help' per visualizzare la lista dei comandi disponibili");
         System.out.println("Digita il comando '/gioca' per avviare una nuova partita");
         System.out.println("Digita il comando '/abbandona' per uscire dalla partita. "
                             + "Attenzione questo comando e' disponibile solo se hai avviato la partita!");
@@ -93,10 +100,10 @@ public final class App {
         System.out.println("Digita il comando '/mostra' per mostrare la parola segreta");
         System.out.println("Digita il comando '/esci' per uscire dall'applicazione\n\n");
         System.out.println("##### RULES OF THE GAME #####");
-        System.out.println("Ad ogni tentativo le lettere possono colorarsi in tre modi:");
-        System.out.println(" - grigie se la lettera in questione non compare nella parola da indovinare");
-        System.out.println(" - gialle se vi compare ma non in quella posizione");
-        System.out.println(" - verdi se hai indovinato la posizione precisa");
+        System.out.println("Ad ogni tentativo lo sfondo delle lettere puo' colorarsi in due modi:");
+        System.out.println(" - giallo se la lettera in questione compare nella parola da indovinare ma non in quella posizione;");
+        System.out.println(" - verde se hai indovinato la posizione precisa;");
+        System.out.println(" - se, invece, la lettera non ha nessun colore di sfondo significa che non compare nella parola da indovinare.");
         System.out.println("\nRicorda che hai a disposizione " + NUMEROTENTATIVIMASSIMI + " tentativi per indovinare la parola."); 
     }
     
@@ -126,15 +133,22 @@ public final class App {
         System.out.println(new App().getGreeting());
         
         if (args.length > 0) {
-            try {
-                if(Analizzatore.analizzatoreComando(args[0]) == Analizzatore.Comando.AIUTO){
-                    getHelp();
-                }
-            }catch(InputUserNotValid e) {
-                System.err.println(e.getMessage());
-            }  
+            
+            if(args[0].equalsIgnoreCase(STRINGLESSLESSH)
+                || args[0].equalsIgnoreCase(STRINGLESSHELP)){
+            
+                getHelp();
+            
+            }
+            
+            else{
+                
+                System.out.println("*** Per avere la lista dei comandi digita '/help'. ***");
+                
+            }
+            
         } else {
-            System.out.println("*** Per avere la lista dei comandi digita '-h' / '--help' ***");
+            System.out.println("*** Per avere la lista dei comandi digita '/help'. ***");
         }
         while(true) {
             System.out.println("Introdurre un comando: ");

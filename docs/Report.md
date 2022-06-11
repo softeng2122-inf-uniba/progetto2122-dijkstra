@@ -211,7 +211,11 @@ Wordle è un web-puzzle che consiste nel richiedere al giocatore di indovinare u
 **Come funziona?**
 
 **1.** Il gioco si avvia con una frase di Benvenuto, seguita da un invito all'utente di digitare il comando   
-*'-h'*, *'--help'* per avere la lista dei comandi disponibili.
+*'/help'* per avere la lista dei comandi disponibili.
+
+--> (E' possibile avviare il gioco anche da linea di comando attraverso i comandi *'-h'* / *'--help'* 
+
+(wordle.jar --help / wordle.jar -h)).
 
 ![Benvenuto](./img/ImgBenvenuto.jpg)
 
