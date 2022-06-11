@@ -92,6 +92,7 @@ public final class App {
     */
     public static void getHelp() {
         System.out.println("Ciao giocatore!");
+        System.out.println("Digita il comando '/help' per visualizzare la lista dei comandi disponibili");
         System.out.println("Digita il comando '/gioca' per avviare una nuova partita");
         System.out.println("Digita il comando '/abbandona' per uscire dalla partita. "
                             + "Attenzione questo comando e' disponibile solo se hai avviato la partita!");
