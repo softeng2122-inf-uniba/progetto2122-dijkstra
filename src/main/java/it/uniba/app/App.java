@@ -137,6 +137,11 @@ public final class App {
             if(args[0].equalsIgnoreCase(STRINGLESSLESSH) || args[0].equalsIgnoreCase(STRINGLESSHELP)){
                 getHelp();
             } 
+            
+            else {
+                System.out.println("*** Per avere la lista dei comandi digita '-h' / '--help' ***");
+            }
+            
         } else {
             System.out.println("*** Per avere la lista dei comandi digita '-h' / '--help' ***");
         }
