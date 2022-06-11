@@ -48,4 +48,9 @@ class AnalizzatoreTest {
     void commandAnalyseGioca() throws InputUserNotValid {
         assertEquals(Analizzatore.Comando.GIOCA, Analizzatore.analizzatoreComando("/gioca"));
     }
+
+    @Test
+    void commandAnalyseAbbandona() throws InputUserNotValid {
+        assertEquals(Analizzatore.Comando.ABBANDONA, Analizzatore.analizzatoreComando("/abbandona"));
+    }
 }
