@@ -11,6 +11,14 @@ public final class App {
     */
     private static String parolaSegreta = null;
     /**
+     * Stringa che identifica il comando --help.
+    */
+    private static final String STRINGLESSLESSH = "--help";
+    /**
+     * Stringa che identifica il comando --h.
+    */
+    private static final String STRINGLESSHELP = "-h";
+    /**
      * Riferimento al numero massimo di lettere ammesse.
     */
     private static final int NUMEROLETTEREMASSIME  = 5;

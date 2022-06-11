@@ -25,14 +25,6 @@ public final class Analizzatore {
     */
     private static final String STRINGHELP = "/help";
     /**
-     * Stringa che identifica il comando --help.
-    */
-    private static final String STRINGLESSLESSH = "--help";
-    /**
-     * Stringa che identifica il comando --h.
-    */
-    private static final String STRINGLESSHELP = "-h";
-    /**
      * Stringa che identifica il comando gioca.
     */
     private static final String STRINGPLAY = "/gioca";
