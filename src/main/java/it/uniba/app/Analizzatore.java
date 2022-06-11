@@ -25,14 +25,6 @@ public final class Analizzatore {
     */
     private static final String STRINGHELP = "/help";
     /**
-     * Stringa che identifica il comando --help.
-    */
-    private static final String STRINGLESSLESSH = "--help";
-    /**
-     * Stringa che identifica il comando --h.
-    */
-    private static final String STRINGLESSHELP = "-h";
-    /**
      * Stringa che identifica il comando gioca.
     */
     private static final String STRINGPLAY = "/gioca";
@@ -96,8 +88,7 @@ public final class Analizzatore {
                 
                 if (token[0].equalsIgnoreCase(STRINGMOSTRA)) {
                     return Comandi.MOSTRA;
-                } else if (token[0].equalsIgnoreCase(STRINGHELP) || token[0].equalsIgnoreCase(STRINGLESSLESSH)
-                        || token[0].equalsIgnoreCase(STRINGLESSHELP)) {
+                } else if (token[0].equalsIgnoreCase(STRINGHELP)) {
                     return Comandi.AIUTO;
                 } else if (token[0].equalsIgnoreCase(STRINGPLAY)) {
                     return Comandi.GIOCA;
