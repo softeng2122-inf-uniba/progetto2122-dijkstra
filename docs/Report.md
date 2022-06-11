@@ -296,9 +296,11 @@ Una volta indovinata la parola verrà visualizzato un messaggio che attesti la v
 
 - durante la sessione di gioco:
 
+    ![Comando help](./img/ImgHelp2.png)
+
 - una volta terminata la partita:
 
-![Comando help](./img/ImgHelp2.png)
+
 
 ## **Riepilogo Test**
 ___
