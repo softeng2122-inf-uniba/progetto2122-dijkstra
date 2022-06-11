@@ -209,13 +209,11 @@ Ogni componente del sistema è ad alta coesione, con un obbiettivo e una respons
 Wordle è un web-puzzle che consiste nel richiedere al giocatore di indovinare una parola segreta di cinque lettere avendo a disposizione sei tentativi.
 
 **Come funziona?**
+E' possibile avviare il gioco anche da linea di comando attraverso i comandi *'-h'* / *'--help'*  (wordle.jar --help / wordle.jar -h)). Verrà visualizzata direttamente la lista dei comandi.
 
 **1.** Il gioco si avvia con una frase di Benvenuto, seguita da un invito all'utente di digitare il comando   
 *'/help'* per avere la lista dei comandi disponibili.
 
---> (E' possibile avviare il gioco anche da linea di comando attraverso i comandi *'-h'* / *'--help'* 
-
-(wordle.jar --help / wordle.jar -h)).
 
 ![Benvenuto](./img/ImgBenvenuto.jpeg)
 
