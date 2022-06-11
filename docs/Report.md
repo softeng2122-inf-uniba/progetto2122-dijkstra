@@ -217,7 +217,7 @@ Wordle è un web-puzzle che consiste nel richiedere al giocatore di indovinare u
 
 (wordle.jar --help / wordle.jar -h)).
 
-![Benvenuto](./img/ImgBenvenuto.jpg)
+![Benvenuto](./img/ImgBenvenuto.jpeg)
 
 ![Comando help](./img/ImgHelp1.jpg)
 
