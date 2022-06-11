@@ -6,15 +6,9 @@ package it.uniba.app;
  * Control class.
  */
 public final class Analizzatore {
-    /**
-     * lista di colori usati sui caratteri durante la partita.
-     */
-    public enum Colore{GRIGIO, GIALLO, VERDE};
     
-    /**
-     * lista dei comandi accettati.
-     */
-    public enum Comando {NUOVA, MOSTRA, GIOCA, ESCI, ABBANDONA, AIUTO, ERRORE};
+    
+    
     /**
      * Token in input contenente il comando.
     */
@@ -67,22 +61,22 @@ public final class Analizzatore {
      * @param parolaSegreta
      * @return Colore[]
      */
-    public static Colore[] analizzatoreTentativo(final String input,final String parolaSegreta) {
-        Colore[] coloriCaratteri = new Colore[input.length()];
+    public static Colori[] analizzatoreTentativo(final String input,final String parolaSegreta) {
+        Colori[] coloriCaratteri = new Colori[input.length()];
         for (int i = 0; i < coloriCaratteri.length; i++) {
-            coloriCaratteri[i] = Colore.GRIGIO;
+            coloriCaratteri[i] = Colori.GRIGIO;
         }
         for (int i = 0; i < input.length(); i++) {
             if(input.charAt(i) == parolaSegreta.charAt(i)) {
-                coloriCaratteri[i] = Colore.VERDE;
+                coloriCaratteri[i] = Colori.VERDE;
             }
         }
         for (int i = 0; i < input.length(); i++) {
-            if(coloriCaratteri[i] != Colore.VERDE) {
+            if(coloriCaratteri[i] != Colori.VERDE) {
                 for (int j = 0; j < parolaSegreta.length(); j++) {
-                    if(coloriCaratteri[j] != Colore.VERDE) {
+                    if(coloriCaratteri[j] != Colori.VERDE) {
                             if(input.charAt(i) == parolaSegreta.charAt(j)) {
-                                coloriCaratteri[i] = Colore.GIALLO;
+                                coloriCaratteri[i] = Colori.GIALLO;
                              }
                     }
                 }
