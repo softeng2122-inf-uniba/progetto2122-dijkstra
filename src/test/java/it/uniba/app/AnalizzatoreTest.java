@@ -1,9 +1,8 @@
 package it.uniba.app;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
-import it.uniba.app.Comandi;
+import static org.junit.jupiter.api.Assertions.*;
 
 class AnalizzatoreTest {
 
@@ -100,11 +99,11 @@ class AnalizzatoreTest {
 
     @Test
     void tryAnalyseCorrectWord() {
-        Analizzatore.Colore green = Analizzatore.Colore.VERDE;
-        Analizzatore.Colore[] coloriCaratteri = {green, green,green, green, green}; //aspettato
+        Colori green = Colori.VERDE;
+        Colori[] coloriCaratteri = {green, green,green, green, green}; //aspettato
         String input = "porta";
 
-        Analizzatore.Colore[] arrayOfColors = Analizzatore.analizzatoreTentativo(input, input);
+        Colori[] arrayOfColors = Analizzatore.analizzatoreTentativo(input, input);
 
         for(int i = 0; i < arrayOfColors.length; i++) {
             assertEquals(coloriCaratteri[i], arrayOfColors[i]);
@@ -113,15 +112,15 @@ class AnalizzatoreTest {
 
     @Test
     void tryAnalyseIncorrectWord() {
-        Analizzatore.Colore green = Analizzatore.Colore.VERDE;
-        Analizzatore.Colore yellow = Analizzatore.Colore.GIALLO;
-        Analizzatore.Colore gray = Analizzatore.Colore.GRIGIO;
+        Colori green = Colori.VERDE;
+        Colori yellow = Colori.GIALLO;
+        Colori gray = Colori.GRIGIO;
 
-        Analizzatore.Colore[] coloriCaratteri = {green, yellow, gray , yellow, green}; //aspettato
+        Colori[] coloriCaratteri = {green, yellow, gray , yellow, green}; //aspettato
         String input = "rules";
         String parolaSegreta = "rebus";
 
-        Analizzatore.Colore[] arrayOfColors = Analizzatore.analizzatoreTentativo(input, parolaSegreta);
+        Colori[] arrayOfColors = Analizzatore.analizzatoreTentativo(input, parolaSegreta);
 
         for(int i = 0; i < arrayOfColors.length; i++) {
             assertEquals(coloriCaratteri[i], arrayOfColors[i]);
