@@ -76,4 +76,9 @@ class AnalizzatoreTest {
                 }
         );
     }
+
+    @Test
+    void commandAnalyseNullCommand() throws InputUserNotValid {
+        assertEquals(Analizzatore.Comando.ERRORE, Analizzatore.analizzatoreComando(""));
+    }
 }
