@@ -115,9 +115,12 @@ L'applicativo è una versione semplificata che rispetta specifici requisiti funz
 - RNF1: il container docker dell’app deve essere eseguito da terminali che supportano Unicode con encoding UTF-8 o UTF-16.
 
 ## **System Design**
-Il *System Design* viene principalmente adottato nella progettazione di software di alto livello e consiste nell'identificazione dei principali componenti e delle relazioni tra questi. 
+Il *System Design* viene principalmente adottato nella progettazione di software di alto livello e consiste nell'identificazione dei principali componenti e delle relazioni tra questi.  
 Solitamente, l'architettura di un software deve essere definita nella prima fase di progettazione (inizio fase Sprint 1), ma il nostro Team non ha ritenuto importante definire uno stile architetturale ben preciso. 
 
+Di conseguenza non c'è stato alcun modo di rappresentarlo e difatto non è stato necessario realizzare nessun diagramma a tale scopo.
+Nonostante l'assenza di tutto ciò, si è comunque seguito lo stile di un sistema software robusto e di facile comprensione.  
+Infine, si è cercato di rispettare i 4 principi sui cambiamenti ideali, applicando a pieno il **principio di Information Hiding**.
 
 
 ## **OO Design**
@@ -299,6 +302,8 @@ Una volta indovinata la parola verrà visualizzato un messaggio che attesti la v
     ![Comando help](./img/ImgHelp2.png)
 
 - una volta terminata la partita:
+
+    ![Comando help](./img/ImgHelp4.png)
 
 
 
