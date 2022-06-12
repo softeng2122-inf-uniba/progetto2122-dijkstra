@@ -361,7 +361,9 @@ Identificazione e chiarimento dei requisiti funzionali richiesti.
  	
 - **Assegnazione dei compiti da svolgere ai membri del gruppo.**
  	
-- **Assegnazione di scadenze intermedie da rispettare per il completamento di un compito assegnato.** 	
+- **Assegnazione di scadenze intermedie da rispettare per il completamento di un compito assegnato.**
+
+Durante il primo incontro di chiarifica sono stati enunciati i requisiti richiesti che il programma doveva rispettare. Ogni requisito è stato poi successivamente analizzato e chiarito in maniera più esaustiva se presenti punti poco chiari o dubbi da parte dei membri del gruppo.
 
 
 ## **Analisi retrospettiva**
