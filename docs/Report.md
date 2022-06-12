@@ -379,6 +379,11 @@ La project board di ogni sprint prevedeva le seguenti colonne:
 -  **Ready**, per gli incarichi revisionati dai membri del gruppo, di cui è stato effettuato il merge.
 - **Done**, relativa alle modifiche revisionate dal product owner.
 
+Ogni requisito funzionale è stato assegnato ad uno o più membri del gruppo in base alla effettiva difficoltà di realizzazione con annessa data di scadenza. 
+Nel caso di compiti assegnati a più persone è stata lasciata piena libertà nell’autogestirsi sulla divisione del proprio lavoro.
+Una volta stabilito il lavoro da svolgere sono stati aperti i rispettivi issue.
+
+
 
 
 
