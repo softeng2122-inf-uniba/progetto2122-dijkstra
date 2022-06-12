@@ -365,7 +365,10 @@ Identificazione e chiarimento dei requisiti funzionali richiesti.
 
 Durante il primo incontro di chiarifica sono stati enunciati i requisiti richiesti che il programma doveva rispettare. Ogni requisito è stato poi successivamente analizzato e chiarito in maniera più esaustiva se presenti punti poco chiari o dubbi da parte dei membri del gruppo.
 
-Successivamente una volta individuata la sequenza di realizzazione dei requisiti funzionali da implementare per un corretto sviluppo, alcuni di essi sono stati realizzati in parallelo ottimizzando i tempi di sviluppo, altri invece no, in quanto avrebbero potuto creare dei conflitti se sviluppati in contemporanea ad altri. 
+Successivamente una volta individuata la sequenza di realizzazione dei requisiti funzionali da implementare per un corretto sviluppo, alcuni di essi sono stati realizzati in parallelo ottimizzando i tempi di sviluppo, altri invece no, in quanto avrebbero potuto creare dei conflitti se sviluppati in contemporanea ad altri.
+
+Dopo l’incontro iniziale il gruppo si è solitamente riunito ogni due giorni per discutere delle modifiche apportate e delle difficoltà incontrate durante lo sviluppo del progetto, durante questi incontri come avvenuto per il primo incontro di chiarifica i membri del gruppo hanno espresso i loro dubbi e perplessità su alcune scelte proponendo alternative da valutare.
+
 
 
 ## **Analisi retrospettiva**
