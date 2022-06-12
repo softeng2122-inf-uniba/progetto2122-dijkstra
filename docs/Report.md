@@ -341,10 +341,10 @@ Sono stati selezionati i casi di test che approssimano un caso ideale, cercando 
 
 I casi di test selezionati sono di tipo Black Box, ossia selezioanti esclusivamente dalle specifiche.
 
-### **Badge Coveralls**
-    ![Report Coveralls](./img/coveralls_report.png)
+- ### **Badge Coveralls**
+    ![Report Jacoco](./img/coveralls_report.png)
 
-### **Badge Jacoco**
+- ### **Badge Jacoco**
     ![Report Jacoco](./img/jacoco_report.png)
 
 ## **Analisi retrospettiva**
