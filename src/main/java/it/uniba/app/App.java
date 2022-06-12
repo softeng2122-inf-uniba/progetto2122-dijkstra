@@ -11,14 +11,6 @@ public final class App {
     */
     private static String parolaSegreta = null;
     /**
-     * Stringa che identifica il comando --help.
-    */
-    private static final String STRINGLESSLESSH = "--help";
-    /**
-     * Stringa che identifica il comando --h.
-    */
-    private static final String STRINGLESSHELP = "-h";
-    /**
      * Riferimento al numero massimo di lettere ammesse.
     */
     private static final int NUMEROLETTEREMASSIME  = 5;
@@ -31,8 +23,14 @@ public final class App {
      * Oggetto di classe giocatore.
     */
     private static Giocatore giocatore = new Giocatore();
-    
-    
+    /**
+     * Stringa che identifica il comando --help.
+    */
+    private static final String STRINGLESSLESSH = "--help";
+    /**
+     * Stringa che identifica il comando -h.
+    */
+    private static final String STRINGLESSHELP = "-h";
     /**
      * Restituisce il giocatore.
      * @return giocatore
@@ -135,16 +133,22 @@ public final class App {
         System.out.println(new App().getGreeting());
         
         if (args.length > 0) {
-            if(args[0].equalsIgnoreCase(STRINGLESSLESSH) || args[0].equalsIgnoreCase(STRINGLESSHELP)){
-                getHelp();
-            } 
             
-            else {
-                System.out.println("*** Per avere la lista dei comandi digita '/help' ***");
+            if(args[0].equalsIgnoreCase(STRINGLESSLESSH)
+                || args[0].equalsIgnoreCase(STRINGLESSHELP)){
+            
+                getHelp();
+            
+            }
+            
+            else{
+                
+                System.out.println("*** Per avere la lista dei comandi digita '/help'. ***");
+                
             }
             
         } else {
-            System.out.println("*** Per avere la lista dei comandi digita '/help' ***");
+            System.out.println("*** Per avere la lista dei comandi digita '/help'. ***");
         }
         while(true) {
             System.out.println("Introdurre un comando: ");
