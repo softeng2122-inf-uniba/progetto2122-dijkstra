@@ -354,7 +354,14 @@ ___
 
 Il gruppo di lavoro durante lo svolgimento delle consegne ha perseguito una strategia precisa nell’organizzazione e nella divisione del lavoro.  
 
-
+Prima dell’inizio del lavoro effettivo per la realizzazione dei requisiti funzionali è stato sempre effettuato un primo incontro di chiarifica, in seguito al lancio di ognuno dei 3 sprint, con tutti i membri del gruppo. In questo incontro sono stati analizzati i seguenti temi:
+Identificazione e chiarimento dei requisiti funzionali richiesti.
+ 	
+- **Identificazione dell'ordine di priorità dei requisiti funzionali da implementare.**
+ 	
+- **Assegnazione dei compiti da svolgere ai membri del gruppo.**
+ 	
+- **Assegnazione di scadenze intermedie da rispettare per il completamento di un compito assegnato.** 	
 
 
 ## **Analisi retrospettiva**
