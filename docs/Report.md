@@ -383,6 +383,7 @@ Ogni requisito funzionale è stato assegnato ad uno o più membri del gruppo in 
 Nel caso di compiti assegnati a più persone è stata lasciata piena libertà nell’autogestirsi sulla divisione del proprio lavoro.
 Una volta stabilito il lavoro da svolgere sono stati aperti i rispettivi issue.
 
+Ognuno di noi ha creato sul proprio repository locale un branch, relativo a ciascun issue assegnato, sul quale lavorare, in modo tale da mantenere in locale tutte le modifiche prima di aggiornare il branch remoto. 
 
 
 
