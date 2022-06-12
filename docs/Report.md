@@ -389,7 +389,7 @@ Nel caso in cui lo stesso compito fosse stato assegnato a più di una persona ve
 
 Una volta portato a termine il proprio compito ed effettuata la pull request è stato richiesto ad almeno una persona del gruppo di confermare ed approvare le modifiche effettuate prima di effettuare il merge e cancellare il branch. Solitamente per modifiche piccole o che difficilmente avrebbero potuto creare dei conflitti è bastata la revisione di un unico membro, mentre per modifiche più significative si è cercato sempre di fornire più di un unico parere in modo da avere maggiore prudenza e sicurezza sulla correttezza del lavoro effettuato. In alcuni casi la revisione ha portato ad ulteriori modifiche prima che le pull request potessero essere approvate.
 
-Prima della data di consegna del progetto il gruppo si è riunito in un incontro finale per un’ultima revisione prima di confermare al product owner la conclusione del lavoro richiesto.
+Prima della data di consegna del progetto, per ogni sprint, il gruppo si è riunito in un incontro finale per un’ultima revisione prima di confermare al product owner la conclusione del lavoro richiesto.
 
 Durante la  realizzazione del progetto, come ambiente di sviluppo, è stato usato l'IDE Netbeans con plug-in: Gradle, JUnit, Checkstyle, Spotbugs.
 Altri Software utilizzati sono stati: 
