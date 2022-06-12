@@ -385,6 +385,8 @@ Una volta stabilito il lavoro da svolgere sono stati aperti i rispettivi issue.
 
 Ognuno di noi ha creato sul proprio repository locale un branch, relativo a ciascun issue assegnato, sul quale lavorare, in modo tale da mantenere in locale tutte le modifiche prima di aggiornare il branch remoto. 
 
+Nel caso in cui lo stesso compito fosse stato assegnato a più di una persona veniva aperto un ulteriore branch direttamente su github in modo tale che tutti gli assegnatari potessero lavorare sul repository aggiornato anche prima di effettuare il merge. 
+
 
 
 
