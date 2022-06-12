@@ -17,7 +17,7 @@
     - [5.4 Commenti decisioni prese](#design-pattern)
 - [6. Manuale utente](#manuale-utente)
 - [7. Riepilogo del test](#riepilogo-test)
-- [8. Processo di sviluppo e organizzazione del lavoro](#processo-organizzazione)
+- [8. Processo di sviluppo e organizzazione del lavoro](#processo-di-sviluppo-e-organizzazione-del-lavoro)
 - [9. Analisi retrospettiva](#analisi-retrospettiva)
 
 
@@ -346,6 +346,14 @@ I casi di test selezionati sono di tipo Black Box, ossia selezioanti esclusivame
 
 - ### **Badge Jacoco**
     ![Report Jacoco](./img/jacoco_report.png)
+
+
+    
+## **Processo di sviluppo e organizzazione del lavoro**
+___
+
+
+
 
 ## **Analisi retrospettiva**
 ___
