@@ -371,6 +371,14 @@ Dopo l’incontro iniziale il gruppo si è solitamente riunito ogni due giorni p
 
 Per ognuno dei 3 sprint è stato creato un milestone, chiamato con il nome del relativo sprint, a cui sono stati assegnati tutti gli issue, le pull request e la project board associati allo sprint in corso. 
 
+La project board di ogni sprint prevedeva le seguenti colonne:
+- **ToDo**, relativa agli incarichi assegnati, ma il cui lavoro non è ancora iniziato.
+-  **inProgress**,  per i compiti in fase di realizzazione
+-  **Review**, per i lavori terminati, ma in attesa di revisione prima del merge
+-  **Ready**, per gli incarichi revisionati dai membri del gruppo, di cui è stato effettuato il merge.
+- **Done**, relativa alle modifiche revisionate dal product owner.
+
+
 
 
 ## **Analisi retrospettiva**
