@@ -369,6 +369,8 @@ Successivamente una volta individuata la sequenza di realizzazione dei requisiti
 
 Dopo l’incontro iniziale il gruppo si è solitamente riunito ogni due giorni per discutere delle modifiche apportate e delle difficoltà incontrate durante lo sviluppo del progetto, durante questi incontri come avvenuto per il primo incontro di chiarifica i membri del gruppo hanno espresso i loro dubbi e perplessità su alcune scelte proponendo alternative da valutare.
 
+Per ognuno dei 3 sprint è stato creato un milestone, chiamato con il nome del relativo sprint, a cui sono stati assegnati tutti gli issue, le pull request e la project board associati allo sprint in corso. 
+
 
 
 ## **Analisi retrospettiva**
