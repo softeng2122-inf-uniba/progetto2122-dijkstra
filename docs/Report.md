@@ -352,6 +352,8 @@ I casi di test selezionati sono di tipo Black Box, ossia selezioanti esclusivame
 ## **Processo di sviluppo e organizzazione del lavoro**
 ___
 
+Il gruppo di lavoro durante lo svolgimento delle consegne ha perseguito una strategia precisa nell’organizzazione e nella divisione del lavoro.  
+
 
 
 
