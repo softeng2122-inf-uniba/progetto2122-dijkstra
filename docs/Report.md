@@ -391,6 +391,12 @@ Una volta portato a termine il proprio compito ed effettuata la pull request è 
 
 Prima della data di consegna del progetto il gruppo si è riunito in un incontro finale per un’ultima revisione prima di confermare al product owner la conclusione del lavoro richiesto.
 
+Durante la  realizzazione del progetto, come ambiente di sviluppo, è stato usato l'IDE Netbeans con plug-in: Gradle, JUnit, Checkstyle, Spotbugs.
+Altri Software utilizzati sono stati: 
+   - _Docker_ per l'utilizzo di container;
+   - _Draw.io_ per i diagrammi di dominio, delle classi e di flusso;
+   -  _Visual Studio Code_ per i file markdown;
+   - _Teams_  per gli incontri e per le comunicazioni.
 
 
 
