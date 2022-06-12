@@ -115,7 +115,29 @@ ___
 
 
 ### **Requisiti non funzionali**
-- RNF1: il container docker dell’app deve essere eseguito da terminali che supportano Unicode con encoding UTF-8 o UTF-16.
+
+Elenco dei terminali supportati:
+- **Linux:**
+    - terminal
+- **Mac OS:**
+    - terminal
+- **Windows:**
+    - terminal
+    - terminal sottosistema windows per linux (*Windows 10 versione 2004 e successiva*)
+    - git bash
+
+Dopo aver eseguito il comando docker pull copiandolo da GitHub Packages, il successivo comando Docker da usare per eseguire il container contenente l'applicazione e':
+
+    docker run --rm -it docker.pkg.github.com/softeng2122-inf-uniba/progetto2122-dijkstra/wordle-dijkstra:latest
+
+Per chi utilizza Git Bash (*Versione 2.36.1*), il comando Docket per eseguire il container dell'applicazione e':
+
+    winpty docker run --rm -it docker.pkg.github.com/softeng2122-inf-uniba/progetto2122-dijkstra/wordle-dijkstra:latest
+
+Per chi utilizza il terminale Windows per visualizzare correttamente i caratteri UTF-8, utilizzare il comando:
+
+    chcp 65001
+
 
 ## **System Design**
 ___
