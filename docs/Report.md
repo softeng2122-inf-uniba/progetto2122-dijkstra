@@ -410,6 +410,7 @@ Altri Software utilizzati sono stati:
    - _Draw.io_ per i diagrammi di dominio, delle classi e di flusso;
    -  _Visual Studio Code_ per i file markdown;
    - _Teams_  per gli incontri e per le comunicazioni.
+   - _IntelliJ_ come IDE secondario. 
 
 
 
