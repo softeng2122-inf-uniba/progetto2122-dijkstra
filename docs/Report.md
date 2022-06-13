@@ -347,8 +347,15 @@ I casi di test selezionati sono di tipo Black Box, ossia selezioanti esclusivame
 - ### **Badge Jacoco**
     ![Report Jacoco](./img/jacoco_report.png)
 
+### **Commenti decisioni prese**
+- Classe `Analizzatore` : classe principale soggetta ai test poiche' contiene i tre analizzatori fondamentali per il controllo dell'input dell'utente, la verifica della correttezza sintattica, la verifica di un comando inserito o la verifica di un tentativo per la partita inserito.
+- Classe `App` : [Boundary class] classe in cui viene richesto l'input dell'utente (mediante la classe Giocatore, vedi sotto), analizzato mediante la classe Analizzatore ed eventualmente richiama la funzione richiesta.
+- Classe `Colori` : classe enumerativa coperta dai test poiche' richiamata in uno degli analizzatori (analizzatore tentativo);
+- Classe `Comandi` : classe enumerativa coperta dai test poiche' richiamata in uno degli analizzatori (analizzatore comando);
+- Classe `Giocatore` : classe in cui e' presente solo il metodo per chiedere l'input dell'utente.
+- Classe `InputUserNotValid` : classe coperta dai test richiamata nel momento in cui l'input dell'utente non dovesse essere corretto (sinstassi del tentativo errato, comando inesistente ecc...);
+- Classe `Partita` : [Boundary class] classe in cui viene richesto l'input dell'utente (mediante la classe Giocatore, vedi sotto) per l'inserimento di un tentativo o anche di un comando, richiamato l'analizzatore corrispondente mediante la classe Analizzatore, provvedendo ad inserire il tentativo o richiamando la funzione richiesta. 
 
-    
 ## **Processo di sviluppo e organizzazione del lavoro**
 ___
 
