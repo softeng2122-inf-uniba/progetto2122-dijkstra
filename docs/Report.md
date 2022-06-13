@@ -238,6 +238,14 @@ Abbiamo fatto in modo che ogni componenente custodisca al proprio interno i prop
 
 Ogni componente del sistema è ad alta coesione, con un obbiettivo e una responsabilità ben definita. Dunque ogni classe è facile da comprendere, da utilizzare ed eventuali modifiche non impatteranno sulle altre classi. Da cui deriva un **basso grado di accoppiamento** / dipendenza tra componenti diversi.
 
+Durante la fase di testing e correzione del checkstyle è stato deciso di escludere i seguenti errori di stile: 
+
+- Errori di spaziatura
+- Lunghezza righe superiore a 80 caratteri 
+
+I rimanenti errori sono stati risolti correttamente.
+
+
 # **Manuale Utente**
 Wordle è un web-puzzle che consiste nel richiedere al giocatore di indovinare una parola segreta di cinque lettere avendo a disposizione sei tentativi.
 
@@ -391,8 +399,6 @@ Nel caso di compiti assegnati a più persone è stata lasciata piena libertà ne
 Una volta stabilito il lavoro da svolgere sono stati aperti i rispettivi issue.
 
 Ognuno di noi ha creato sul proprio repository locale un branch, relativo a ciascun issue assegnato, sul quale lavorare, in modo tale da mantenere in locale tutte le modifiche prima di aggiornare il branch remoto. 
-
-Nel caso in cui lo stesso compito fosse stato assegnato a più di una persona veniva aperto un ulteriore branch direttamente su github in modo tale che tutti gli assegnatari potessero lavorare sul repository aggiornato anche prima di effettuare il merge. 
 
 Una volta portato a termine il proprio compito ed effettuata la pull request è stato richiesto ad almeno una persona del gruppo di confermare ed approvare le modifiche effettuate prima di effettuare il merge e cancellare il branch. Solitamente per modifiche piccole o che difficilmente avrebbero potuto creare dei conflitti è bastata la revisione di un unico membro, mentre per modifiche più significative si è cercato sempre di fornire più di un unico parere in modo da avere maggiore prudenza e sicurezza sulla correttezza del lavoro effettuato. In alcuni casi la revisione ha portato ad ulteriori modifiche prima che le pull request potessero essere approvate.
 

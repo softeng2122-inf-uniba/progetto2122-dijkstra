@@ -52,7 +52,7 @@ public final class App {
      * @param x nuova parola da impostare.
      * @exception InputUserNotValid input dell'utente non  valido .
     */
-    public static void setParola(String x) throws InputUserNotValid {
+    public static void setParola(final String x) throws InputUserNotValid {
         if (x.length() < NUMEROLETTEREMASSIME) {
             throw new InputUserNotValid("Parola segreta troppo corta");
         }else if (x.length() > NUMEROLETTEREMASSIME) {
