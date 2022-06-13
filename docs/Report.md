@@ -233,7 +233,7 @@ ___
 
 Abbiamo fatto in modo che ogni componenente custodisca al proprio interno i propri attributi e metodi, rendendo pubblici solo i membri, operazioni e attributi strettamente necessari, che offrono un servizio - principio di **information hiding**.
 
-Ogni componente del sistema è ad alta coesione, con un obbiettivo e una responsabilità ben definita. Dunque ogni classe è facile da comprendere, da utilizzare ed eventuali modifiche non impatteranno sulle altre classi. Da cui deriva un **basso grado di accoppiamento** / dipendenza tra componenti diversi.
+Ogni componente del sistema è ad alta coesione, con un obbiettivo e una responsabilità ben definita. Dunque ogni classe è facile da comprendere, da utilizzare ed eventuali modifiche non impatteranno sulle altre classi; da qui deriva un **basso grado di accoppiamento** / dipendenza tra componenti diversi.
 
 Durante la fase di testing e correzione del checkstyle è stato deciso di escludere i seguenti errori di stile: 
 
@@ -242,7 +242,7 @@ Durante la fase di testing e correzione del checkstyle è stato deciso di esclud
 
 I rimanenti errori sono stati risolti correttamente.
 
-Durante l'analisi del codice effettuata da SpotBugs, l'unico warning segnalato dal plugin risiedeva nella codifica dei caratteri, segnalandoci che impostando la codifica dei caratteri predefinita dal sistema operativo utilizzato da chi ha codificato il metodo, gli altri sistemi operativi avrebbero potuto avere dei problemi nel leggere i caratteri.
+Durante l'analisi del codice effettuata da SpotBugs, l'unico warning segnalato dal plugin risiedeva nella codifica dei caratteri, segnalandoci che impostando la codifica dei caratteri predefinita dal sistema operativo utilizzato da chi ha codificato il metodo, gli altri sistemi operativi avrebbero potuto avere dei problemi nel leggere i caratteri.  
 Il problema è stato risolto aggiungendo la clausola "UTF-8" nel metodo input() di Giocatore.java che si occupa di ricevere l'input dell'utente da terminale.
 
 
