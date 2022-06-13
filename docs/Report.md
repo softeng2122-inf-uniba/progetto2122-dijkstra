@@ -245,6 +245,9 @@ Durante la fase di testing e correzione del checkstyle è stato deciso di esclud
 
 I rimanenti errori sono stati risolti correttamente.
 
+Durante l'analisi del codice effettuata da SpotBugs, l'unico warning segnalato dal plugin risiedeva nella codifica dei caratteri, segnalandoci che impostando la codifica dei caratteri predefinita dal sistema operativo utilizzato da chi ha codificato il metodo, gli altri sistemi operativi avrebbero potuto avere dei problemi nel leggere i caratteri.
+Il problema è stato risolto aggiungendo la clausola "UTF-8" nel metodo input() di Giocatore.java che si occupa di ricevere l'input dell'utente da terminale.
+
 
 # **Manuale Utente**
 Wordle è un web-puzzle che consiste nel richiedere al giocatore di indovinare una parola segreta di cinque lettere avendo a disposizione sei tentativi.
