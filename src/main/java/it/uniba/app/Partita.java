@@ -10,7 +10,7 @@ public final class Partita {
     private final String[][] matriceTentativi;
     /**
      *  Variabile costante contenente il numero massimo di lettere di cui
-     *  può essere composta la parola
+     *  puo' essere composta la parola
      */
     private final int numeroletteremassime;
     /**
